@@ -1,0 +1,4479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新加坡迪士尼郵輪 + 當地5日遊 10天行李與行前檢核表</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #f59e0b;
+      --accent-gold: #d97706;
+      --disney-navy: #0f172a;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --warning: #f59e0b;
+      --warning-light: #fef3c7;
+      --purple: #8b5cf6;
+      --purple-light: #ede9fe;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 400px);
+      color: var(--text);
+      min-height: 100vh;
+      padding-bottom: 80px;
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Header Banner */
+    .hero-card {
+      background: linear-gradient(135deg, #091e3a 0%, #1e3a8a 50%, #0369a1 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .hero-card::after {
+      content: "✨🚢🦁✨";
+      position: absolute;
+      right: 20px;
+      bottom: -15px;
+      font-size: 5rem;
+      opacity: 0.12;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #fef08a;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      font-weight: 900;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      color: #cbd5e1;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    /* Overall Progress Bar */
+    .progress-box {
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .progress-pct {
+      color: #38bdf8;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .progress-track {
+      background: rgba(255, 255, 255, 0.2);
+      height: 12px;
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      background: linear-gradient(90deg, #38bdf8, #f59e0b);
+      height: 100%;
+      width: 0%;
+      border-radius: 9999px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Weather Forecast Widget */
+    .weather-widget {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+    }
+
+    .weather-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #e0f2fe;
+      padding-bottom: 12px;
+    }
+
+    .weather-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .weather-icon-badge {
+      font-size: 1.8rem;
+      background: #fed7aa;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .weather-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+    }
+
+    .weather-subtitle {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .season-badge {
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .weather-day-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 10px 6px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .weather-day-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .day-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #64748b;
+    }
+
+    .day-date {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+      margin-bottom: 4px;
+    }
+
+    .day-icon {
+      font-size: 1.5rem;
+      margin: 4px 0;
+    }
+
+    .day-temp {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .day-rain {
+      font-size: 0.75rem;
+      color: #0284c7;
+      font-weight: 600;
+    }
+
+    .weather-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .weather-tip-card {
+      background: #fff;
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      border-left: 4px solid var(--primary);
+      font-size: 0.85rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .weather-tip-card.warm {
+      border-left-color: var(--accent);
+    }
+
+    .weather-tip-card.rain {
+      border-left-color: #38bdf8;
+    }
+
+    .weather-tip-title {
+      font-weight: 700;
+      color: var(--disney-navy);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Action & Filter Bar */
+    .toolbar {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .btn.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .btn-outline-danger:hover {
+      background: var(--danger-light);
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    /* Category Navigation Chips */
+    .cat-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      scrollbar-width: thin;
+    }
+
+    .cat-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    .cat-nav::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .cat-chip {
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .cat-chip:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .cat-chip.active {
+      background: var(--disney-navy);
+      color: #fff;
+      border-color: var(--disney-navy);
+    }
+
+    /* Sections / Cards */
+    .checklist-section {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .checklist-section:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .section-header {
+      padding: 18px 24px;
+      background: #fafbfc;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      background: var(--primary-light);
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--disney-navy);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .section-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      color: var(--text-muted);
+    }
+
+    .section-badge.completed {
+      background: var(--success-light);
+      color: var(--success);
+    }
+
+    .toggle-arrow {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: transform 0.25s;
+    }
+
+    .section-collapsed .toggle-arrow {
+      transform: rotate(-90deg);
+    }
+
+    .section-body {
+      padding: 8px 16px;
+      display: block;
+    }
+
+    .section-collapsed .section-body {
+      display: none;
+    }
+
+    /* Checklist Items */
+    .item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 10px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.15s;
+      border-radius: var(--radius-sm);
+    }
+
+    .item-row:last-child {
+      border-bottom: none;
+    }
+
+    .item-row:hover {
+      background: #f8fafc;
+    }
+
+    .item-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+      cursor: pointer;
+      margin-top: 2px;
+      display: grid;
+      place-content: center;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .item-checkbox:hover {
+      border-color: var(--primary);
+    }
+
+    .item-checkbox:checked {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .item-checkbox:checked::before {
+      content: "✓";
+      color: white;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .item-content {
+      flex: 1;
+    }
+
+    .item-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .item-text {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .item-completed .item-text {
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+
+    .item-tag {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .tag-crucial {
+      background: var(--danger-light);
+      color: #b91c1c;
+    }
+
+    .tag-cruise {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .tag-sg {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .tag-pack {
+      background: #f3e8ff;
+      color: #7e22ce;
+    }
+
+    .tag-hack {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+    }
+
+    .item-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .item-tip-box {
+      margin-top: 6px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.83rem;
+      background: #f8fafc;
+      border-left: 3px solid var(--primary);
+      color: #475569;
+    }
+
+    .item-tip-box.warning-box {
+      background: #fffbeb;
+      border-left-color: var(--warning);
+      color: #92400e;
+    }
+
+    .item-tip-box.pro-tip {
+      background: #f0fdf4;
+      border-left-color: #10b981;
+      color: #166534;
+    }
+
+    .item-actions {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .item-del-btn {
+      background: none;
+      border: none;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+
+    .item-del-btn:hover {
+      color: var(--danger);
+      background: var(--danger-light);
+    }
+
+    /* Add Item Form Inside Section */
+    .add-custom-wrap {
+      padding: 12px 10px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .custom-input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .custom-input:focus {
+      border-color: var(--primary);
+    }
+
+    .add-btn {
+      padding: 8px 16px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border: 1px solid #bae6fd;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .add-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Floating Quick Actions */
+    .floating-tools {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .fab-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--disney-navy);
+      color: #fff;
+      border: none;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .fab-btn:hover {
+      transform: translateY(-2px);
+      background: var(--primary);
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+        padding-bottom: 0;
+      }
+      .toolbar, .cat-nav, .floating-tools, .add-custom-wrap, .item-del-btn {
+        display: none !important;
+      }
+      .hero-card {
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+        padding: 16px;
+        box-shadow: none;
+      }
+      .hero-card::after {
+        display: none;
+      }
+      .hero-desc, .badge-pill {
+        color: #333;
+      }
+      .checklist-section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+      }
+      .section-header {
+        background: #f1f5f9;
+      }
+      .section-collapsed .section-body {
+        display: block !important;
+      }
+    }
+  
+    /* Sync Status Bar */
+    .sync-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sync-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #94a3b8;
+      display: inline-block;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+
+    .status-dot.synced {
+      background: #10b981;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.25);
+    }
+
+    .sync-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary-action {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff !important;
+      border-color: #0284c7 !important;
+      font-weight: 700;
+    }
+
+    .btn-primary-action:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    }
+
+    .btn-accent-action {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #fff !important;
+      border-color: #f59e0b !important;
+      font-weight: 700;
+    }
+
+    .btn-accent-action:hover {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    }
+
+    
+    /* Smart Universal Input Card */
+    .smart-input-card {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+      border: 2px solid #bae6fd;
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+    }
+
+    .smart-input-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .smart-input-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .smart-input-hint {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .smart-input-wrap {
+      display: flex;
+      gap: 10px;
+    }
+
+    .smart-input-field {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid #cbd5e1;
+      font-size: 0.98rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+      background: #fff;
+    }
+
+    .smart-input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+    }
+
+    .smart-add-btn {
+      padding: 12px 22px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: inherit;
+    }
+
+    .smart-add-btn:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    /* Duplicate Match Card */
+    .dup-card {
+      border-left: 5px solid #f59e0b;
+    }
+
+    .dup-match-item {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    /* Item Actions */
+    .item-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+
+    .item-action-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 0.82rem;
+      padding: 5px 8px;
+      border-radius: 6px;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: inherit;
+    }
+
+    .item-action-btn:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: var(--text);
+    }
+
+    .item-action-btn.btn-edit:hover {
+      background: var(--primary-light);
+      border-color: #bae6fd;
+      color: var(--primary-dark);
+    }
+
+    .item-action-btn.btn-del:hover {
+      background: var(--danger-light);
+      border-color: #fecaca;
+      color: var(--danger);
+    }
+
+    /* Modal Backdrop & Card */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 580px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+
+    .modal-backdrop.open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #94a3b8;
+      padding: 4px 8px;
+      border-radius: 4px;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--danger);
+    }
+
+    .modal-body {
+      padding: 22px 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 0.94rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .btn-save {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    .btn-save:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+  
+
+    /* ========================================================
+       MAIN TOP VIEW TABS (CHECKLIST vs CALENDAR)
+       ======================================================== */
+    .main-tabs-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      padding: 8px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+    }
+
+    .main-tab-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 2px solid transparent;
+      background: #f8fafc;
+      border-radius: var(--radius-md);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .main-tab-btn:hover {
+      background: #e0f2fe;
+      color: #0369a1;
+      border-color: #bae6fd;
+    }
+
+    .main-tab-btn.active {
+      background: linear-gradient(135deg, #091e3a 0%, #0284c7 100%);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+    }
+
+    .tab-count-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      color: #475569;
+      transition: all 0.2s;
+    }
+
+    .main-tab-btn.active .tab-count-badge {
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+    }
+
+    .tab-count-badge.gold {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    .main-tab-btn.active .tab-count-badge.gold {
+      background: #f59e0b;
+      color: #fff;
+    }
+
+    /* Views */
+    .view-panel {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .view-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========================================================
+       CALENDAR VIEW STYLING
+       ======================================================== */
+    .cal-hero-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #0284c7 100%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 32px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cal-hero-banner::after {
+      content: "✈️🚢🎡🦁✨";
+      position: absolute;
+      right: 20px;
+      bottom: -15px;
+      font-size: 5rem;
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    .cal-quick-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .cal-stat-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cal-stat-icon {
+      font-size: 1.8rem;
+    }
+
+    .cal-stat-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .cal-stat-label {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+    }
+
+    /* Calendar Toolbar */
+    .cal-toolbar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cal-search-wrap {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+
+    .cal-search-input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      background: #f8fafc;
+      color: var(--text);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .cal-search-input:focus {
+      background: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .cal-search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.95rem;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .cal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Day Navigation Chips */
+    .cal-day-pills-wrap {
+      margin-bottom: 24px;
+    }
+
+    .cal-day-pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: thin;
+    }
+
+    .cal-day-pills::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .cal-day-pills::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+
+    .cal-day-pill {
+      flex-shrink: 0;
+      padding: 10px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      min-width: 90px;
+    }
+
+    .cal-day-pill:hover {
+      border-color: var(--primary);
+      background: #f0f9ff;
+      transform: translateY(-2px);
+    }
+
+    .cal-day-pill.active {
+      background: var(--disney-navy);
+      border-color: var(--disney-navy);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+    }
+
+    .cal-day-pill-top {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #64748b;
+    }
+    .cal-day-pill.active .cal-day-pill-top {
+      color: #93c5fd;
+    }
+
+    .cal-day-pill-date {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin: 2px 0;
+    }
+
+    .cal-day-pill-tag {
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 9999px;
+      background: #e2e8f0;
+      color: #475569;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .cal-day-pill.active .cal-day-pill-tag {
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    /* Day Cards */
+    .cal-day-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .cal-day-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .cal-day-card-header {
+      padding: 20px 24px;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .cal-day-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cal-day-number-badge {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3);
+    }
+
+    .cal-day-number-badge.cruise {
+      background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%);
+      box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+    }
+
+    .cal-day-title-main {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+      line-height: 1.35;
+    }
+
+    .cal-day-title-sub {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .cal-day-header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cal-day-check-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: #64748b;
+      transition: all 0.2s;
+    }
+
+    .cal-day-check-btn:hover {
+      border-color: var(--success);
+      color: var(--success);
+      background: var(--success-light);
+    }
+
+    .cal-day-check-btn.checked {
+      background: var(--success);
+      color: #fff;
+      border-color: var(--success);
+    }
+
+    .cal-day-toggle-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #64748b;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+
+    .cal-day-toggle-btn:hover {
+      background: #e2e8f0;
+      color: var(--text);
+    }
+
+    /* Day Card Route Summary Bar */
+    .cal-route-bar {
+      padding: 10px 24px;
+      background: #f0fdf4;
+      border-bottom: 1px solid #dcfce7;
+      font-size: 0.86rem;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    /* Timeline Section */
+    .cal-timeline-body {
+      padding: 24px;
+      position: relative;
+    }
+
+    .cal-timeline-container {
+      position: relative;
+    }
+
+    .cal-timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      bottom: 25px;
+      left: 17px;
+      width: 2px;
+      background: #e2e8f0;
+    }
+
+    .cal-timeline-item {
+      position: relative;
+      padding-left: 48px;
+      margin-bottom: 30px;
+    }
+
+    .cal-timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cal-timeline-dot {
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      z-index: 2;
+      transition: transform 0.2s;
+    }
+
+    .cal-timeline-item:hover .cal-timeline-dot {
+      transform: scale(1.25);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+    }
+
+    .cal-time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .cal-event-title-h4 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--disney-navy);
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .cal-event-content-p {
+      font-size: 0.93rem;
+      color: #334155;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      white-space: pre-line;
+    }
+
+    /* Highlight Feature Boxes */
+    .cal-feature-card {
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* Video Transition Card (Gold/Purple) */
+    .cal-video-card {
+      background: linear-gradient(135deg, #faf5ff 0%, #fdf4ff 100%);
+      border: 1px solid #f3e8ff;
+      border-left: 4px solid #a855f7;
+      color: #581c87;
+    }
+    .cal-video-header {
+      font-weight: 800;
+      color: #7e22ce;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    /* Transit Card (Blue) */
+    .cal-transit-card {
+      background: #f0f9ff;
+      border: 1px solid #e0f2fe;
+      border-left: 4px solid #0284c7;
+      color: #0c4a6e;
+    }
+    .cal-transit-header {
+      font-weight: 800;
+      color: #0369a1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    /* Dining Card (Orange) */
+    .cal-dining-card {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      border-left: 4px solid #f97316;
+      color: #7c2d12;
+    }
+    .cal-dining-header {
+      font-weight: 800;
+      color: #c2410c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    /* Alert Card (Red) */
+    .cal-alert-card {
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      border-left: 4px solid #ef4444;
+      color: #7f1d1d;
+    }
+    .cal-alert-header {
+      font-weight: 800;
+      color: #b91c1c;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    .cal-tip-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .cal-tip-list li {
+      margin-bottom: 4px;
+    }
+    .cal-tip-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background: #fff !important;
+        padding: 0 !important;
+      }
+      .main-tabs-bar, .toolbar, .sync-bar, .cal-toolbar, .cal-day-pills-wrap, .floating-tools, .add-custom-wrap, .smart-input-card, .cat-nav, .item-del-btn, .cal-day-toggle-btn, .cal-day-check-btn {
+        display: none !important;
+      }
+      .cal-day-card {
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+        margin-bottom: 20px !important;
+      }
+      .view-panel {
+        display: block !important;
+      }
+    }
+    
+</style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Hero Header -->
+    <header class="hero-card">
+      <div class="badge-pill">✨ 迪士尼郵輪 Disney Adventure 航程 × 新加坡 5 日深度遊</div>
+      <h1 class="hero-title">10 天新加坡 & 迪士尼郵輪全能行前檢核表</h1>
+      <p class="hero-desc">整合 Magic Tips 官方攻略、DCL 郵輪老手實戰經驗、10/21～10/30 新加坡氣候預報分析及在地文化秘笈！包含氣候穿搭、磁吸掛鉤、免費客房送餐小費與自帶酒水規定。勾選進度自動儲存於瀏覽器中！</p>
+
+      <!-- Overall Progress -->
+      <div class="progress-box">
+        <div class="progress-info">
+          <span>整體準備進度</span>
+          <span class="progress-pct" id="globalProgressPct">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="globalProgressFill"></div>
+        </div>
+        <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 6px; display: flex; justify-content: space-between;">
+          <span id="globalCountText">已完成 0 / 0 項</span>
+          <span>離線儲存已啟用 💾</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Weather Forecast Widget: 10/21 - 10/30 -->
+    
+
+    <!-- Top-level Navigation Tabs (Checklist vs Calendar) -->
+    <nav class="main-tabs-bar" id="mainTabsBar">
+      <button type="button" class="main-tab-btn active" data-tab="checklist" id="tabBtnChecklist">
+        <span class="tab-icon">🧳</span>
+        <span class="tab-label">行李行前檢核表</span>
+        <span class="tab-count-badge" id="tabChecklistCount">113 項</span>
+      </button>
+      <button type="button" class="main-tab-btn" data-tab="calendar" id="tabBtnCalendar">
+        <span class="tab-icon">📅</span>
+        <span class="tab-label">10天精緻蜜月行事曆</span>
+        <span class="tab-count-badge gold">10/21～10/30</span>
+      </button>
+    </nav>
+    
+<div id="viewChecklist" class="view-panel active">
+<section class="weather-widget">
+      <div class="weather-header">
+        <div class="weather-title-wrap">
+          <div class="weather-icon-badge">🌦️</div>
+          <div>
+            <div class="weather-title">10/21 ～ 10/30 新加坡當地氣候預估看板</div>
+            <div class="weather-subtitle">新加坡氣候特徵：季風交替期（Inter-Monsoon Period）• 全島平均氣溫 25°C～32°C • 濕度約 82%</div>
+          </div>
+        </div>
+        <div class="season-badge">熱帶午後對流陣雨型態 ⛈️</div>
+      </div>
+
+      <!-- 10 Days Forecast Grid -->
+      <div class="weather-grid">
+        <div class="weather-day-card">
+          <div class="day-name">週三</div>
+          <div class="day-date">10/21</div>
+          <div class="day-icon">🌦️</div>
+          <div class="day-temp">25°-32°</div>
+          <div class="day-rain">午後雷陣雨 55%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週四</div>
+          <div class="day-date">10/22</div>
+          <div class="day-icon">⛈️</div>
+          <div class="day-temp">25°-31°</div>
+          <div class="day-rain">午後雷雨 60%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週五</div>
+          <div class="day-date">10/23</div>
+          <div class="day-icon">🌤️</div>
+          <div class="day-temp">26°-33°</div>
+          <div class="day-rain">短暫陣雨 45%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週六</div>
+          <div class="day-date">10/24</div>
+          <div class="day-icon">🌦️</div>
+          <div class="day-temp">25°-32°</div>
+          <div class="day-rain">午後陣雨 50%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週日</div>
+          <div class="day-date">10/25</div>
+          <div class="day-icon">⛈️</div>
+          <div class="day-temp">25°-31°</div>
+          <div class="day-rain">局部雷陣雨 60%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週一</div>
+          <div class="day-date">10/26</div>
+          <div class="day-icon">🌦️</div>
+          <div class="day-temp">26°-32°</div>
+          <div class="day-rain">午後短暫雨 50%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週二</div>
+          <div class="day-date">10/27</div>
+          <div class="day-icon">🌤️</div>
+          <div class="day-temp">25°-33°</div>
+          <div class="day-rain">晴時偶雨 40%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週三</div>
+          <div class="day-date">10/28</div>
+          <div class="day-icon">🌦️</div>
+          <div class="day-temp">25°-32°</div>
+          <div class="day-rain">午後雷雨 55%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週四</div>
+          <div class="day-date">10/29</div>
+          <div class="day-icon">⛈️</div>
+          <div class="day-temp">25°-31°</div>
+          <div class="day-rain">局部雷雨 60%</div>
+        </div>
+        <div class="weather-day-card">
+          <div class="day-name">週五</div>
+          <div class="day-date">10/30</div>
+          <div class="day-icon">🌦️</div>
+          <div class="day-temp">26°-32°</div>
+          <div class="day-rain">午後陣雨 50%</div>
+        </div>
+      </div>
+
+      <!-- Weather Tips & Strategy -->
+      <div class="weather-tips-grid">
+        <div class="weather-tip-card rain">
+          <div class="weather-tip-title">☔ 雨勢特徵：來得快、去得快</div>
+          <div>10 月底為季風交替期，降雨通常集中在<strong>下午 14:00～17:00</strong>，多為強烈但短暫（約 30～60 分鐘）的雷陣雨。午後可安排室內景點（如濱海灣冷室、星耀樟宜、購物中心）。新加坡有極為完善的<strong>全島避雨連廊（Covered Linkways）</strong>，不必擔心行程中斷！</div>
+        </div>
+        <div class="weather-tip-card warm">
+          <div class="weather-tip-title">🌡️ 體感溫度高達 36°C，防曬要足</div>
+          <div>白天氣溫約 31°C～33°C，配合 80% 高濕度，體感宛如盛夏高溫。每天上午 11:00 至 15:00 紫外線指數（UV）常飆破 11+（極端），請隨身補充水分、戴遮陽帽並補擦防曬乳。</div>
+        </div>
+        <div class="weather-tip-card">
+          <div class="weather-tip-title">🧥 關鍵穿搭原則：「外熱內冷洋蔥式」</div>
+          <div>室外赤道高溫，但<strong>郵輪艙房/秀場與新加坡地鐵、商場內部冷氣極度強烈（恆溫約 20°C～22°C）</strong>。若只穿單薄短袖極易感冒頭痛，包包內<strong>務必隨身攜帶薄風衣、抗抗 UV 開衫或披肩</strong>！</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sync Bar: TXT Auto-Sync & File Connection -->
+    <div class="sync-bar">
+      <div class="sync-status-badge" id="syncStatusBadge">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="syncStatusText">☁️ 雲端同步模式：手機與電腦隨時雙向即時同步</span>
+      </div>
+      <div class="sync-actions">
+        <button class="btn btn-primary-action" id="btnRefreshCloud" title="重新整理取得最新雲端資料">
+          🔄 重新整理雲端
+        </button>
+        <button class="btn btn-accent-action" id="btnAddNewItem" title="新增自訂項目">
+          ➕ 新增項目
+        </button>
+        <button class="btn" id="btnExportTxt" title="下載當前清單為 TXT 檔">
+          📥 匯出 TXT
+        </button>
+        <button class="btn" id="btnLinkTxt" style="display:none;">
+          📁 連動 TXT 檔
+        </button>
+        <button class="btn" id="btnImportTxt" style="display:none;">
+          📤 匯入 TXT
+        </button>
+        <input type="file" id="filePickerInput" accept=".txt" style="display: none;">
+      </div>
+    </div>
+
+    <!-- Toolbar: Search, Filters, Reset -->
+    <div class="toolbar">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜尋清單物件（如：暈船藥、磁吸掛鉤、毛巾夾、保溫杯、護照、插頭、酒水、退稅...）">
+      </div>
+
+      <div class="filter-buttons">
+        <button class="btn active" data-filter="all" id="filterAllBtn">全部顯示</button>
+        <button class="btn" data-filter="uncompleted" id="filterUncompletedBtn">未完成</button>
+        <button class="btn" data-filter="completed" id="filterCompletedBtn">已打勾</button>
+        <button class="btn" id="printBtn" title="列印成紙本或存為 PDF">🖨️ 列印</button>
+        <button class="btn" id="resetChecksBtn" title="清除所有打勾（保留項目）">清空勾選</button>
+        <button class="btn btn-outline-danger" id="resetDefaultsBtn" title="完全還原為原始官方預設清單">恢復預設</button>
+      </div>
+    </div>
+
+    
+    <!-- Smart Universal Quick-Add Bar (Auto-classify & Duplicate Check) -->
+    <div class="smart-input-card">
+      <div class="smart-input-header">
+        <div class="smart-input-title">
+          <span>💡 隨想隨記・智慧快速輸入</span>
+          <span class="badge-pill" style="font-size:0.75rem; padding:2px 8px; margin:0; background:#e0f2fe; color:#0369a1; border-color:#bae6fd;">自動分類 ＋ 相似防重</span>
+        </div>
+        <div class="smart-input-hint">想到什麼直接打，按 Enter 自動分類歸位；若有重複自動提醒！</div>
+      </div>
+      <div class="smart-input-wrap">
+        <input type="text" id="smartInputField" class="smart-input-field" placeholder="想到想帶什麼直接輸入（如：防曬乳 x 2、刮鬍刀、雨傘、胃藥、美金小費...）按 Enter 立即加入！">
+        <button type="button" id="smartAddBtn" class="smart-add-btn">
+          ⚡ 智慧加入
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Quick Navigation -->
+    <!-- Category Quick Navigation -->
+    <nav class="cat-nav" id="catNav">
+      <div class="cat-chip active" data-cat="all">全部箱包</div>
+      <div class="cat-chip" data-cat="bag_pouch">👛 隨身小包包</div>
+      <div class="cat-chip" data-cat="messenger">👝 側身隨身袋</div>
+      <div class="cat-chip" data-cat="backpack">🎒 雙肩隨身中包</div>
+      <div class="cat-chip" data-cat="documents">📑 重要證件包</div>
+      <div class="cat-chip" data-cat="luggage_A">🧳 28吋行李箱 A (衣物)</div>
+      <div class="cat-chip" data-cat="luggage_B">🧳 28吋行李箱 B (神器/鞋)</div>
+      <div class="cat-chip" data-cat="forbidden">🚫 避坑禁帶</div>
+      <div class="cat-chip" data-cat="timeline">⏰ 倒數時序</div>
+    </nav>
+
+    <!-- Main Checklist Sections Container -->
+    <main id="sectionsContainer">
+      <!-- Generated by JavaScript -->
+    </main>
+</div>
+
+
+    <!-- ==========================================
+         VIEW 2: 10-DAY HONEYMOON CALENDAR VIEW
+         ========================================== -->
+    <div id="viewCalendar" class="view-panel">
+
+      <!-- Calendar Hero Banner -->
+      <section class="cal-hero-banner">
+        <div class="badge-pill">📅 2026/10/21 ～ 10/30 • 10 天 9 夜完整行程大綱</div>
+        <h2 style="font-size: clamp(1.5rem, 3.2vw, 2.2rem); font-weight: 900; line-height: 1.25; margin-bottom: 8px;">
+          星宇航空 × 迪士尼探險號 10天精緻蜜月行事曆
+        </h2>
+        <p style="font-size: 0.95rem; color: #cbd5e1; max-width: 820px; line-height: 1.6;">
+          完整收錄每日分時動線、招牌影音三轉場拍攝機位、交通捷運轉乘指引、必吃在地美食與重要提醒。支援天數過濾、關鍵字即時搜尋與單日勾選完成！
+        </p>
+
+        <div class="cal-quick-stats">
+          <div class="cal-stat-card">
+            <span class="cal-stat-icon">🚢</span>
+            <div>
+              <div class="cal-stat-val">4 天 3 夜</div>
+              <div class="cal-stat-label">迪士尼探險號海上巡航</div>
+            </div>
+          </div>
+          <div class="cal-stat-card">
+            <span class="cal-stat-icon">🏨</span>
+            <div>
+              <div class="cal-stat-val">雙渡假村</div>
+              <div class="cal-stat-label">香格里拉 ＋ 悅樂聖淘沙</div>
+            </div>
+          </div>
+          <div class="cal-stat-card">
+            <span class="cal-stat-icon">🎬</span>
+            <div>
+              <div class="cal-stat-val">3 大招牌轉場</div>
+              <div class="cal-stat-label">手拿鏡放大・邁步・拉走</div>
+            </div>
+          </div>
+          <div class="cal-stat-card">
+            <span class="cal-stat-icon">🎡</span>
+            <div>
+              <div class="cal-stat-val">雙主題樂園</div>
+              <div class="cal-stat-label">環球影城 ＋ S.E.A.水族館</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar Filter & Search Toolbar -->
+      <div class="cal-toolbar">
+        <div class="cal-search-wrap">
+          <span class="cal-search-icon">🔍</span>
+          <input type="text" id="calSearchInput" class="cal-search-input" placeholder="搜尋行事曆（如：卡丁車、斜坡滑車、亞坤、烤鴨、肉骨茶、水族館、轉場、退稅...）">
+        </div>
+        <div class="cal-actions">
+          <button type="button" class="btn" id="calExpandAllBtn">展開全部</button>
+          <button type="button" class="btn" id="calCollapseAllBtn">收合全部</button>
+          <button type="button" class="btn btn-primary-action" id="calPrintBtn">🖨️ 列印行程表</button>
+        </div>
+      </div>
+
+      <!-- Day Navigation Pills -->
+      <div class="cal-day-pills-wrap">
+        <div class="cal-day-pills" id="calDayPills">
+          <div class="cal-day-pill active" data-day="all">
+            <div class="cal-day-pill-top">🌟 全部</div>
+            <div class="cal-day-pill-date">10 天日程</div>
+            <div class="cal-day-pill-tag">完整全覽</div>
+          </div>
+          <!-- Generated by JS -->
+        </div>
+      </div>
+
+      <!-- Calendar Days Container -->
+      <div id="calDaysContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+    
+
+
+  </div>
+
+  <!-- Modal for Adding / Editing Items -->
+  <div class="modal-backdrop" id="itemModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">✏️ 編輯清單項目</h3>
+        <button type="button" class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modalItemId">
+        <div class="form-group">
+          <label for="modalSectionSelect">所屬分類</label>
+          <select id="modalSectionSelect" class="form-select">
+            <option value="bag_pouch">👛 1. Bag 隨身小包包</option>
+            <option value="messenger">👜 2. Messenger Bag 側身隨身袋</option>
+            <option value="backpack">🎒 3. Backpack 雙肩隨身中包包</option>
+            <option value="doc_pouch">📜 4. 重要證件包 / 票券收納包</option>
+            <option value="luggage_wife">🧳 5. 太太大行李箱（託運大箱）</option>
+            <option value="luggage_husband">🧳 6. 先生大行李箱（託運大箱）</option>
+            <option value="cruise_hacks">🚢 7. 郵輪生活老手神器袋</option>
+            <option value="prohibited">🚫 8. 避坑法規禁帶指南</option>
+            <option value="timeline">⏰ 9. 行前時序備忘</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modalItemText">項目名稱（必填）</label>
+          <input type="text" id="modalItemText" class="form-input" placeholder="例如：自備暈船藥 或 至 3 樓服務台領取...">
+        </div>
+        <div class="form-group">
+          <label for="modalItemDetail">詳細說明 / 攻略備註</label>
+          <textarea id="modalItemDetail" class="form-textarea" rows="3" placeholder="填寫使用時機、存放位置、注意事項或攜帶規則..."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modalItemTagType">標籤樣式</label>
+            <select id="modalItemTagType" class="form-select">
+              <option value="pack">一般打包 (紫色)</option>
+              <option value="crucial">重要必備 (紅色)</option>
+              <option value="cruise">郵輪專屬 (藍色)</option>
+              <option value="sg">新加坡在地 (黃色)</option>
+              <option value="hack">老手神物/秘笈 (綠色)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modalItemTagText">標籤文字</label>
+            <input type="text" id="modalItemTagText" class="form-input" placeholder="如：老手推薦、自備拖鞋...">
+          </div>
+        </div>
+        <div class="form-group" style="flex-direction: row; align-items: center; gap: 8px; margin-top: 4px;">
+          <input type="checkbox" id="modalItemWarning" style="width: 18px; height: 18px; accent-color: #ef4444;">
+          <label for="modalItemWarning" style="font-weight: 600; cursor: pointer; color: #b91c1c;">標記為重要警示或法規禁帶品（⚠️ 警示外框）</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn" id="modalCancelBtn">取消</button>
+        <button type="button" class="btn btn-save" id="modalSaveBtn">💾 儲存並同步</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span id="toastIcon">💾</span>
+    <span id="toastMsg">已自動更新並儲存</span>
+  </div>
+
+  
+  <!-- Duplicate Warning Modal -->
+  <div class="modal-backdrop" id="dupModal">
+    <div class="modal-card dup-card">
+      <div class="modal-header" style="background:#fffbeb; border-bottom:1px solid #fef3c7;">
+        <h3 class="modal-title" style="color:#b45309; display:flex; align-items:center; gap:8px;">
+          <span>⚠️ 發現已存在相似項目！</span>
+        </h3>
+        <button type="button" class="modal-close-btn" id="dupCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.95rem; color:#475569;">您剛才輸入：<strong id="dupInputText" style="color:#0f172a; font-size:1.05rem; background:#f1f5f9; padding:2px 8px; border-radius:4px;"></strong></p>
+        
+        <div class="dup-match-item">
+          <div style="font-size:0.82rem; font-weight:700; color:#b45309; margin-bottom:4px;" id="dupSecName">所在分類：</div>
+          <div style="font-size:1.05rem; font-weight:800; color:#0f172a;" id="dupExistingText"></div>
+          <div style="font-size:0.86rem; color:#64748b; margin-top:4px;" id="dupExistingDetail"></div>
+        </div>
+
+        <p style="font-size:0.88rem; color:#64748b; line-height:1.5;">
+          系統偵測到這項物品可能已經在清單中了。您可以直接修改現有項目（例如增加數量），或者確認無誤後仍然新增。
+        </p>
+      </div>
+      <div class="modal-footer" style="background:#fffbeb; border-top:1px solid #fef3c7; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+        <button type="button" class="btn" id="dupCancelBtn">✕ 取消不加</button>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn" id="dupForceAddBtn" style="border-color:#cbd5e1;">➕ 仍然新增</button>
+          <button type="button" class="btn" id="dupEditExistingBtn" style="background:#f59e0b; color:#fff; border-color:#d97706; font-weight:700;">✏️ 修改現有項目</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Tools (Scroll to top & Quick Add) -->
+  <div class="floating-tools">
+    <button class="fab-btn" id="fabAddBtn" title="新增自訂項目">＋</button>
+    <button class="fab-btn" id="scrollTopBtn" title="回到頂部">⬆</button>
+  </div>
+
+  <script>
+    // Comprehensive Default Checklist Data
+    const defaultData = [
+  {
+    "id": "bag_pouch",
+    "icon": "👛",
+    "title": "1. Bag 隨身小包包（貼身常掛・出門即用）",
+    "subtitle": "出門貼身斜背，放隨時要拿的手機、行動電源、交通卡與貼身物品",
+    "items": [
+      {
+        "id": "bp-1",
+        "text": "手機",
+        "detail": "已下載 Disney Cruise App 及 Grab 叫車",
+        "tagText": "隨身",
+        "checked": false
+      },
+      {
+        "id": "bp-2",
+        "text": "行動電源 (行充)",
+        "detail": "★ 民航局規定嚴禁託運，必須隨身攜帶，嚴禁放行李箱",
+        "tagText": "隨身登機",
+        "checked": false
+      },
+      {
+        "id": "bp-3",
+        "text": "耳機",
+        "detail": "飛機與搭車交通途中使用",
+        "tagText": "隨身",
+        "checked": false
+      },
+      {
+        "id": "bp-4",
+        "text": "交通支付錢包 (悠遊卡/感應信用卡/現金)",
+        "detail": "Visa/Mastercard 可直接感應搭乘新加坡地鐵 MRT 及公車",
+        "tagText": "交通支付",
+        "checked": false
+      },
+      {
+        "id": "bp-5",
+        "text": "家中鑰匙",
+        "detail": "返台進門用，妥善收納在隨身包內袋",
+        "tagText": "隨身",
+        "checked": false
+      },
+      {
+        "id": "bp-6",
+        "text": "口罩 (黃色 x 2)",
+        "detail": "隨身防護備用",
+        "tagText": "防護",
+        "checked": false
+      },
+      {
+        "id": "bp-7",
+        "text": "衛生棉 x 4 (夜用)",
+        "detail": "隨身貼身防護備用",
+        "tagText": "衛生",
+        "checked": false
+      },
+      {
+        "id": "bp-8",
+        "text": "貓咪項鍊",
+        "detail": "隨身飾品佩戴",
+        "tagText": "飾品",
+        "checked": false
+      },
+      {
+        "id": "bp-9",
+        "text": "香水 (隨身小瓶)",
+        "detail": "隨身補香，容量小於 100ml",
+        "tagText": "香氛",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "messenger",
+    "icon": "👝",
+    "title": "2. Messenger Bag 側身隨身袋（輕便小袋）",
+    "subtitle": "輕便小袋斜背好拿，放隨身零嘴與隨身護髮用品",
+    "items": [
+      {
+        "id": "mb-1",
+        "text": "拜拜餅乾",
+        "detail": "隨身小袋零嘴保平安，航程點心",
+        "tagText": "點心",
+        "checked": false
+      },
+      {
+        "id": "mb-2",
+        "text": "髮帽 x 2 (隨身輕便)",
+        "detail": "隨身洗沐護髮與臨時防水使用",
+        "tagText": "配件",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "backpack",
+    "icon": "🎒",
+    "title": "3. Backpack 雙肩隨身中包（登機手提・首日玩水＋隨身救急＋首日神器）",
+    "subtitle": "先生背負登機手提（星宇限重7kg）。【已徹底移除內衣褲，全部改放託運大箱】！只放機上保暖、救護包、貴重3C與登船首日手提神器",
+    "items": [
+      {
+        "id": "bpk-1",
+        "text": "厚外套 x 1 (穿著/隨身帶)",
+        "detail": "防星宇機艙、新加坡地鐵與郵輪室內強烈冷氣（約20°C）",
+        "tagText": "保暖",
+        "checked": false
+      },
+      {
+        "id": "bpk-2",
+        "text": "薄長袖外衣長褲 x 1套",
+        "detail": "飛機冷氣備用換穿，不含內衣褲",
+        "tagText": "備用衣",
+        "checked": false
+      },
+      {
+        "id": "bpk-3",
+        "text": "臨時救護包：優碘棉片",
+        "detail": "傷口消毒必備，獨立單包裝",
+        "tagText": "急救",
+        "checked": false
+      },
+      {
+        "id": "bpk-4",
+        "text": "臨時救護包：生理食鹽水棉片",
+        "detail": "傷口清潔沖洗，獨立單包裝",
+        "tagText": "急救",
+        "checked": false
+      },
+      {
+        "id": "bpk-5",
+        "text": "臨時救護包：酒精棉片",
+        "detail": "器具與手部消毒清潔",
+        "tagText": "急救",
+        "checked": false
+      },
+      {
+        "id": "bpk-6",
+        "text": "臨時救護包：OK蹦 (多尺寸)",
+        "detail": "防磨腳與小傷口包紮，走路必備",
+        "tagText": "急救",
+        "checked": false
+      },
+      {
+        "id": "bpk-7",
+        "text": "隱形眼鏡 x 2副",
+        "detail": "備用隱眼，隨身攜帶防止行李箱延誤",
+        "tagText": "眼部護理",
+        "checked": false
+      },
+      {
+        "id": "bpk-8",
+        "text": "生理食鹽水 x 2瓶 (小容量)",
+        "detail": "隱形眼鏡沖洗用，每瓶小於100ml裝透明夾鏈袋",
+        "tagText": "眼部護理",
+        "checked": false
+      },
+      {
+        "id": "bpk-9",
+        "text": "人工淚液 x 1盒 (★ 需避光)",
+        "detail": "眼睛乾澀舒緩，請放在包包避光暗袋中",
+        "tagText": "眼部護理",
+        "checked": false
+      },
+      {
+        "id": "bpk-10",
+        "text": "洗面乳 (旅行小條裝)",
+        "detail": "隨身洗臉清爽，小於 100ml",
+        "tagText": "洗沐",
+        "checked": false
+      },
+      {
+        "id": "bpk-11",
+        "text": "美容紙巾",
+        "detail": "洗臉後一次性擦拭，乾淨衛生",
+        "tagText": "洗沐",
+        "checked": false
+      },
+      {
+        "id": "bpk-12",
+        "text": "保養品旅行組",
+        "detail": "化妝水與乳液小樣，小於 100ml",
+        "tagText": "保養",
+        "checked": false
+      },
+      {
+        "id": "bpk-13",
+        "text": "護髮油 (隨身小瓶)",
+        "detail": "吹頭髮護理，小於 100ml",
+        "tagText": "護髮",
+        "checked": false
+      },
+      {
+        "id": "bpk-14",
+        "text": "3C 充電線組 (手機/手錶/耳機)",
+        "detail": "飛機座位與隨時充電用",
+        "tagText": "3C",
+        "checked": false
+      },
+      {
+        "id": "bpk-15",
+        "text": "衛生棉 x 4 (夜用備份)",
+        "detail": "中包包備份",
+        "tagText": "衛生",
+        "checked": false
+      },
+      {
+        "id": "bpk-16",
+        "text": "衛生棉褲 x 1",
+        "detail": "夜間超強防漏備用",
+        "tagText": "衛生",
+        "checked": false
+      },
+      {
+        "id": "bpk-17",
+        "text": "晴雨折疊兩用傘",
+        "detail": "防新加坡午後雷陣雨與熱帶遮陽",
+        "tagText": "隨身必備",
+        "checked": false
+      },
+      {
+        "id": "bpk-18",
+        "text": "口罩 (黃色 x 2 備用)",
+        "detail": "中包包備用",
+        "tagText": "防護",
+        "checked": false
+      },
+      {
+        "id": "bpk-19",
+        "text": "隨身手拿鏡",
+        "detail": "【新增加・隨身手提】車上機上隨時補妝整理儀容",
+        "tagText": "隨身鏡",
+        "checked": false
+      },
+      {
+        "id": "bpk-20",
+        "text": "筆電 / 平板 iPad (隨身攜帶)",
+        "detail": "★ 3C設備嚴禁託運，請放中包隨身帶上飛機",
+        "tagText": "貴重3C",
+        "checked": false
+      },
+      {
+        "id": "bpk-21",
+        "text": "相機與鏡頭 (隨身攜帶)",
+        "detail": "★ 防託運震動損壞，全程手提攜帶",
+        "tagText": "貴重3C",
+        "checked": false
+      },
+      {
+        "id": "bpk-22",
+        "text": "貴重珠寶與首飾 (隨身攜帶)",
+        "detail": "★ 嚴禁放託運箱，全程隨身手提",
+        "tagText": "貴重首飾",
+        "checked": false
+      },
+      {
+        "id": "bpk-23",
+        "text": "【首日手提神器】掛頸房卡吊牌套 x 2條",
+        "detail": "【直接放在手提中包】登船手續領取 Key to the World 房卡後立刻掛在脖子上，全船消費通行必備",
+        "tagText": "首日手提神器",
+        "checked": false
+      },
+      {
+        "id": "bpk-24",
+        "text": "【首日手提神器】手機防水透明掛袋 x 2個",
+        "detail": "【直接放在手提中包】中午一登船房間未開放但頂層泳池已開，隨身掛脖子玩水拍照防浸水",
+        "tagText": "首日手提神器",
+        "checked": false
+      },
+      {
+        "id": "bpk-25",
+        "text": "【首日手提神器】暈船藥 (搭船前半小時服用)",
+        "detail": "【直接放在手提中包】登船前 30~60 分鐘必須先吃第一顆！放行李箱託運會來不及吃",
+        "tagText": "首日手提神器",
+        "checked": false
+      },
+      {
+        "id": "bpk-26",
+        "text": "【首日手提神器】首日玩水泳裝與泳鏡 (夫妻各1套)",
+        "detail": "【直接放在手提中包】放中包可一上船就直奔甲板泳池，免等行李送進房",
+        "tagText": "首日手提神器",
+        "checked": false
+      },
+      {
+        "id": "bpk-27",
+        "text": "【首日手提神器】穴位防暈船手環 (Sea-Bands)",
+        "detail": "【直接放在手提中包】物理穴位防暈，上船前即可佩戴",
+        "tagText": "首日手提神器",
+        "checked": false
+      },
+      {
+        "id": "bpk-28",
+        "text": "食品級大夾鏈袋 (Ziploc) x 3~5個",
+        "detail": "裝首日濕泳衣或過安檢液體透明袋使用",
+        "tagText": "收納",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "documents",
+    "icon": "📑",
+    "title": "4. 重要證件包（通關登船隨身・★嚴禁託運）",
+    "subtitle": "星宇航空櫃檯、新加坡樟宜海關、濱海灣郵輪中心報到必備，全程手提！",
+    "items": [
+      {
+        "id": "doc-1",
+        "text": "護照正本 x 2本 (先生+太太)",
+        "detail": "★ 效期自返台日起算需滿 6 個月以上，嚴禁託運",
+        "tagText": "絕對必備",
+        "checked": false
+      },
+      {
+        "id": "doc-2",
+        "text": "身分證正本 x 2張",
+        "detail": "台灣機場查驗備用",
+        "tagText": "備份證件",
+        "checked": false
+      },
+      {
+        "id": "doc-3",
+        "text": "護照影本與手機拍照檔 x 2份",
+        "detail": "與正本分開存放，遺失時補辦必備",
+        "tagText": "備份",
+        "checked": false
+      },
+      {
+        "id": "doc-4",
+        "text": "機票行程單證明 x 2份 (星宇航空截圖/紙本)",
+        "detail": "新加坡海關入境隨時抽查回程機票",
+        "tagText": "機票證明",
+        "checked": false
+      },
+      {
+        "id": "doc-5",
+        "text": "迪士尼郵輪登船憑證 (PAT 二維碼截圖/紙本)",
+        "detail": "新加坡港口登船報到出示 QR Code 刷碼",
+        "tagText": "郵輪憑證",
+        "checked": false
+      },
+      {
+        "id": "doc-6",
+        "text": "新加坡電子入境卡 (SG Arrival Card) x 2人截圖",
+        "detail": "抵達前 3 天內上 MyICA 填妥，存下 QR Code",
+        "tagText": "入境卡",
+        "checked": false
+      },
+      {
+        "id": "doc-7",
+        "text": "海外旅遊不便險與醫療保單截圖 x 2人",
+        "detail": "含郵輪緊急醫療與延誤理賠專線資訊",
+        "tagText": "保險證明",
+        "checked": false
+      },
+      {
+        "id": "doc-8",
+        "text": "新幣 (SGD) 現金與美金現金",
+        "detail": "新加坡熟食中心 (小販中心) 現金專用，船上小費備用",
+        "tagText": "外幣現鈔",
+        "checked": false
+      },
+      {
+        "id": "doc-9",
+        "text": "個人重要慢性病藥物之原裝藥盒",
+        "detail": "新加坡海關對管制藥物嚴格，帶原裝藥盒備查",
+        "tagText": "海關備查",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "luggage_A",
+    "icon": "🧳",
+    "title": "5. 28吋行李箱 A【10天夫妻服飾與衣物箱】（託運・星宇限重23kg）",
+    "subtitle": "夫妻衣物交叉打包（各佔半箱，用壓縮袋分裝，防單箱延誤！）【所有夫妻內衣褲與襪子全部集中在此箱】！熱帶夏裝輕薄，28吋空間充裕！",
+    "items": [
+      {
+        "id": "lga-1",
+        "text": "太太：正式晚宴禮服 / 優雅長洋裝 x 2套",
+        "detail": "郵輪皇家晚宴與高檔成人餐廳 (Palo) 著裝規範",
+        "tagText": "晚宴正裝",
+        "checked": false
+      },
+      {
+        "id": "lga-2",
+        "text": "太太：渡假休閒洋裝 x 4~5套 (擴充10天)",
+        "detail": "新加坡濱海灣、環球影城與郵輪甲板拍照美照穿搭",
+        "tagText": "渡假穿搭",
+        "checked": false
+      },
+      {
+        "id": "lga-3",
+        "text": "太太：休閒短袖 / 排汗上衣 x 6件",
+        "detail": "新加坡炎熱透氣更換",
+        "tagText": "日常衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-4",
+        "text": "太太：短褲 / 涼爽長裙 x 4~5件",
+        "detail": "10 天下身搭配",
+        "tagText": "日常衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-5",
+        "text": "太太：渡假泳衣 x 2套",
+        "detail": "獨立打勾項目，船上多處泳池與滑水道替換",
+        "tagText": "泳裝",
+        "checked": false
+      },
+      {
+        "id": "lga-6",
+        "text": "太太：泳帽 x 1頂",
+        "detail": "獨立打勾項目，衛生泳池備用",
+        "tagText": "泳具",
+        "checked": false
+      },
+      {
+        "id": "lga-7",
+        "text": "太太：泳鏡 x 1副",
+        "detail": "獨立打勾項目，防池水與海水刺激",
+        "tagText": "泳具",
+        "checked": false
+      },
+      {
+        "id": "lga-8",
+        "text": "太太：比基尼罩衫 / 沙灘防曬披肩 x 1件",
+        "detail": "甲板走動與出水防曬",
+        "tagText": "防曬",
+        "checked": false
+      },
+      {
+        "id": "lga-9",
+        "text": "太太：免洗內褲 x 10~12件",
+        "detail": "【全部放託運行李箱A】穿完即丟免手洗，10天份量充裕省空間",
+        "tagText": "貼身衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-10",
+        "text": "太太：日常純棉內褲 x 3~4件",
+        "detail": "【全部放託運行李箱A】舒適備用替換",
+        "tagText": "貼身衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-11",
+        "text": "太太：貼身無痕內衣 x 5~6件",
+        "detail": "【全部放託運行李箱A】搭配各式洋裝與外衣",
+        "tagText": "貼身衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-12",
+        "text": "太太：日常襪子 x 8~10雙",
+        "detail": "【全部放託運行李箱A】透氣防臭短襪",
+        "tagText": "貼身襪子",
+        "checked": false
+      },
+      {
+        "id": "lga-13",
+        "text": "太太：船上冷氣披肩 / 薄罩衫 x 1件",
+        "detail": "劇院看百老匯秀防冷氣吹風",
+        "tagText": "保暖披肩",
+        "checked": false
+      },
+      {
+        "id": "lga-14",
+        "text": "太太：遮陽草帽 / 遮陽帽 x 1頂",
+        "detail": "熱帶烈日防曬",
+        "tagText": "遮陽",
+        "checked": false
+      },
+      {
+        "id": "lga-15",
+        "text": "先生：正式長袖襯衫 x 2件",
+        "detail": "正裝晚宴穿搭，建議防皺材質",
+        "tagText": "先生正裝",
+        "checked": false
+      },
+      {
+        "id": "lga-16",
+        "text": "先生：西裝長褲 x 1~2條",
+        "detail": "進入成人高級餐廳禁止短褲牛仔褲",
+        "tagText": "先生正裝",
+        "checked": false
+      },
+      {
+        "id": "lga-17",
+        "text": "先生：休閒短袖 / 排汗衫 x 8~10件 (擴充10天)",
+        "detail": "新加坡熱帶多汗，每天更換清爽舒適",
+        "tagText": "先生衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-18",
+        "text": "先生：休閒短褲 / 運動褲 x 4~5件",
+        "detail": "日間活動穿搭",
+        "tagText": "先生衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-19",
+        "text": "先生：休閒休閒薄長褲 x 1條",
+        "detail": "冷氣房或正式場合備用",
+        "tagText": "先生衣物",
+        "checked": false
+      },
+      {
+        "id": "lga-20",
+        "text": "先生：泳褲 x 2條",
+        "detail": "獨立打勾項目，更換替換",
+        "tagText": "先生泳具",
+        "checked": false
+      },
+      {
+        "id": "lga-21",
+        "text": "先生：泳鏡 x 1副",
+        "detail": "獨立打勾項目，先生專用泳鏡",
+        "tagText": "先生泳具",
+        "checked": false
+      },
+      {
+        "id": "lga-22",
+        "text": "先生：免洗內褲 x 10~12件",
+        "detail": "【全部放託運行李箱A】10 天充足份量穿完即丟",
+        "tagText": "先生貼身",
+        "checked": false
+      },
+      {
+        "id": "lga-23",
+        "text": "先生：日常短襪 x 8~10雙",
+        "detail": "【全部放託運行李箱A】防臭排汗襪",
+        "tagText": "先生襪子",
+        "checked": false
+      },
+      {
+        "id": "lga-24",
+        "text": "先生：正式深色西裝襪 x 2雙",
+        "detail": "【全部放託運行李箱A】搭配皮鞋與西褲專用",
+        "tagText": "先生正裝",
+        "checked": false
+      },
+      {
+        "id": "lga-25",
+        "text": "先生：抗UV防曬薄外套 x 1件",
+        "detail": "新加坡戶外走動防烈日曬傷",
+        "tagText": "先生防曬",
+        "checked": false
+      },
+      {
+        "id": "lga-26",
+        "text": "先生：遮陽棒球帽 x 1頂",
+        "detail": "戶外遮陽活動",
+        "tagText": "先生配件",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "luggage_B",
+    "icon": "🧳",
+    "title": "6. 28吋行李箱 B【鞋履、客房神器、盥洗備品與戰利品預留箱】（託運・星宇限重23kg）",
+    "subtitle": "【所有進房才用的神器全部直接歸入此箱】！包含磁吸掛鉤、門上布置、鞋款、大瓶液體與化妝大鏡！預留 40% 空間裝戰利品！",
+    "items": [
+      {
+        "id": "lgb-1",
+        "text": "強力磁吸掛鉤 x 6~8個",
+        "detail": "【直接放在託運箱B】★ 鋼壁神器！沉重金屬物放託運箱，進房後吸在鐵壁上掛包掛外套，釋放地面空間！",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-2",
+        "text": "迪士尼郵輪門上的布置 (Stateroom Door Magnets 磁吸門貼)",
+        "detail": "【新增加・直接放在託運箱B】★ 迪士尼傳統！全世界客人都會佈置房門，進房後吸在鐵門上，拍照超吸睛又防走錯房間",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-3",
+        "text": "甲板躺椅防風大毛巾夾 x 4個",
+        "detail": "【直接放在託運箱B】夾浴巾防海風吹跑，遠遠一眼認出躺椅位子",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-4",
+        "text": "艙房感應小夜燈 x 1~2個",
+        "detail": "【直接放在託運箱B】客艙夜晚全黑，放置洗手間門口起夜不刺眼不跌倒",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-5",
+        "text": "郵輪專用延長線 (★ 務必無防突波功能)",
+        "detail": "【直接放在託運箱B】★ 郵輪法規嚴禁防突波(Surge Protection)，普通分接延長線安全充多支手機",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-6",
+        "text": "折疊大容量水壺 / 保溫杯 x 2個",
+        "detail": "【直接放在託運箱B】★ 郵輪 24 小時免費飲料吧裝茶水進房喝超省錢省力",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-7",
+        "text": "衣物防皺噴霧 / 免燙除皺噴霧 x 1瓶",
+        "detail": "【直接放在託運箱B】★ 郵輪禁帶熨斗！衣服壓皺噴一噴拉平即直，大瓶液體務必託運",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-8",
+        "text": "彈力折疊髒衣籃 / 髒衣收納袋",
+        "detail": "【直接放在託運箱B】放衣櫃角落收集 10 天髒衣服，房內乾淨不凌亂",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-9",
+        "text": "便攜折疊衣架 x 4~6個",
+        "detail": "【直接放在託運箱B】艙房衣架數量有限，自備折疊架晾曬泳裝毛巾",
+        "tagText": "客房託運神器",
+        "checked": false
+      },
+      {
+        "id": "lgb-10",
+        "text": "備用護髮/洗沐髮帽 x 2頂",
+        "detail": "【新增加・直接放在託運箱B】客房洗澡梳化更換備用",
+        "tagText": "美髮配件",
+        "checked": false
+      },
+      {
+        "id": "lgb-11",
+        "text": "化妝檯立式/手拿大鏡 x 1個",
+        "detail": "【新增加・直接放在託運箱B】雙人同時梳妝不用搶浴室鏡子，化妝極度方便",
+        "tagText": "梳妝鏡",
+        "checked": false
+      },
+      {
+        "id": "lgb-12",
+        "text": "太太：正式晚宴跟鞋 / 氣質包鞋 x 1雙",
+        "detail": "搭配晚宴禮服專用，用防塵袋包好放箱底",
+        "tagText": "鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-13",
+        "text": "太太：渡假休閒涼鞋 / 好走球鞋 x 1雙",
+        "detail": "新加坡走跳與環球影城暴走必備好穿布鞋",
+        "tagText": "鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-14",
+        "text": "太太：室內拖鞋 / 防水沙灘拖鞋 x 1雙",
+        "detail": "郵輪房間與甲板泳池防滑穿著",
+        "tagText": "鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-15",
+        "text": "先生：正式皮鞋 x 1雙",
+        "detail": "搭配正裝長褲進高檔餐廳，用鞋袋包妥",
+        "tagText": "先生鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-16",
+        "text": "先生：耐走運動鞋 x 1雙 (穿著/裝箱)",
+        "detail": "日常陸地觀光暴走必備",
+        "tagText": "先生鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-17",
+        "text": "先生：防滑沙灘拖鞋 x 1雙",
+        "detail": "甲板泳池與房內防滑拖鞋",
+        "tagText": "先生鞋履",
+        "checked": false
+      },
+      {
+        "id": "lgb-18",
+        "text": "先生：電動刮鬍刀 (放託運箱/附保護蓋)",
+        "detail": "10 天男士儀容整理",
+        "tagText": "個人護理",
+        "checked": false
+      },
+      {
+        "id": "lgb-19",
+        "text": "大罐裝臉部與身體高係數防曬乳 (SPF50+)",
+        "detail": "赤道紫外線極強烈，大容量超過100ml必須放託運箱",
+        "tagText": "防曬大瓶",
+        "checked": false
+      },
+      {
+        "id": "lgb-20",
+        "text": "曬後蘆薈舒緩凝膠 x 1罐",
+        "detail": "甲板玩水曬傷急救舒緩",
+        "tagText": "曬後護理",
+        "checked": false
+      },
+      {
+        "id": "lgb-21",
+        "text": "防蚊液 (含派卡瑞丁成分)",
+        "detail": "新加坡熱帶防伊蚊叮咬（預防登革熱）",
+        "tagText": "防蚊大瓶",
+        "checked": false
+      },
+      {
+        "id": "lgb-22",
+        "text": "常備成藥大盒：綜合感冒藥 / 止痛普拿疼",
+        "detail": "水土不服發燒止痛急用",
+        "tagText": "常備醫藥",
+        "checked": false
+      },
+      {
+        "id": "lgb-23",
+        "text": "常備成藥大盒：胃腸止瀉藥 / 胃散",
+        "detail": "新加坡美食與郵輪吃到飽腸胃不適急用",
+        "tagText": "常備醫藥",
+        "checked": false
+      },
+      {
+        "id": "lgb-24",
+        "text": "英規三腳轉接插頭 (Type G) x 2個",
+        "detail": "新加坡市區飯店充電必備",
+        "tagText": "插座轉換",
+        "checked": false
+      },
+      {
+        "id": "lgb-25",
+        "text": "輕量可折疊大旅行袋 / 登機包 x 1個",
+        "detail": "回程若戰利品塞不下，展開直接當手提行李登機！",
+        "tagText": "戰利品預備",
+        "checked": false
+      },
+      {
+        "id": "lgb-26",
+        "text": "預留 30%~50% 空間 (紀念品戰利品位)",
+        "detail": "空位留給新加坡樟宜機場伴手禮與迪士尼船上限量玩偶！",
+        "tagText": "預留空間",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "forbidden",
+    "icon": "🚫",
+    "title": "7. 避坑法規禁帶（嚴禁放進任何包包或行李箱！）",
+    "subtitle": "★ 新加坡重罰法規與郵輪嚴格安檢禁帶品，千萬不要帶！",
+    "items": [
+      {
+        "id": "fb-1",
+        "text": "【嚴禁攜帶】電子煙與加熱菸 (含煙油/煙彈)",
+        "detail": "★ 新加坡全境嚴禁！違者海關查獲罰款高達 10,000 新幣或監禁",
+        "tagText": "重罰禁帶",
+        "warning": true,
+        "checked": false
+      },
+      {
+        "id": "fb-2",
+        "text": "【嚴禁攜帶】口香糖",
+        "detail": "新加坡禁止進口與販售口香糖，通關嚴禁攜帶",
+        "tagText": "海關禁止",
+        "warning": true,
+        "checked": false
+      },
+      {
+        "id": "fb-3",
+        "text": "【嚴禁攜帶】具備「防突波功能」之延長線",
+        "detail": "郵輪發電系統與陸地不同，防突波會導致船隻配電箱跳火引發火警，上船安檢必遭沒收！",
+        "tagText": "郵輪沒收",
+        "warning": true,
+        "checked": false
+      },
+      {
+        "id": "fb-4",
+        "text": "【嚴禁攜帶】自備吹風機、整髮器、電湯匙、熨斗",
+        "detail": "大功率加熱電器嚴禁自備登船！艙房抽屜已有專用吹風機",
+        "tagText": "安全扣留",
+        "warning": true,
+        "checked": false
+      },
+      {
+        "id": "fb-5",
+        "text": "【嚴禁攜帶】肉類製品與生鮮水果 (含肉乾、肉鬆)",
+        "detail": "出入境檢疫嚴禁攜帶動植物肉品生鮮",
+        "tagText": "檢疫重罰",
+        "warning": true,
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": "timeline",
+    "icon": "⏰",
+    "title": "8. 行前時序備忘",
+    "subtitle": "倒數關鍵時刻提醒，不慌不忙輕鬆出發",
+    "items": [
+      {
+        "id": "time-1",
+        "text": "出發前 30 天：搶最早 PAT 登船時段",
+        "detail": "線上值機上傳雙人資料與信用卡綁定，搶首批登船時間玩整天",
+        "tagText": "T-30 天",
+        "checked": false
+      },
+      {
+        "id": "time-2",
+        "text": "出發前 3 天：填妥新加坡電子入境卡 x 2人",
+        "detail": "登入 MyICA 免費申報並存下 QR Code 截圖",
+        "tagText": "T-3 天",
+        "checked": false
+      },
+      {
+        "id": "time-3",
+        "text": "出發前 1 天：確認憑證截圖，行李箱綁上行李飄帶/吊牌",
+        "detail": "28 吋兩咖箱子綁好顯眼標籤，防提領錯拿",
+        "tagText": "T-1 天",
+        "checked": false
+      },
+      {
+        "id": "time-4",
+        "text": "郵輪開船那一刻：手機立即開啟【飛航模式】！",
+        "detail": "★ 公海衛星漫遊每分鐘百元天價！開船瞬間立刻開飛航，僅連船上內網 App",
+        "tagText": "重大提醒",
+        "warning": true,
+        "checked": false
+      }
+    ]
+  }
+];
+
+    // Storage Keys
+    const STORAGE_KEY_SECTIONS = "disney_cruise_sg_sections_full_v10";
+    const STORAGE_KEY_HANDLE_NAME = "disney_cruise_file_handle_name";
+
+    // Application State
+    let sections = [];
+    let fileHandle = null;
+
+    // Toast Function
+    let toastTimer = null;
+    function showToast(msg, icon = "💾") {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toastMsg");
+      const toastIcon = document.getElementById("toastIcon");
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2400);
+    }
+
+    // Load Local Storage
+    function loadState() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY_SECTIONS);
+        if (saved) {
+          sections = JSON.parse(saved);
+        } else {
+          // Check for legacy state
+          const legacy = localStorage.getItem("disney_cruise_singapore_checklist_state_v3");
+          let legacyChecked = {};
+          let legacyCustoms = {};
+          if (legacy) {
+            try {
+              const parsed = JSON.parse(legacy);
+              legacyChecked = parsed.checkedItems || {};
+              legacyCustoms = parsed.customItems || {};
+            } catch(e) {}
+          }
+
+          // Initialize with deep copy of defaultData
+          sections = JSON.parse(JSON.stringify(defaultData));
+          sections.forEach(sec => {
+            sec.items.forEach(it => {
+              it.checked = !!legacyChecked[it.id];
+            });
+            if (legacyCustoms[sec.id]) {
+              legacyCustoms[sec.id].forEach(ci => {
+                ci.checked = !!legacyChecked[ci.id];
+                sec.items.push(ci);
+              });
+            }
+          });
+          saveState(false);
+        }
+      } catch (e) {
+        console.error("Failed to load local storage", e);
+        sections = JSON.parse(JSON.stringify(defaultData));
+      }
+    }
+
+    
+    let isGasMode = (typeof google !== 'undefined' && google.script && google.script.run);
+
+    // GAS Auto Save
+    function saveToGas() {
+      if (!isGasMode) return;
+      google.script.run
+        .withSuccessHandler((res) => {
+          showToast("🟢 雲端已即時同步！", "☁️");
+        })
+        .withFailureHandler((err) => {
+          console.error("GAS save error", err);
+          showToast("⚠️ 雲端同步暫時受阻，已存於手機快取", "⚠️");
+        })
+        .saveChecklistData(JSON.stringify(sections));
+    }
+
+    // GAS Load Data
+    function loadFromGas() {
+      if (!isGasMode) return;
+      showToast("正在同步雲端最新清單...", "⏳");
+      google.script.run
+        .withSuccessHandler((data) => {
+          if (data && Array.isArray(data) && data.length > 0) {
+            sections = data;
+            saveState(false);
+            render();
+            showToast("已同步雲端最新清單！", "✅");
+          } else {
+            // First time initialization in GAS
+            saveToGas();
+          }
+        })
+        .withFailureHandler((err) => {
+          console.error("GAS load error", err);
+        })
+        .getChecklistData();
+    }
+
+    let isPythonServer = false;
+
+    // Save State (Local Storage + Python Server + TXT Auto-Sync)
+    let autoSaveFileTimer = null;
+    function saveState(triggerFileSync = true) {
+      try {
+        localStorage.setItem(STORAGE_KEY_SECTIONS, JSON.stringify(sections));
+      } catch (e) {
+        console.error("Failed to save local storage", e);
+      }
+
+      if (isGasMode) {
+        clearTimeout(autoSaveFileTimer);
+        autoSaveFileTimer = setTimeout(() => {
+          saveToGas();
+        }, 300);
+      } else if (isPythonServer && window.apiBaseUrl) {
+        clearTimeout(autoSaveFileTimer);
+        autoSaveFileTimer = setTimeout(async () => {
+          try {
+            const content = generateTxt(sections);
+            await fetch(window.apiBaseUrl + '/api/save_txt', {
+              method: 'POST',
+              headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+              body: content,
+              mode: 'cors'
+            });
+            showToast("🟢 已自動寫入硬碟 checklist.txt", "💾");
+          } catch (err) {
+            console.warn("無法寫入 Python 伺服器", err);
+          }
+        }, 200);
+      } else if (triggerFileSync && fileHandle) {
+        clearTimeout(autoSaveFileTimer);
+        autoSaveFileTimer = setTimeout(() => {
+          saveToFileHandle();
+        }, 300);
+      }
+    }
+
+    // Generate Text Output for TXT
+    function generateTxt(dataSections) {
+      let lines = [];
+      lines.push('================================================================================');
+      lines.push('新加坡迪士尼郵輪 + 當地5日遊 10天行李與行前檢核表');
+      lines.push('更新時間：' + new Date().toLocaleString('zh-TW', { hour12: false }));
+      lines.push('================================================================================');
+      lines.push('【使用與自動同步說明】');
+      lines.push('1. [狀態]：[v] 代表已完成，[ ] 代表未完成。');
+      lines.push('2. [格式]：[狀態] 項目名稱 | 標籤分類');
+      lines.push('   下一行縮排為「細節：」備註與攻略。');
+      lines.push('3. 您可以直接使用 Windows 記事本開啟本檔案編輯、新增或刪除項目！');
+      lines.push('4. 在網頁端點選「📁 連動 TXT」後，網頁的所有操作皆會即時自動寫入此檔案。');
+      lines.push('   若您在記事本改了此檔，亦可在網頁點擊「📤 匯入 TXT」同步最新內容。');
+      lines.push('================================================================================\r\n');
+
+      dataSections.forEach(sec => {
+        lines.push(`[分類:${sec.id}] ${sec.title}`);
+        if (sec.subtitle) {
+          lines.push(`# 說明：${sec.subtitle}`);
+        }
+        sec.items.forEach(item => {
+          const mark = item.checked ? '[v]' : '[ ]';
+          const tag = item.tagText ? ` | ${item.tagText}` : '';
+          lines.push(`${mark} ${item.text}${tag}`);
+          if (item.detail) {
+            lines.push(`    細節：${item.detail}`);
+          }
+          if (item.proTip) {
+            lines.push(`    攻略：${item.proTip}`);
+          }
+          if (item.tip) {
+            lines.push(`    提示：${item.tip}`);
+          }
+          if (item.warning) {
+            lines.push(`    警示：⚠️ 法規警示限制`);
+          }
+        });
+        lines.push('');
+      });
+
+      return lines.join('\r\n');
+    }
+
+    // Export to TXT File
+    function exportTxt() {
+      const content = generateTxt(sections);
+      const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `迪士尼郵輪檢核表_${new Date().toISOString().slice(0, 10)}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("已下載清單為 TXT 檔案！", "📥");
+    }
+
+    // Import from TXT File
+    function importTxt(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const text = e.target.result;
+          const parsed = parseTxt(text);
+          if (parsed && parsed.length > 0) {
+            sections = parsed;
+            saveState(true);
+            render();
+            showToast("成功匯入 TXT 清單！", "✅");
+          } else {
+            alert("匯入失敗：未能解析出有效的項目清單。");
+          }
+        } catch (err) {
+          alert("讀取檔案失敗：" + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // Parse Text File to Sections
+    function parseTxt(text) {
+      const lines = text.split(/\r?\n/);
+      const sectionsMap = new Map();
+
+      // Initialize map from defaultData structure
+      defaultData.forEach(s => {
+        sectionsMap.set(s.id, {
+          id: s.id,
+          icon: s.icon,
+          title: s.title,
+          subtitle: s.subtitle,
+          items: []
+        });
+      });
+
+      let currentSecId = "docs";
+      let currentItem = null;
+
+      for (let rawLine of lines) {
+        const line = rawLine.trim();
+        if (!line || line.startsWith("===") || line.startsWith("【") || line.startsWith("# 提示") || line.startsWith("# 使用") || line.startsWith("更新時間：")) {
+          continue;
+        }
+
+        // Section header
+        const secMatch = line.match(/^\[分類(?::([a-zA-Z0-9_-]+))?\]\s*(.+)/);
+        if (secMatch) {
+          let secId = secMatch[1];
+          const secTitle = secMatch[2].trim();
+          if (!secId) {
+            const found = defaultData.find(s => secTitle.includes(s.title.substring(3, 8)) || secTitle.includes(s.id));
+            secId = found ? found.id : "custom-" + Date.now();
+          }
+          if (!sectionsMap.has(secId)) {
+            sectionsMap.set(secId, {
+              id: secId,
+              icon: "📌",
+              title: secTitle,
+              subtitle: "自訂分類",
+              items: []
+            });
+          }
+          currentSecId = secId;
+          currentItem = null;
+          continue;
+        }
+
+        // Subtitle comment
+        if (line.startsWith("# 說明：") || line.startsWith("# 說明:")) {
+          const sub = line.replace(/^#\s*說明[：:]\s*/, "");
+          if (sectionsMap.has(currentSecId)) {
+            sectionsMap.get(currentSecId).subtitle = sub;
+          }
+          continue;
+        }
+
+        // Item line
+        const itemMatch = line.match(/^\[([ vxX])\]\s*(.+)/);
+        if (itemMatch) {
+          const isChecked = itemMatch[1].toLowerCase() === 'v' || itemMatch[1].toLowerCase() === 'x';
+          let titlePart = itemMatch[2].trim();
+          let tagText = "";
+          let tag = "pack";
+
+          if (titlePart.includes("|")) {
+            const parts = titlePart.split("|");
+            titlePart = parts[0].trim();
+            tagText = parts.slice(1).join("|").trim();
+            if (tagText.includes("必備") || tagText.includes("重罰") || tagText.includes("提醒")) tag = "crucial";
+            else if (tagText.includes("郵輪") || tagText.includes("海上") || tagText.includes("房卡")) tag = "cruise";
+            else if (tagText.includes("新加坡") || tagText.includes("入境") || tagText.includes("海關")) tag = "sg";
+            else if (tagText.includes("老手") || tagText.includes("神器") || tagText.includes("福利") || tagText.includes("省錢")) tag = "hack";
+          }
+
+          currentItem = {
+            id: `item-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
+            text: titlePart,
+            detail: "",
+            checked: isChecked,
+            tagText: tagText || undefined,
+            tag: tag
+          };
+
+          if (!sectionsMap.has(currentSecId)) {
+            sectionsMap.set(currentSecId, {
+              id: currentSecId,
+              icon: "📌",
+              title: "自訂分類",
+              subtitle: "",
+              items: []
+            });
+          }
+          sectionsMap.get(currentSecId).items.push(currentItem);
+          continue;
+        }
+
+        // Detail or tip for current item
+        if (currentItem) {
+          if (line.startsWith("細節：") || line.startsWith("細節:")) {
+            currentItem.detail = line.replace(/^細節[：:]\s*/, "");
+          } else if (line.startsWith("攻略：") || line.startsWith("攻略:")) {
+            currentItem.proTip = line.replace(/^攻略[：:]\s*/, "");
+          } else if (line.startsWith("提示：") || line.startsWith("提示:")) {
+            currentItem.tip = line.replace(/^提示[：:]\s*/, "");
+          } else if (line.startsWith("警示：") || line.startsWith("警示:")) {
+            currentItem.warning = true;
+          } else {
+            currentItem.detail = currentItem.detail ? (currentItem.detail + " " + line) : line;
+          }
+        }
+      }
+
+      return Array.from(sectionsMap.values()).filter(s => s.items.length > 0 || defaultData.some(ds => ds.id === s.id));
+    }
+
+    // Save directly to File System FileHandle
+    async function saveToFileHandle() {
+      if (!fileHandle) return;
+      try {
+        const writable = await fileHandle.createWritable();
+        const content = generateTxt(sections);
+        await writable.write(content);
+        await writable.close();
+        showToast(`🟢 已即時同步寫入 ${fileHandle.name}`, "✅");
+      } catch (err) {
+        console.warn("寫入檔案失敗，可能權限過期", err);
+        updateSyncStatus(null);
+      }
+    }
+
+    // Link Local TXT File
+    async function handleLinkTxtFile() {
+      if (!window.showOpenFilePicker && !window.showSaveFilePicker) {
+        alert("您的瀏覽器暫不支援本機檔案直接即時同步 API（推薦使用 Chrome 或 Edge 瀏覽器）。\n\n您仍可以使用「📥 匯出 TXT」隨時下載清單，或「📤 匯入 TXT」載入您在記事本修改後的檔案！");
+        return;
+      }
+
+      try {
+        let handle = null;
+        if (window.showOpenFilePicker) {
+          const handles = await window.showOpenFilePicker({
+            types: [{
+              description: '文字檔案 (*.txt)',
+              accept: { 'text/plain': ['.txt'] }
+            }],
+            multiple: false
+          });
+          if (handles && handles.length > 0) {
+            handle = handles[0];
+          }
+        } else if (window.showSaveFilePicker) {
+          handle = await window.showSaveFilePicker({
+            suggestedName: 'checklist.txt',
+            types: [{
+              description: '文字檔案 (*.txt)',
+              accept: { 'text/plain': ['.txt'] }
+            }]
+          });
+        }
+
+        if (handle) {
+          fileHandle = handle;
+          const file = await fileHandle.getFile();
+          const text = await file.text();
+
+          let shouldImport = false;
+          if (text && text.trim().length > 50) {
+            const pick = confirm(`已成功選擇檔案「${file.name}」！\n\n【確定】＝ 從該 TXT 檔案讀取載入清單\n【取消】＝ 將目前網頁內容覆寫至該檔案並開啟自動同步`);
+            if (pick) {
+              shouldImport = true;
+            }
+          }
+
+          if (shouldImport) {
+            const imported = parseTxt(text);
+            if (imported && imported.length > 0) {
+              sections = imported;
+              saveState(false);
+              render();
+              showToast(`已從 ${file.name} 載入清單！`, "📥");
+            }
+          } else {
+            await saveToFileHandle();
+          }
+
+          updateSyncStatus(file.name);
+        }
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          console.error(err);
+          alert('連動檔案失敗: ' + err.message);
+        }
+      }
+    }
+
+    // Update Status Bar UI
+    function updateSyncStatus(fileName) {
+      const dot = document.getElementById("statusDot");
+      const text = document.getElementById("syncStatusText");
+      const btn = document.getElementById("btnLinkTxt");
+      if (isGasMode) {
+        dot.className = "status-dot synced";
+        text.innerHTML = "<strong>🟢 Google 雲端即時同步：</strong>您與老婆的手機/電腦<strong>隨時雙向即時同步</strong>！";
+        if (btn) btn.style.display = "none";
+      } else if (isPythonServer) {
+        dot.className = "status-dot synced";
+        text.innerHTML = `<strong>🟢 Python 伺服器已連線：</strong>任何新增、修改、刪除、打勾<strong>均自動秒存至硬碟 <code>checklist.txt</code></strong>！`;
+        if (btn) btn.style.display = "none";
+      } else if (fileHandle) {
+        dot.className = "status-dot synced";
+        text.innerHTML = `<strong>🟢 自動同步中：</strong>已連動本機 <code>${fileHandle.name}</code>（所有更動即刻寫入本機檔）`;
+        if (btn) {
+          btn.style.display = "inline-flex";
+          btn.innerHTML = `📁 切換 TXT 檔案`;
+        }
+      } else {
+        dot.className = "status-dot";
+        text.innerHTML = `<strong>本機快取模式：</strong>在資料夾雙擊執行 <code>一鍵啟動.bat</code>（Python）即可全自動秒存至 <code>checklist.txt</code>！`;
+        if (btn) {
+          btn.style.display = "inline-flex";
+          btn.innerHTML = `📁 連動 TXT 檔（自動記錄）`;
+        }
+      }
+    }
+
+    // Check Python Server Backend
+    async function checkPythonServer() {
+      try {
+        const baseUrl = window.location.origin.startsWith('http') ? window.location.origin : 'http://localhost:8000';
+        const res = await fetch(baseUrl + '/api/status', { mode: 'cors' });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.status === 'connected') {
+            isPythonServer = true;
+            window.apiBaseUrl = baseUrl;
+            updateSyncStatus();
+            
+            // Fetch latest content from checklist.txt
+            const txtRes = await fetch(baseUrl + '/api/get_txt', { mode: 'cors' });
+            if (txtRes.ok) {
+              const txtContent = await txtRes.text();
+              if (txtContent && txtContent.trim().length > 50) {
+                const parsed = parseTxt(txtContent);
+                if (parsed && parsed.length > 0) {
+                  sections = parsed;
+                  saveState(false);
+                  render();
+                  showToast("已從硬碟 checklist.txt 同步最新資料！", "⚡");
+                }
+              }
+            }
+          }
+        }
+      } catch (e) {
+        isPythonServer = false;
+        updateSyncStatus();
+      }
+    }
+
+    // Initialize State
+    loadState();
+    if (isGasMode) { updateSyncStatus(); loadFromGas(); } else { checkPythonServer(); }
+
+    // DOM Elements
+    const sectionsContainer = document.getElementById("sectionsContainer");
+    const globalProgressPct = document.getElementById("globalProgressPct");
+    const globalProgressFill = document.getElementById("globalProgressFill");
+    const globalCountText = document.getElementById("globalCountText");
+    const searchInput = document.getElementById("searchInput");
+    const filterButtons = document.querySelectorAll(".filter-buttons .btn[data-filter]");
+    const catChips = document.querySelectorAll(".cat-chip");
+    const printBtn = document.getElementById("printBtn");
+    const resetChecksBtn = document.getElementById("resetChecksBtn");
+    const resetDefaultsBtn = document.getElementById("resetDefaultsBtn");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const btnLinkTxt = document.getElementById("btnLinkTxt");
+    const btnExportTxt = document.getElementById("btnExportTxt");
+    const btnImportTxt = document.getElementById("btnImportTxt");
+    const btnAddNewItem = document.getElementById("btnAddNewItem");
+    const fabAddBtn = document.getElementById("fabAddBtn");
+    const filePickerInput = document.getElementById("filePickerInput");
+
+    // Modal Elements
+    const itemModal = document.getElementById("itemModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalCloseBtn = document.getElementById("modalCloseBtn");
+    const modalCancelBtn = document.getElementById("modalCancelBtn");
+    const modalSaveBtn = document.getElementById("modalSaveBtn");
+    const modalItemId = document.getElementById("modalItemId");
+    const modalSectionSelect = document.getElementById("modalSectionSelect");
+    const modalItemText = document.getElementById("modalItemText");
+    const modalItemDetail = document.getElementById("modalItemDetail");
+    const modalItemTagType = document.getElementById("modalItemTagType");
+    const modalItemTagText = document.getElementById("modalItemTagText");
+    const modalItemWarning = document.getElementById("modalItemWarning");
+
+    let currentFilter = "all";
+    let currentCat = "all";
+    let searchQuery = "";
+
+    // Open Modal
+    function openModal(item = null, defaultSecId = "docs") {
+      if (item) {
+        modalTitle.textContent = "✏️ 編輯清單項目";
+        modalItemId.value = item.id;
+        modalItemText.value = item.text || "";
+        modalItemDetail.value = item.detail || "";
+        modalItemTagType.value = item.tag || "pack";
+        modalItemTagText.value = item.tagText || "";
+        modalItemWarning.checked = !!item.warning;
+
+        // Find which section this item belongs to
+        const sec = sections.find(s => s.items.some(i => i.id === item.id));
+        if (sec) {
+          modalSectionSelect.value = sec.id;
+        }
+      } else {
+        modalTitle.textContent = "➕ 新增清單項目";
+        modalItemId.value = "";
+        modalItemText.value = "";
+        modalItemDetail.value = "";
+        modalItemTagType.value = "pack";
+        modalItemTagText.value = "自訂";
+        modalItemWarning.checked = false;
+        modalSectionSelect.value = defaultSecId;
+      }
+      itemModal.classList.add("open");
+      setTimeout(() => modalItemText.focus(), 50);
+    }
+
+    function closeModal() {
+      itemModal.classList.remove("open");
+    }
+
+    modalCloseBtn.addEventListener("click", closeModal);
+    modalCancelBtn.addEventListener("click", closeModal);
+    itemModal.addEventListener("click", (e) => {
+      if (e.target === itemModal) closeModal();
+    });
+
+    // Save from Modal
+    modalSaveBtn.addEventListener("click", () => {
+      const textVal = modalItemText.value.trim();
+      if (!textVal) {
+        alert("請輸入項目名稱！");
+        modalItemText.focus();
+        return;
+      }
+
+      const idVal = modalItemId.value;
+      const targetSecId = modalSectionSelect.value;
+      const detailVal = modalItemDetail.value.trim();
+      const tagTypeVal = modalItemTagType.value;
+      const tagTextVal = modalItemTagText.value.trim();
+      const warningVal = modalItemWarning.checked;
+
+      if (idVal) {
+        // Edit existing item
+        let foundItem = null;
+        let sourceSec = null;
+        for (let s of sections) {
+          const idx = s.items.findIndex(i => i.id === idVal);
+          if (idx !== -1) {
+            foundItem = s.items[idx];
+            sourceSec = s;
+            break;
+          }
+        }
+
+        if (foundItem) {
+          foundItem.text = textVal;
+          foundItem.detail = detailVal;
+          foundItem.tag = tagTypeVal;
+          foundItem.tagText = tagTextVal;
+          foundItem.warning = warningVal;
+
+          // If moved to another section
+          if (sourceSec && sourceSec.id !== targetSecId) {
+            sourceSec.items = sourceSec.items.filter(i => i.id !== idVal);
+            const targetSec = sections.find(s => s.id === targetSecId);
+            if (targetSec) {
+              targetSec.items.push(foundItem);
+            }
+          }
+          showToast("已成功更新項目！");
+        }
+      } else {
+        // Add new item
+        const newItem = {
+          id: `item-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
+          text: textVal,
+          detail: detailVal,
+          checked: false,
+          tag: tagTypeVal,
+          tagText: tagTextVal || "自訂",
+          warning: warningVal,
+          isCustom: true
+        };
+        const targetSec = sections.find(s => s.id === targetSecId);
+        if (targetSec) {
+          targetSec.items.push(newItem);
+        }
+        showToast("已新增項目！");
+      }
+
+      saveState(true);
+      closeModal();
+      render();
+    });
+
+    // Render Checklist Function
+    function render() {
+      sectionsContainer.innerHTML = "";
+      let totalCount = 0;
+      let completedCount = 0;
+
+      sections.forEach(section => {
+        // Category filter
+        if (currentCat !== "all" && section.id !== currentCat) {
+          return;
+        }
+
+        let secTotal = 0;
+        let secChecked = 0;
+
+        const secEl = document.createElement("section");
+        secEl.className = "checklist-section";
+        secEl.id = `sec-${section.id}`;
+
+        // Section Header
+        const headerEl = document.createElement("div");
+        headerEl.className = "section-header";
+        headerEl.innerHTML = `
+          <div class="section-title-wrap">
+            <div class="section-icon">${section.icon}</div>
+            <div>
+              <div class="section-title">${section.title}</div>
+              <div class="section-subtitle">${section.subtitle || ''}</div>
+            </div>
+          </div>
+          <div class="section-stats">
+            <span class="section-badge" id="badge-${section.id}">0 / 0</span>
+            <span class="toggle-arrow">▼</span>
+          </div>
+        `;
+
+        headerEl.addEventListener("click", (e) => {
+          if (e.target.closest(".section-stats") || e.target.closest(".section-title-wrap")) {
+            secEl.classList.toggle("section-collapsed");
+          }
+        });
+
+        // Section Body
+        const bodyEl = document.createElement("div");
+        bodyEl.className = "section-body";
+
+        // Render Items
+        section.items.forEach(item => {
+          const isChecked = !!item.checked;
+          totalCount++;
+          secTotal++;
+          if (isChecked) {
+            completedCount++;
+            secChecked++;
+          }
+
+          // Apply Status Filter
+          if (currentFilter === "uncompleted" && isChecked) return;
+          if (currentFilter === "completed" && !isChecked) return;
+
+          // Apply Search Query
+          if (searchQuery) {
+            const fullText = (item.text + " " + (item.detail || "") + " " + (item.tip || "") + " " + (item.proTip || "") + " " + (item.tagText || "")).toLowerCase();
+            if (!fullText.includes(searchQuery.toLowerCase())) {
+              return;
+            }
+          }
+
+          const itemRow = document.createElement("div");
+          itemRow.className = `item-row ${isChecked ? "item-completed" : ""}`;
+          itemRow.id = `item-row-${item.id}`;
+
+          itemRow.innerHTML = `
+            <input type="checkbox" class="item-checkbox" ${isChecked ? "checked" : ""} aria-label="${item.text}">
+            <div class="item-content">
+              <div class="item-title-row">
+                <span class="item-text">${item.text}</span>
+                ${item.tagText ? `<span class="item-tag tag-${item.tag || 'pack'}">${item.tagText}</span>` : ""}
+              </div>
+              ${item.detail ? `<div class="item-detail">${item.detail}</div>` : ""}
+              ${item.tip ? `<div class="item-tip-box">${item.tip}</div>` : ""}
+              ${item.proTip ? `<div class="item-tip-box pro-tip">${item.proTip}</div>` : ""}
+              ${item.warning ? `<div class="item-tip-box warning-box">⚠️ <strong>重要提醒：</strong>${item.detail || '請務必遵守規範'}</div>` : ""}
+            </div>
+            <div class="item-actions">
+              <button type="button" class="item-action-btn btn-edit" title="編輯修改此項目" data-edit-id="${item.id}">✏️ 編輯</button>
+              <button type="button" class="item-action-btn btn-del" title="刪除此項目" data-del-id="${item.id}">🗑️ 刪除</button>
+            </div>
+          `;
+
+          // Checkbox toggle
+          const checkbox = itemRow.querySelector(".item-checkbox");
+          checkbox.addEventListener("change", (e) => {
+            item.checked = e.target.checked;
+            saveState(true);
+            render();
+          });
+
+          // Edit button
+          const editBtn = itemRow.querySelector(".btn-edit");
+          editBtn.addEventListener("click", () => {
+            openModal(item, section.id);
+          });
+
+          // Delete button
+          const delBtn = itemRow.querySelector(".btn-del");
+          delBtn.addEventListener("click", () => {
+            if (confirm(`確定要刪除「${item.text}」嗎？`)) {
+              section.items = section.items.filter(i => i.id !== item.id);
+              saveState(true);
+              render();
+              showToast("已刪除項目！", "🗑️");
+            }
+          });
+
+          bodyEl.appendChild(itemRow);
+        });
+
+        // Quick Add Form at Section Bottom
+        const addWrap = document.createElement("div");
+        addWrap.className = "add-custom-wrap";
+        addWrap.innerHTML = `
+          <input type="text" class="custom-input" placeholder="＋ 為此分類快速新增項目（輸入名稱後按 Enter 或點新增）..." id="input-${section.id}">
+          <button class="add-btn" data-add-cat="${section.id}">＋ 快速新增</button>
+        `;
+
+        const addBtn = addWrap.querySelector(".add-btn");
+        const customInput = addWrap.querySelector(".custom-input");
+
+        const handleQuickAdd = () => {
+          const val = customInput.value.trim();
+          if (!val) return;
+          const newItem = {
+            id: `item-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
+            text: val,
+            detail: "",
+            checked: false,
+            tag: "pack",
+            tagText: "自訂",
+            isCustom: true
+          };
+          section.items.push(newItem);
+          saveState(true);
+          render();
+          showToast("已新增項目！");
+        };
+
+        addBtn.addEventListener("click", handleQuickAdd);
+        customInput.addEventListener("keypress", (e) => {
+          if (e.key === "Enter") handleQuickAdd();
+        });
+
+        bodyEl.appendChild(addWrap);
+
+        secEl.appendChild(headerEl);
+        secEl.appendChild(bodyEl);
+        sectionsContainer.appendChild(secEl);
+
+        // Update Section Badge
+        const badge = headerEl.querySelector(`#badge-${section.id}`);
+        if (badge) {
+          badge.textContent = `${secChecked} / ${secTotal}`;
+          if (secTotal > 0 && secChecked === secTotal) {
+            badge.classList.add("completed");
+          } else {
+            badge.classList.remove("completed");
+          }
+        }
+      });
+
+      // Update Global Progress
+      const pct = totalCount === 0 ? 0 : Math.round((completedCount / totalCount) * 100);
+      globalProgressPct.textContent = `${pct}%`;
+      globalProgressFill.style.width = `${pct}%`;
+      globalProgressFill.style.width = `${pct}%`;
+      globalCountText.textContent = `已完成 ${completedCount} / ${totalCount} 項`;
+      const tabBadge = document.getElementById("tabChecklistCount");
+      if (tabBadge) tabBadge.textContent = `${totalCount} 項`;
+    }
+
+    // Search Input Listener
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim();
+      render();
+    });
+
+    // Filter Buttons
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
+        render();
+      });
+    });
+
+    // Category Chips
+    catChips.forEach(chip => {
+      chip.addEventListener("click", () => {
+        catChips.forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        currentCat = chip.dataset.cat;
+        render();
+      });
+    });
+
+    // Print
+    printBtn.addEventListener("click", () => {
+      window.print();
+    });
+
+    // Reset Checked status only
+    resetChecksBtn.addEventListener("click", () => {
+      if (confirm("確定要清空所有項目的打勾狀態嗎？您自訂或編輯的項目內容都會完整保留。")) {
+        sections.forEach(s => s.items.forEach(i => i.checked = false));
+        saveState(true);
+        render();
+        showToast("已清空所有項目的打勾狀態！");
+      }
+    });
+
+    // Reset Defaults (Full restore)
+    resetDefaultsBtn.addEventListener("click", () => {
+      if (confirm("⚠️ 警告：這將會清除您所有的自訂修改，並將清單還原為最初的官方完整預設版本！\n\n確定要恢復預設嗎？")) {
+        sections = JSON.parse(JSON.stringify(defaultData));
+        saveState(true);
+        render();
+        showToast("已恢復為官方預設清單！");
+      }
+    });
+
+    // Scroll to Top
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Top action buttons
+    btnLinkTxt.addEventListener("click", handleLinkTxtFile);
+    btnExportTxt.addEventListener("click", exportTxt);
+    btnImportTxt.addEventListener("click", () => {
+      filePickerInput.click();
+    });
+
+    filePickerInput.addEventListener("change", (e) => {
+      if (e.target.files && e.target.files[0]) {
+        importTxt(e.target.files[0]);
+        filePickerInput.value = "";
+      }
+    });
+
+    const btnRefreshCloud = document.getElementById("btnRefreshCloud");
+    if (btnRefreshCloud) {
+      btnRefreshCloud.addEventListener("click", () => {
+        if (isGasMode) {
+          loadFromGas();
+        } else {
+          location.reload();
+        }
+      });
+    }
+    btnAddNewItem.addEventListener("click", () => openModal(null, currentCat !== "all" ? currentCat : "docs"));
+    fabAddBtn.addEventListener("click", () => openModal(null, currentCat !== "all" ? currentCat : "docs"));
+
+    // Initial render
+    
+    // Smart Classifier (Aligned with 8 Physical Containers)
+    function classifyItem(text) {
+      const t = text.toLowerCase();
+      
+      // 1. Forbidden (法規禁帶)
+      if (/電子煙|加熱菸|煙彈|口香糖|防突波|吹風機|電熱毯|電湯匙|熨斗|掛燙機|空拍機|肉類|生鮮|肉乾|肉鬆/.test(t)) {
+        return "forbidden";
+      }
+      
+      // 2. Bag pouch (隨身小包包: 手機、行動電源、交通卡、貼身小件、隨身衛生棉、隨身口罩)
+      if (/手機|行動電源|行充|耳機|悠遊卡|交通卡|皮夾|錢包|鑰匙|黃色口罩|隨身衛生棉|貓咪項鍊|隨身香水/.test(t)) {
+        return "bag_pouch";
+      }
+      
+      // 3. Messenger bag (側身隨身袋: 隨身輕便髮帽)
+      if (/隨身輕便髮帽|隨身髮帽|側身袋/.test(t)) {
+        return "messenger";
+      }
+      
+      // 4. Documents pouch (重要證件包: 護照、簽證、入境卡、機票、船票、保單、外幣)
+      if (/護照|簽證|入境卡|myica|sgac|機票|pat|登船|憑證|確認單|新幣|sgd|美金|usd|現金|小費|保險|保單|處方箋|原裝藥盒/.test(t)) {
+        return "documents";
+      }
+
+      // 5. Backpack middle bag (雙肩隨身中包: 保暖外套、隨身救急衣、眼鏡盒、墨鏡、急救棉片、隨身隱眼食鹽水、燙睫毛器、首日手提神器、貴重3C)
+      if (/外套|厚外套|保暖|眼鏡盒|墨鏡|太陽眼鏡|棉片|優碘|食鹽水|酒精|ok蹦|急救|洗面乳|美容紙巾|保養品旅行|護髮油|充電線|隨身手拿鏡|手拿鏡|燙睫毛|睫毛器|筆電|電腦|平板|ipad|珠寶|首飾|房卡掛繩|lanyards|吊牌套|防水袋|防水套|首日泳|夾鏈袋|ziploc/.test(t)) {
+        return "backpack";
+      }
+
+      // 6. 28吋行李箱 B (鞋履、拍照道具：捧花/氣球/花瓣/腳架、客房神器、大瓶液體、門上布置、萬用接頭、一般手動刮鬍刀、大盒隱眼)
+      if (/捧花|氣球|花瓣|腳架|自拍桿|萬用接頭|轉接頭|英規|磁吸|掛鉤|門上|布置|門貼|magnets|毛巾夾|防風夾|夜燈|小夜燈|折疊水壺|保溫杯|髒衣籃|折疊衣架|衣架|備用髮帽|洗沐髮帽|大盒隱眼|盒裝隱眼|立式鏡|大鏡|婚鞋|高跟|蕾絲包鞋|包鞋|拖鞋|沙灘拖|涼鞋|皮鞋|運動鞋|小白鞋|布鞋|刮鬍刀|防曬|防曬乳|蘆薈|防蚊|常備成藥|普拿疼|感冒藥|胃藥|胃散|旅行袋/.test(t)) {
+        return "luggage_B";
+      }
+
+      // 7. 28吋行李箱 A (夫妻服飾、婚紗、NU BRA、晚宴正裝、西裝、日常短袖短褲、泳裝、內褲、生理褲、衛生棉7天份、棉條、襪子、備用口罩)
+      if (/婚紗|禮服|nubra|nu bra|胸罩|西裝|洋裝|晚宴|短袖|排汗|上衣|短褲|長褲|西褲|長裙|襯衫|泳裝|泳衣|泳褲|泳帽|比基尼|罩衫|內褲|免洗內褲|純棉內褲|內衣|文胸|生理褲|衛生棉|棉條|日用|夜用|襪子|短襪|西裝襪|披肩|草帽|棒球帽|遮陽帽|備用口罩|大包裝口罩|口罩|衣物|衣服|服飾/.test(t)) {
+        return "luggage_A";
+      }
+
+      // 8. Timeline (時序備忘)
+      if (/前30天|前3天|前1天|天前|飛航模式|值機|開船/.test(t)) {
+        return "timeline";
+      }
+      
+      return "luggage_A";
+    }
+
+    // Comprehensive Duplicate / Similarity Detector
+    function findDuplicate(inputText) {
+      if (!inputText || !inputText.trim()) return null;
+      // Strip numbers, quantities like x2, *2, 2個, 2件, 2雙, 2本, 2頂, 2套, 2瓶
+      const cleanInput = inputText
+        .replace(/[x×*]\s*\d+.*$/i, '')
+        .replace(/\d+\s*(個|件|雙|本|頂|套|瓶|盒|包|條|副|組|張|把)/g, '')
+        .replace(/[\s\(\)\（\）\-_、，,]/g, '')
+        .toLowerCase();
+        
+      if (cleanInput.length < 1) return null;
+      
+      let bestMatch = null;
+      let highestScore = 0;
+      
+      const keywords = [
+        "護照", "身分證", "入境卡", "機票", "憑證", "防曬", "暈船", "轉接頭", 
+        "磁吸", "掛鉤", "毛巾夾", "水壺", "保溫杯", "房卡", "拖鞋", "皮鞋", 
+        "球鞋", "雨傘", "刮鬍刀", "免洗內褲", "內褲", "內衣", "襪子", "泳衣", 
+        "泳褲", "泳帽", "泳鏡", "洋裝", "禮服", "襯衫", "西裝", "胃藥", 
+        "普拿疼", "感冒藥", "夾鏈袋", "行動電源", "行充", "電子煙", "口香糖", 
+        "延長線", "小夜燈", "防蚊", "面紙", "衛生棉", "髮帽", "手拿鏡", "大鏡", 
+        "門上", "布置", "門貼", "外套", "優碘", "食鹽水", "酒精", "ok蹦", 
+        "隱眼", "淚液", "洗面乳", "護髮油", "除皺", "髒衣籃", "衣架", "香水", "餅乾"
+      ];
+
+      for (const sec of sections) {
+        for (const item of sec.items) {
+          const cleanItem = item.text
+            .replace(/[x×*]\s*\d+.*$/i, '')
+            .replace(/\d+\s*(個|件|雙|本|頂|套|瓶|盒|包|條|副|組|張|把)/g, '')
+            .replace(/[\s\(\)\（\）\-_、，,]/g, '')
+            .toLowerCase();
+          
+          // 1. Exact match
+          if (cleanInput === cleanItem) {
+            return { item, sec, score: 1.0, type: '完全一致' };
+          }
+          
+          // 2. Substring match
+          if (cleanItem.includes(cleanInput) || cleanInput.includes(cleanItem)) {
+            const overlapLen = Math.min(cleanInput.length, cleanItem.length);
+            const maxLen = Math.max(cleanInput.length, cleanItem.length);
+            const score = overlapLen / maxLen;
+            if (score > highestScore && score >= 0.35) {
+              highestScore = score;
+              bestMatch = { item, sec, score, type: '名稱高度相似' };
+            }
+          }
+          
+          // 3. Semantic keyword overlap
+          for (const kw of keywords) {
+            if (cleanInput.includes(kw) && cleanItem.includes(kw)) {
+              if (0.85 > highestScore) {
+                highestScore = 0.85;
+                bestMatch = { item, sec, score: 0.85, type: `關鍵字重複【${kw}】` };
+              }
+            }
+          }
+        }
+      }
+      
+      return highestScore >= 0.35 ? bestMatch : null;
+    }
+
+    // Smart Input DOM & Events
+    const smartInputField = document.getElementById("smartInputField");
+    const smartAddBtn = document.getElementById("smartAddBtn");
+    const dupModal = document.getElementById("dupModal");
+    const dupCloseBtn = document.getElementById("dupCloseBtn");
+    const dupCancelBtn = document.getElementById("dupCancelBtn");
+    const dupForceAddBtn = document.getElementById("dupForceAddBtn");
+    const dupEditExistingBtn = document.getElementById("dupEditExistingBtn");
+    const dupInputText = document.getElementById("dupInputText");
+    const dupSecName = document.getElementById("dupSecName");
+    const dupExistingText = document.getElementById("dupExistingText");
+    const dupExistingDetail = document.getElementById("dupExistingDetail");
+
+    let pendingSmartItemText = "";
+    let matchedDuplicateItem = null;
+
+    function handleSmartSubmit() {
+      const rawVal = smartInputField.value.trim();
+      if (!rawVal) return;
+      
+      pendingSmartItemText = rawVal;
+      const dup = findDuplicate(rawVal);
+      
+      if (dup) {
+        // Show Duplicate Warning Modal
+        matchedDuplicateItem = dup.item;
+        dupInputText.textContent = rawVal;
+        dupSecName.textContent = "所在分類：" + dup.sec.title;
+        dupExistingText.textContent = dup.item.text + (dup.type ? ` (${dup.type})` : "");
+        dupExistingDetail.textContent = dup.item.detail || "（無細節備註）";
+        dupModal.classList.add("open");
+      } else {
+        // Add directly via auto-classification
+        executeSmartAdd(rawVal);
+      }
+    }
+
+    function executeSmartAdd(val) {
+      const targetSecId = classifyItem(val);
+      const targetSec = sections.find(s => s.id === targetSecId) || sections[4] || sections[0];
+      
+      const newItem = {
+        id: `item-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
+        text: val,
+        detail: "",
+        checked: false,
+        tag: "pack",
+        tagText: "自訂",
+        isCustom: true
+      };
+      
+      targetSec.items.push(newItem);
+      
+      // If current filter is not "all" and not this category, reset filter so user SEES it
+      if (currentCat !== "all" && currentCat !== targetSec.id) {
+        currentCat = "all";
+        catChips.forEach(c => {
+          c.classList.toggle("active", c.dataset.cat === "all");
+        });
+      }
+      
+      saveState(true);
+      render();
+      smartInputField.value = "";
+      
+      const catDisplayName = targetSec.title.replace(/^[0-9]+\.\s*/, '');
+      showToast(`✨ 自動分類加入「${catDisplayName}」：${val}`, "🎯");
+      
+      // Smooth scroll to that item and highlight
+      setTimeout(() => {
+        const row = document.getElementById(`item-row-${newItem.id}`);
+        if (row) {
+          row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          row.style.background = '#e0f2fe';
+          row.style.transition = 'background 1.5s ease';
+          setTimeout(() => row.style.background = '', 2000);
+        }
+      }, 150);
+    }
+
+    smartAddBtn.addEventListener("click", handleSmartSubmit);
+    smartInputField.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        handleSmartSubmit();
+      }
+    });
+
+    // Duplicate Modal Actions
+    function closeDupModal() {
+      dupModal.classList.remove("open");
+    }
+
+    dupCloseBtn.addEventListener("click", closeDupModal);
+    dupCancelBtn.addEventListener("click", () => {
+      closeDupModal();
+      smartInputField.value = "";
+      showToast("已取消新增重複項目", "ℹ️");
+    });
+
+    dupForceAddBtn.addEventListener("click", () => {
+      closeDupModal();
+      executeSmartAdd(pendingSmartItemText);
+    });
+
+    dupEditExistingBtn.addEventListener("click", () => {
+      closeDupModal();
+      smartInputField.value = "";
+      if (matchedDuplicateItem) {
+        openModal(matchedDuplicateItem);
+      }
+    });
+
+    dupModal.addEventListener("click", (e) => {
+      if (e.target === dupModal) closeDupModal();
+    });
+
+        render();
+  
+
+    // ========================================================
+    // CALENDAR VIEW MODULE & DATA
+    // ========================================================
+    const calendarData = [{"day": 1, "date": "10/21", "weekday": "週三", "tag": "啟航出發", "title": "Day 1：10/21（三）桃園啟航 ➡️ 樟宜降落 ➡️ 星耀樟宜分區拍攝 ➡️ 捷運前往香格里拉 Check-in ＆ 多場景特輯/Room Tour ➡️ 海灘電車至卡丁車影音飆速 ➡️ 松發肉骨茶 ➡️ 輕軌返回飯店[1]", "raw_file": "1021.txt", "events": [{"time": "05:00 - 08:00", "title": "桃園國際機場第二航廈（影音拍攝與順暢報到）", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "05:00 - 05:45", "title": "抵達桃園國際機場第二航廈（T2）➡️ 星宇航空報到與托運行李 🎒", "description": "05:00 準時抵達第二航廈，至星宇航空櫃檯辦理 Check-in 報到、托運行李並領取實體登機證 [2]。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["05:00 準時抵達第二航廈，至星宇航空櫃檯辦理 Check-in 報到、托運行李並領取實體登機證 [2]。"]}, {"time": "05:45 - 06:15", "title": "順暢安全檢查 ＆ 自動證照查驗通關 ✈️", "description": "順暢通過安檢與證照查驗，步入第二航廈出境管制區內。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["順暢通過安檢與證照查驗，步入第二航廈出境管制區內。"]}, {"time": "06:15 - 07:20", "title": "【二航廈出境管制區】T2 免費拍貼機放閃 📸 ＆ 🎬 蜜月出發招牌影音三轉場", "description": "📸 【T2 免費拍貼機】：趁清晨管制區內人潮稀少，選好可愛框線，拍下兩位蜜月的第一張甜美拍貼紀念照！\n\n🎬 【雙人邁步街拍】：於二航廈 D 區著名的**「文學之牆」**前，拍攝兩人牽手推隨身行李邁步前進的隨性流暢畫面！\n\n🎬 【定點拉走轉場】：在**「文學之牆」**前，一個人站在原地看鏡頭甜笑，另一個人伸手將他/她拉出鏡頭外！\n\n🎬 【手拿鏡放大轉場】：於候機室巨型落地窗前，對準手拿鏡映出兩位手持護照與機票的甜蜜合照，鏡頭快速拉近放大，切換停機坪星宇航空飛機大景！", "photo_tips": ["📸 【T2 免費拍貼機】：趁清晨管制區內人潮稀少，選好可愛框線，拍下兩位蜜月的第一張甜美拍貼紀念照！", "🎬 【雙人邁步街拍】：於二航廈 D 區著名的**「文學之牆」**前，拍攝兩人牽手推隨身行李邁步前進的隨性流暢畫面！", "🎬 【定點拉走轉場】：在**「文學之牆」**前，一個人站在原地看鏡頭甜笑，另一個人伸手將他/她拉出鏡頭外！", "🎬 【手拿鏡放大轉場】：於候機室巨型落地窗前，對準手拿鏡映出兩位手持護照與機票的甜蜜合照，鏡頭快速拉近放大，切換停機坪星宇航空飛機大景！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "07:20 - 08:00", "title": "登機門報到 ➡️ 08:00 星宇航空準時起飛前往新加坡 ✈️", "description": "07:20 抵達登機門準備登機（起飛前 40 分鐘），準備享用星宇航空精緻機上餐點與蜜月服務 [2]！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["07:20 抵達登機門準備登機（起飛前 40 分鐘），準備享用星宇航空精緻機上餐點與蜜月服務 [2]！"]}, {"time": "08:00 - 12:40", "title": "星宇航空前往新加坡[2]", "description": "🎬 【起降窗景縮時 Time-lapse】：手機固定於舷窗，記錄桃園機場 08:00 起飛衝向雲霄，以及 12:40 降落新加坡俯瞰海岸線與雨林城市的震撼縮時[2]！\n\n飛行途中享用精緻機上餐，降落後無需額外吃午餐。", "photo_tips": ["🎬 【起降窗景縮時 Time-lapse】：手機固定於舷窗，記錄桃園機場 08:00 起飛衝向雲霄，以及 12:40 降落新加坡俯瞰海岸線與雨林城市的震撼縮時[2]！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["飛行途中享用精緻機上餐，降落後無需額外吃午餐。"]}, {"time": "12:40 - 13:40", "title": "樟宜機場第一航廈（T1）入境通關與提領行李", "description": "辦理入境通關、提領行李。出一樓抵達大廳（Arrival Hall），正對面即是星耀樟宜入口，直接步入常規建議（來源未提及）。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["辦理入境通關、提領行李。出一樓抵達大廳（Arrival Hall），正對面即是星耀樟宜入口，直接步入常規建議（來源未提及）。"]}, {"time": "13:40 - 14:45", "title": "星耀樟宜（Jewel）雨林瀑布（由上往下順向動線：拍照＋影片一口氣完成）", "description": "📍 【拍攝地點 A：5 樓 Canopy Park 頂層觀景位】（搭電梯直達 5 樓）\n\n📸 【雨林谷全景與輕軌同框】：俯瞰雨林谷全景，抓準高空輕軌（Skytrain）穿越瀑布與綠意的瞬間，拍出震撼神級大片常規建議（來源未提及）。\n\n📍 【拍攝地點 B：2 樓 / 3 樓中層觀景平台】（電梯下至 2/3 樓：核心影音基地）\n\n📸 【水柱平視合照】：與直瀉而下的水柱平視合照（自然光充足，適合拍攝兩位牽手側影或半身美照）常規建議（來源未提及）。\n\n🎬 【手拿鏡放大轉場】：觀景平台欄杆前，手拿鏡滿版映出瀑布水流，鏡頭推近放大切換全景常規建議（來源未提及）。\n\n🎬 【雙人邁步街拍】：平台前拍攝兩位牽手邁步行進的畫面（作為桃園機場邁步的第二段卡點銜接）常規建議（來源未提及）。\n\n🎬 【定點拉走轉場】：一人站在原地看瀑布，另一個人伸手將他/她拉出鏡頭外（作為桃園機場拉走的第二段卡點銜接）常規建議（來源未提及）。\n\n📍 【採買地點 C：B1 樓 MINISO】（電梯下至 B1 樓）\n\n快閃採買：購入「魚尾獅米奇」。\n\n📍 【拍攝與美食地點 D：B2 樓水旋渦透明底座】（電梯下至 B2 樓）\n\n📸 【巨型水旋渦底座】：近距離觀賞水流在透明巨型圓柱內急速旋轉落下的科幻夢幻感常規建議（來源未提及）。\n\n☕️ 【美味彈性加碼：亞坤咖椰吐司】：若此時稍微有點餓，可在 B2 亞坤分店點一份香酥咖椰吐司與熱奶茶先墊墊胃；若不餓則留待後續陸地早餐享用[3]！", "photo_tips": ["📍 【拍攝地點 A：5 樓 Canopy Park 頂層觀景位】（搭電梯直達 5 樓）", "📸 【雨林谷全景與輕軌同框】：俯瞰雨林谷全景，抓準高空輕軌（Skytrain）穿越瀑布與綠意的瞬間，拍出震撼神級大片常規建議（來源未提及）。", "📍 【拍攝地點 B：2 樓 / 3 樓中層觀景平台】（電梯下至 2/3 樓：核心影音基地）", "📸 【水柱平視合照】：與直瀉而下的水柱平視合照（自然光充足，適合拍攝兩位牽手側影或半身美照）常規建議（來源未提及）。", "🎬 【手拿鏡放大轉場】：觀景平台欄杆前，手拿鏡滿版映出瀑布水流，鏡頭推近放大切換全景常規建議（來源未提及）。", "🎬 【雙人邁步街拍】：平台前拍攝兩位牽手邁步行進的畫面（作為桃園機場邁步的第二段卡點銜接）常規建議（來源未提及）。", "🎬 【定點拉走轉場】：一人站在原地看瀑布，另一個人伸手將他/她拉出鏡頭外（作為桃園機場拉走的第二段卡點銜接）常規建議（來源未提及）。", "📍 【拍攝與美食地點 D：B2 樓水旋渦透明底座】（電梯下至 B2 樓）", "📸 【巨型水旋渦底座】：近距離觀賞水流在透明巨型圓柱內急速旋轉落下的科幻夢幻感常規建議（來源未提及）。"], "transit_tips": [], "dining_tips": ["☕️ 【美味彈性加碼：亞坤咖椰吐司】：若此時稍微有點餓，可在 B2 亞坤分店點一份香酥咖椰吐司與熱奶茶先墊墊胃；若不餓則留待後續陸地早餐享用[3]！"], "alerts": [], "highlights": ["📍 【採買地點 C：B1 樓 MINISO】（電梯下至 B1 樓）", "快閃採買：購入「魚尾獅米奇」。"]}, {"time": "14:45 - 16:15", "title": "搭乘捷運（MRT）與輕軌/電車前往「香格里拉聖淘沙度假村」[1]", "description": "🚇 【捷運＋聖淘沙電車轉乘動線】（含轉乘等待約 80–90 分鐘）：\n\n從 Jewel B2 連通道步行至 樟宜機場捷運站（CG2）。\n\n搭乘 2 站至 丹那美拉站（EW4），走到對面月台轉乘綠線往市區方向常規建議（來源未提及）。\n\n搭至 歐南園站（EW16） 轉乘紫線（NE1）至終點 **港灣站/怡豐城（HarbourFront）**常規建議（來源未提及）。\n\n直上怡豐城 3 樓搭乘 聖淘沙輕軌（Sentosa Express） 至「海灘站（Beach Station）」，轉乘免費海灘電車（Beach Tram）或巴士直達香格里拉度假村門口（Siloso Point）常規建議（來源未提及）！", "photo_tips": [], "transit_tips": ["🚇 【捷運＋聖淘沙電車轉乘動線】（含轉乘等待約 80–90 分鐘）："], "dining_tips": [], "alerts": [], "highlights": ["從 Jewel B2 連通道步行至 樟宜機場捷運站（CG2）。", "搭乘 2 站至 丹那美拉站（EW4），走到對面月台轉乘綠線往市區方向常規建議（來源未提及）。", "搭至 歐南園站（EW16） 轉乘紫線（NE1）至終點 **港灣站/怡豐城（HarbourFront）**常規建議（來源未提及）。", "直上怡豐城 3 樓搭乘 聖淘沙輕軌（Sentosa Express） 至「海灘站（Beach Station）」，轉乘免費海灘電車（Beach Tram）或巴士直達香格里拉度假村門口（Siloso Point）常規建議（來源未提及）！"]}, {"time": "16:15 - 16:30", "title": "香格里拉 Check-in 影音特輯 🎬 ➡️ 房內 Room Tour 蜜月開箱[1]", "description": "📍 【香格里拉多場景影音特輯】：\n\n🎬 【大廳手拿鏡放大轉場】：在大廳對準手拿鏡映出辦理 Check-in 的甜蜜笑容，推近放大切換大廳棕櫚景致常規建議（來源未提及）！\n\n🎬 【椰林沙灘雙人邁步街拍】：在前往客房路上的戶外陽光椰林步道前，拍攝兩位牽手推行李邁步前進的畫面常規建議（來源未提及）！\n\n🎬 【沙灘邊定點拉走轉場】：在西樂索沙灘邊，一人站在原地看向鏡頭，另一個人伸手將他/她拉出鏡頭，順暢切換至推開房門常規建議（來源未提及）！\n\n🎬 【香格里拉 Room Tour 蜜月開箱】：進房後一鏡到底拍攝推門入房、雙人特大床、蜜月備品，並一路推開陽台門展現無敵海景陽台常規建議（來源未提及）！\n\n稍微補妝與休息。", "photo_tips": ["🎬 【大廳手拿鏡放大轉場】：在大廳對準手拿鏡映出辦理 Check-in 的甜蜜笑容，推近放大切換大廳棕櫚景致常規建議（來源未提及）！", "🎬 【椰林沙灘雙人邁步街拍】：在前往客房路上的戶外陽光椰林步道前，拍攝兩位牽手推行李邁步前進的畫面常規建議（來源未提及）！", "🎬 【沙灘邊定點拉走轉場】：在西樂索沙灘邊，一人站在原地看向鏡頭，另一個人伸手將他/她拉出鏡頭，順暢切換至推開房門常規建議（來源未提及）！", "🎬 【香格里拉 Room Tour 蜜月開箱】：進房後一鏡到底拍攝推門入房、雙人特大床、蜜月備品，並一路推開陽台門展現無敵海景陽台常規建議（來源未提及）！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["📍 【香格里拉多場景影音特輯】：", "稍微補妝與休息。"]}, {"time": "16:30 - 16:45", "title": "飯店前往 HyperDrive 卡丁車賽場（約 12–15 分鐘）", "description": "🛺 【海灘電車微風漫遊】：飯店門口 Siloso Point 站搭乘免費海灘電車（Beach Tram），沿西樂索海岸線直達巴拉灣海灘 HyperDrive 賽場常規建議（來源未提及）！", "photo_tips": [], "transit_tips": ["🛺 【海灘電車微風漫遊】：飯店門口 Siloso Point 站搭乘免費海灘電車（Beach Tram），沿西樂索海岸線直達巴拉灣海灘 HyperDrive 賽場常規建議（來源未提及）！"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "16:45 - 18:15", "title": "駕日沖卡丁車賽場（HyperDrive）🏎️（鎖定預約 17:00 場次：熱血飆速 ＋ 雙轉場影音特輯）", "description": "位於聖淘沙巴拉灣海灘，展開熱血暢快的高質感卡丁車極速體驗常規建議（來源未提及）！\n\n🎬 【手拿鏡放大轉場】：在賽道旁或卡丁車前，對準手拿鏡映出頭戴賽車安全帽的酷帥造型，快速推近放大切換霓虹賽道全景常規建議（來源未提及）！\n\n🎬 【定點拉走轉場】：在準備區車輛旁，一人站在原地看向鏡頭，另一個人伸手將他/她拉出鏡頭、邁步走向卡丁車常規建議（來源未提及）！", "photo_tips": ["🎬 【手拿鏡放大轉場】：在賽道旁或卡丁車前，對準手拿鏡映出頭戴賽車安全帽的酷帥造型，快速推近放大切換霓虹賽道全景常規建議（來源未提及）！", "🎬 【定點拉走轉場】：在準備區車輛旁，一人站在原地看向鏡頭，另一個人伸手將他/她拉出鏡頭、邁步走向卡丁車常規建議（來源未提及）！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["位於聖淘沙巴拉灣海灘，展開熱血暢快的高質感卡丁車極速體驗常規建議（來源未提及）！"]}, {"time": "18:15 - 20:00", "title": "怡豐城（VivoCity）松發肉骨茶 🥣[3]", "description": "從 Palawan Beach 站搭乘海灘電車至海灘站，轉乘聖淘沙輕軌返回怡豐城（車程＋換乘約 20 分鐘），約 18:40 抵達松發肉骨茶享用招牌潮州式胡椒肉骨茶（免費無限續湯），讓賽車後的體力瞬間滿血復活[3]！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["從 Palawan Beach 站搭乘海灘電車至海灘站，轉乘聖淘沙輕軌返回怡豐城（車程＋換乘約 20 分鐘），約 18:40 抵達松發肉骨茶享用招牌潮州式胡椒肉骨茶（免費無限續湯），讓賽車後的體力瞬間滿血復活[3]！"]}, {"time": "20:00 之後", "title": "返回香格里拉聖淘沙度假村（沉浸放鬆前夜）[1]", "description": "🚆 【輕軌＋電車回飯店】：怡豐城 3 樓搭聖淘沙輕軌至「海灘站」➔ 轉乘免費海灘電車/巴士直達香格里拉門口（約 15–20 分鐘；輕軌營運至 24:00，海灘電車至 22:00/22:30）常規建議（來源未提及）。\n\n飯店開箱整理隨身登船包、享受度假村晚間海岸氛圍，早早休息養精蓄銳，準備迎接隔天迪士尼探險號登船[2]！", "photo_tips": [], "transit_tips": ["🚆 【輕軌＋電車回飯店】：怡豐城 3 樓搭聖淘沙輕軌至「海灘站」➔ 轉乘免費海灘電車/巴士直達香格里拉門口（約 15–20 分鐘；輕軌營運至 24:00，海灘電車至 22:00/22:30）常規建議（來源未提及）。"], "dining_tips": [], "alerts": [], "highlights": ["飯店開箱整理隨身登船包、享受度假村晚間海岸氛圍，早早休息養精蓄銳，準備迎接隔天迪士尼探險號登船[2]！"]}], "subtitle": "桃園啟航・星耀樟宜・卡丁車"}, {"day": 2, "date": "10/22", "weekday": "週四", "tag": "探險號登船", "title": "Day 2：10/22（二）香格里拉自然醒（不吃早餐）➡️ 💡 一早隨身包提醒 🎒 ➡️ MBCCS 通關登船 ➡️ 📸【登船走廊神級機位】合照 ＆ 🎬 MBCCS 招牌影音三轉場全集 ➡️ 解鎖 App 上網 📲 ➡️ 6樓【航海家俱樂部】尊榮點餐午宴 🍷 ➡️ 13:30 進房佈置房門 🎀 ＆ 🎬 拍攝艙房 Room Tour 蜜月開箱 ➡️ 啟航派對 🎉 ➡️【輪轉主餐廳】無限續點大餐 🥩 ➡️ 百老匯大秀 🎭", "raw_file": "1022.txt", "events": [{"time": "08:30 - 10:30", "title": "香格里拉自然醒（不吃早餐 ☕️）➡️ 洗漱換上精緻渡假服 🧴 ➡️ 💡 隨身登船包關鍵打包提醒 🎒 ➡️ 退房", "description": "在香格里拉享受舒適晨光（不吃早餐），輕鬆洗漱、換上時尚渡假服。\n\n🚨 【管家一早重要提醒】：請務必將 「迪士尼房門佈置道具（磁鐵/飾品）」 放入 隨身登船包（絕對不能放進大行李箱托運！），因為托運行李要 18:00 前才到[1]，兩位 13:30 進房就要立刻佈置與拍攝 Room Tour！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": ["🚨 【管家一早重要提醒】：請務必將 「迪士尼房門佈置道具（磁鐵/飾品）」 放入 隨身登船包（絕對不能放進大行李箱托運！），因為托運行李要 18:00 前才到[1]，兩位 13:30 進房就要立刻佈置與拍攝 Room Tour！"], "highlights": ["在香格里拉享受舒適晨光（不吃早餐），輕鬆洗漱、換上時尚渡假服。"]}, {"time": "10:30 - 11:15", "title": "香格里拉 ➔ 搭乘 Grab 直達【濱海灣郵輪中心（MBCCS）】（車程約 20 分鐘 🚗）", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "11:15 - 12:30", "title": "MBCCS 托運行李 ➡️ 領取實體房卡 ➡️ 📸【與迪士尼探險號船身巨型合照】＆ 🎬 MBCCS 招牌影音三轉場全集", "description": "📸 【Smallchin 推薦神級機位】：通關後走在 MBCCS 高空登船連通道/看台上，對準整艘巨大的迪士尼探險號船身，拍下經典必拍的同框放閃大片！\n\n🎬 【MBCCS 招牌影音三轉場拍攝細節】：\n\n🎬 【手拿鏡放大轉場】：手拿鏡映出兩位手持登船房卡/護照的甜笑，鏡頭快速推近放大，瞬間切換至巨大的迪士尼探險號全景！\n\n🎬 【雙人邁步街拍】：在登船連通道上，兩位牽手推著隨身行李箱朝鏡頭隨性邁步而來，背景是氣勢磅礴的整艘迪士尼船身，渡假大牌感滿格！\n\n🎬 【定點拉走轉場】：在連通道欄杆前，一人站在原地看鏡頭甜笑比心（背景為巨型迪士尼船身），另一人伸手將他/她拉出鏡頭外，畫面順暢切換至踏上郵輪入口！", "photo_tips": ["📸 【Smallchin 推薦神級機位】：通關後走在 MBCCS 高空登船連通道/看台上，對準整艘巨大的迪士尼探險號船身，拍下經典必拍的同框放閃大片！", "🎬 【MBCCS 招牌影音三轉場拍攝細節】：", "🎬 【手拿鏡放大轉場】：手拿鏡映出兩位手持登船房卡/護照的甜笑，鏡頭快速推近放大，瞬間切換至巨大的迪士尼探險號全景！", "🎬 【雙人邁步街拍】：在登船連通道上，兩位牽手推著隨身行李箱朝鏡頭隨性邁步而來，背景是氣勢磅礴的整艘迪士尼船身，渡假大牌感滿格！", "🎬 【定點拉走轉場】：在連通道欄杆前，一人站在原地看鏡頭甜笑比心（背景為巨型迪士尼船身），另一人伸手將他/她拉出鏡頭外，畫面順暢切換至踏上郵輪入口！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "12:30 之後", "title": "歡樂登船！📱 連線免費 Wi-Fi DCL-GUEST ，依秘笈登入 App（First Name： 名字第一字 + [空格] + 中間名 ）解鎖全船行事曆[1]**！", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "12:30 - 13:30", "title": "6 樓船尾【航海家俱樂部（Navigator's Club）】享用專人桌邊服務的尊榮點餐午宴 🍷[1]", "description": "入座優雅享受專人桌邊點餐上菜的登船第一餐[1]，免去自行端盤排隊的奔波！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["入座優雅享受專人桌邊點餐上菜的登船第一餐[1]，免去自行端盤排隊的奔波！"]}, {"time": "13:30 - 14:30", "title": "房門口領實體房卡進房 ➡️ 🎀 佈置蜜月房門 ＆ 🎬 拍攝艙房【Room Tour 蜜月開箱影片】", "description": "約 13:30 房卡生效放置於門牌上[1]，一進房立刻從隨身登船包拿出道具佈置門口，隨後錄製兩位走進艙房、開箱海景/內艙房設施與蜜月氛圍的 一鏡到底 Room Tour 影片 🎬！", "photo_tips": ["約 13:30 房卡生效放置於門牌上[1]，一進房立刻從隨身登船包拿出道具佈置門口，隨後錄製兩位走進艙房、開箱海景/內艙房設施與蜜月氛圍的 一鏡到底 Room Tour 影片 🎬！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "14:30 - 15:30", "title": "房內稍作休息 ＆ 七大主題區悠閒漫遊探索 🚢", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "16:00", "title": "強制安全演習（Muster Drill）⚓️ ➡️ 16:30 花園舞台【Let's Set Sail 啟航派對 🎉】**[1][2]", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "18:00 - 20:00", "title": "第一晚【輪轉主餐廳（Rotational Dining）】全免費、無限續點國宴級大餐 🥩[3]", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "20:00 - 21:30", "title": "6,7 樓主劇院觀賞《Disney Seas the Adventure》或《Remember》百老匯級大秀 🎭[2]", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "21:30 之後", "title": "漫遊七大主題區夜景 ➡️ 返回海景/內艙房享受海上寧靜夜 🌙", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}], "subtitle": "登船日・航海家俱樂部・啟航派對"}, {"day": 3, "date": "10/23", "weekday": "週五", "tag": "探險號巡航", "subtitle": "全日海上巡航 Day 1・漫威雲霄飛車・角色見面・輪轉晚宴", "title": "Day 3：10/23（五）迪士尼探險號 全日海上巡航 Day 1 ➡️ 漫威海上飛車 ＆ 水上樂園 ➡️ 角色見面合照 ➡️ 輪轉第二晚宴 ➡️ 百老匯大秀", "raw_file": "cruise_day3", "events": [{"time": "08:30 - 10:00", "title": "客艙海景自然醒 ➡️ 享受 24H 免費客房送餐早餐 ☕️ 🥞", "description": "睡到自然醒，享受海上無敵晨光。拿起客房電話撥打 Room Service，免費點選現做歐姆蛋、熱咖啡、新鮮水果與熱鬆餅送到房內享用（建議備好 SGD $2 或 USD $1~$2 小費現金感謝客房服務員）！亦可前往 6 樓航海家俱樂部或自助餐廳享用。", "photo_tips": ["📸 【客艙陽台海景晨光】：在海景陽台手持咖啡杯與一望無際的蔚藍大海合影，拍下愜意渡假風晨光大片！"], "transit_tips": ["🚢 【全船通用】：艙房內已解鎖全船活動，隨時打開 Disney Cruise App 查詢本日角色見面時間與秀場場次。"], "dining_tips": ["🥞 【免費客房送餐】：全天候 24 小時免費提供，早餐熱食美味免排隊！"], "alerts": ["💡 【老手秘笈】：客房送餐雖然免費，但習慣性遞給送餐員 1~2 元小費是國際郵輪禮儀。"], "highlights": ["客艙陽台海景晨光早餐", "隨時查看 App 角色動態與活動時刻表"]}, {"time": "10:00 - 12:30", "title": "頂層甲板漫威天地 🦸‍♂️ ➡️ 飆速「Ironcycle Test Run」海上雲霄飛車 ＆ 水上滑水道 🏊‍♂️", "description": "直奔頂層 Marvel Landing 漫威主題甲板！體驗全球首創的海上高速雲霄飛車「Ironcycle Test Run」，感受在海面上空呼嘯馳騁的極致快感；隨後暢玩甲板旋轉滑水道與無邊際海景溫水泳池！", "photo_tips": ["📸 【漫威飛車前合影】：在鋼鐵人與復仇者標誌前戴上墨鏡酷帥合照！", "🎬 【甲板泳池手拿鏡放大轉場】：手拿鏡映出陽光灑落的海景泳池，鏡頭推近放大切換海天一色全景！"], "transit_tips": ["🚢 從客房搭乘中段或後段電梯直達頂層甲板（Deck 11/12）。"], "dining_tips": ["🍦 【甲板免費霜淇淋與飲料站】：隨時自取無限供應的香草/巧克力霜淇淋與氣泡飲水。"], "alerts": ["☀️ 【極端防曬提醒】：海上甲板紫外線反射極強，務必每兩小時補擦防曬乳與戴墨鏡！"], "highlights": ["體驗全球首創海上漫威雲霄飛車", "甲板水上滑水道與泳池狂歡"]}, {"time": "12:30 - 14:00", "title": "七大主題區南洋美食巡禮 🍴 ＆ 甜蜜霜淇淋暢吃 🍦", "description": "前往池畔快餐區或 Discovery Reef 主題餐廳，享用特色刈包、南洋沙嗲烤肉串、熱騰騰披薩與各式輕食點心，免排隊自由拿取，在甲板海風中悠閒享用午餐！", "photo_tips": ["📸 【可愛造型餐點打卡】：拿著迪士尼主題造型點心與背後蔚藍大海合照。"], "transit_tips": [], "dining_tips": ["🍕 【全船各區快餐吧】：現烤手工披薩、香脆薯條、特色熱狗堡隨點隨拿，全包在船票內！"], "alerts": [], "highlights": ["池畔特色美食免費暢吃", "吹海風享用午間輕食"]}, {"time": "14:00 - 16:30", "title": "迪士尼 ＆ 皮克斯巨星見面會 📸 放閃合照 ＆ 探索 San Fransokyo", "description": "依據 Disney Cruise App 上的預約與排隊時間，前往各指定地點與身著航海服的米奇、米妮、唐老鴨、高飛，以及白雪公主、灰姑娘或漫威英雄們零距離合照與簽名！隨後漫步至 San Fransokyo Street 欣賞大英雄天團的科幻街景。", "photo_tips": ["📸 【米奇米妮船長放閃合照】：準備好情侶穿搭或同款髮箍，拍下蜜月專屬甜蜜合照！", "🎬 【定點拉走轉場】：在三藩京市街景前一人比心，另一人拉出鏡頭，畫面切換至秀場！"], "transit_tips": ["📱 【App 提醒】：提早 10 分鐘抵達見面拍照點，排隊更流暢。"], "dining_tips": [], "alerts": ["💡 【簽名本提醒】：可隨身攜帶簽名本或明信片讓角色簽名留念！"], "highlights": ["與航海版米奇米妮親密互動合照", "漫步 San Fransokyo 街景"]}, {"time": "16:30 - 18:00", "title": "客艙精緻換裝 🧴 換上華麗正裝 ➡️ 準備迎接第二晚主題晚宴", "description": "返回舒適客艙沖澡洗漱，化上精緻晚宴妝容，換上優雅的晚禮服與紳士正裝，準備前往今晚專屬的輪轉主題餐廳，享受尊榮的主題晚宴。", "photo_tips": ["📸 【正裝客艙鏡前合照】：換上盛裝後在客房鏡前合照，紀錄優雅蜜月時刻。"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["回房小憩沐浴換裝", "化晚宴美妝、盛裝出席晚宴"]}, {"time": "18:00 - 20:00", "title": "第二晚【輪轉主餐廳（Rotational Dining）】第二主題國宴盛宴 🥩 🍷", "description": "前往第二間輪轉主餐廳（如 Animator's Palate 或 Marvel 主題餐廳），同一組貼心服務團隊已在桌邊等候！開吃全菜單無限續點的主廚牛排、香煎干貝、龍蝦濃湯與精緻法式甜點！", "photo_tips": ["📸 【桌邊專人服務與主菜合影】：記錄道道精緻擺盤的頂級晚宴。"], "transit_tips": ["🚢 根據 Key to the World 房卡或 App 標註的桌號入座，服務生已熟悉兩位口味習慣！"], "dining_tips": ["🥩 【無限續點神技】：所有前菜、主餐、甜點皆可重複免費加點，想吃兩份牛排或試試不同甜點請大方開口！"], "alerts": [], "highlights": ["輪轉主題特色沈浸式餐飲體驗", "牛排干貝主菜全菜單免費續點"]}, {"time": "20:00 - 21:30", "title": "華麗百老匯級大型舞台劇秀 🎭（頂尖歌舞聲光視覺饗宴）", "description": "前往 6,7 樓主劇院（Walt Disney Theatre），提早 15 分鐘入座黃金視野座位，欣賞百老匯規格的原創歌舞劇，沈浸於動人的迪士尼經典名曲與震撼特效中！", "photo_tips": ["🎭 劇院開演前與華麗舞台布幕合影（演出期間請勿使用閃光燈錄影）。"], "transit_tips": [], "dining_tips": [], "alerts": ["💡 【提早入座】：熱門百老匯劇目建議開演前 15~20 分鐘抵達以挑選最佳中前排視野！"], "highlights": ["百老匯級世界頂尖原創大秀", "極致聲光震撼效果"]}, {"time": "21:30 之後", "title": "成人專屬 Lounge 微醺酒吧 🍸 ＆ 頂層甲板海上滿天星光漫步 🌌", "description": "來到成人專屬的安靜酒吧（如 The Rose 或 Skyline），點上一杯蜜月特調雞尾酒，聆聽現場爵士樂演奏；隨後牽手漫步於安靜的頂層甲板，迎著涼爽海風仰望滿天星斗，度過極致浪漫的海上之夜！", "photo_tips": ["📸 【微醺星空甲板照】：在甲板柔和夜燈下拍攝牽手側影。"], "transit_tips": [], "dining_tips": ["🍸 【微醺特調】：酒吧酒精飲品需單點自費，但氣氛極度奢華浪漫！"], "alerts": [], "highlights": ["成人專屬安靜微醺 Lounge", "頂層甲板夜風與海上星空漫步"]}]}, {"day": 4, "date": "10/24", "weekday": "週六", "tag": "探險號巡航", "subtitle": "全日海上巡航 Day 2・七大主題區深入探索・甲板狂歡夜・煙火大秀", "title": "Day 4：10/24（六）迪士尼探險號 全日海上巡航 Day 2 ➡️ 探索七大主題區 ➡️ 24H客房點餐(曲奇牛奶) ➡️ 第三晚輪轉晚宴 ➡️ 甲板狂歡派對 ＆ 海上煙火/無人機大秀", "raw_file": "cruise_day4", "events": [{"time": "08:30 - 10:30", "title": "晨光海景自然喚醒 ➡️ 主題自助餐廳享用現做豐盛早午餐 🥞 🍳", "description": "伴著悠揚海浪聲醒來，前往頂層海景自助餐廳，享用現煎歐姆蛋、現烤比利時鬆餅、新鮮煙燻鮭魚與熱帶水果拼盤，靠窗邊享用邊俯瞰無垠海景！", "photo_tips": ["📸 【海景窗邊早午餐】：陽光透過巨型落地窗灑在豐盛餐點上，拍下極致渡假美感。"], "transit_tips": [], "dining_tips": ["🍳 【現點現做專區】：可向主廚客製配料豐富的現煎歐姆蛋！"], "alerts": [], "highlights": ["無邊際窗景豐盛早午餐", "現烤鬆餅與新鮮熱帶水果"]}, {"time": "10:30 - 13:00", "title": "迪士尼探險號七大主題區深度探索 ＆ 隱藏米奇大尋寶 🔍", "description": "悠閒探索全船七大主題區：從充滿綠意的 Disney Imagination Garden、宛如海底世界的 Disney Discovery Reef，到玩具總動員水上樂園 Toy Story Place。尋找船上各處設計的「隱藏米奇（Hidden Mickey）」驚喜圖案！", "photo_tips": ["📸 【花園大廳城堡造景合照】：在中央巨型童話城堡舞台前拍下甜蜜全景！", "🎬 【雙人邁步街拍】：牽手漫步穿過海底珊瑚隧道，記錄童心未泯的動態畫面！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["七大主題區拍照打卡全解鎖", "尋找全船各處隱藏米奇"]}, {"time": "13:00 - 15:30", "title": "客艙午後無敵海景小憩 ＆ 點免費熱巧克力曲奇 🍪 配冰牛奶 🥛", "description": "回房拉開窗簾，躺在柔軟的特大雙人床上看海發呆。撥打客房送餐服務，點上老手狂推的「新鮮現烤熱巧克力曲奇餅乾（Warm Chocolate Chip Cookies）配冰牛奶」，享受客艙無人打擾的甜蜜午睡時光！", "photo_tips": ["📸 【床頭曲奇牛奶生活感美照】：剛出爐巧克力曲奇與冰牛奶特寫，溫馨又甜蜜。"], "transit_tips": [], "dining_tips": ["🍪 【老手必點隱藏菜單】：現烤熱巧克力曲奇外酥內軟流心，配冰牛奶是迪士尼郵輪傳奇吃法！"], "alerts": [], "highlights": ["客艙午後愜意充電小憩", "解鎖老手狂推曲奇餅配冰牛奶"]}, {"time": "15:30 - 17:30", "title": "無聲耳機派對或 SPA 水療放鬆體驗 💆‍♀️ ＆ 甲板微風散步", "description": "前往成人放鬆專區，可預約頂級海景水療按摩，或在安靜的露天日光浴躺椅上閱讀、喝冰沙；亦可在中央廣場參加歡樂的互動闖關遊戲！", "photo_tips": ["📸 【日光浴躺椅慵懶美照】：戴著草帽與墨鏡在躺椅上感受微風吹拂。"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["極致放鬆的海上水療時光", "日光浴放空享受赤道微風"]}, {"time": "17:30 - 19:30", "title": "第三晚【輪轉主餐廳（Rotational Dining）】第三主題奢華盛宴 🍽️", "description": "輪轉至第三間特色主題餐廳！品嚐主廚精心調配的海陸雙拼大餐、黑松露野菇燉飯、慢烤頂級肋眼牛排，與身旁貼心的專屬服務生分享今日趣事！", "photo_tips": ["📸 【特色主題餐廳裝潢同框】：記錄今晚獨具風格的餐廳背景與精美擺盤！"], "transit_tips": [], "dining_tips": ["🥩 依然全菜單免費暢吃，喜歡的菜色隨時請服務生多上一份！"], "alerts": [], "highlights": ["第三間主題餐廳沈浸式美饌", "全菜單無限加點"]}, {"time": "20:00 - 21:30", "title": "甲板星空狂歡派對 🎉 ＆ 震撼海上無人機/煙火星空大秀 ✨", "description": "全船今晚最燃時刻！穿上主題服飾直奔頂層露天甲板，所有迪士尼巨星同台載歌載舞，帶領全場狂歡熱舞；隨後在浩瀚大海上空點亮璀璨奪目的煙火與無人機星空大秀，為蜜月留下最感動的一刻！", "photo_tips": ["📸 【煙火綻放浪漫合照】：在夜空煙火綻放瞬間按下快門，拍下畢生難忘的夢幻放閃照！", "🎬 【手拿鏡放大轉場】：手拿鏡映出甲板狂歡燈光，快速推近放大切換漫天煙火全景！"], "transit_tips": ["🚢 提早 20 分鐘上甲板尋找前排視野或二層俯瞰看台。"], "dining_tips": [], "alerts": ["🎆 【海上獨家】：迪士尼郵輪是全球少數擁有在公海上施放煙火特許許可的郵輪！"], "highlights": ["全船迪士尼巨星甲板熱舞派對", "浩瀚公海璀璨煙火與無人機大秀"]}, {"time": "21:30 之後", "title": "甲板星空夜景街拍 📸 ➡️ 返回客房享受寧靜海浪聲入眠 🌙", "description": "派對結束後，在點綴星光的甲板漫步街拍，隨後回房享受泡澡沐浴，伴隨平穩寧靜的海浪聲沉沉入睡。", "photo_tips": ["📸 【深夜空景甲板街拍】：趁派對散場後拍下極富氛圍的空曠甲板大片。"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["深夜甲板浪漫街拍", "客房內聽海浪聲香甜入眠"]}]}, {"day": 5, "date": "10/25", "weekday": "週日", "tag": "探險號巡航", "subtitle": "全日海上巡航 Day 3・免稅紀念品最後採買・惜別感恩晚宴・行李托運提醒", "title": "Day 5：10/25（日）迪士尼探險號 全日海上巡航 Day 3 ➡️ 免稅紀念品最後採買 ➡️ 角色惜別見面 ➡️ 惜別感恩晚宴 ➡️ 22:00 前放置託運行李於房門外", "raw_file": "cruise_day5", "events": [{"time": "08:30 - 10:30", "title": "海上最後晨光 ➡️ 享用悠閒精緻早餐 ☕️ 🍳", "description": "在迪士尼探險號上的最後一個海上早晨，悠閒洗漱後前往喜愛的主題餐廳享用悠閒早餐，搭配熱吉拿棒、鬆餅與濃縮咖啡，慢慢品味海上時光。", "photo_tips": ["📸 【晨光海景陽台合影】：換上喜愛的渡假服飾在陽台合影留念。"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["最後一個海上悠閒晨光", "享用現做熱吉拿棒與香濃咖啡"]}, {"time": "10:30 - 13:00", "title": "迪士尼免稅商店最後掃貨採買 🛍️（限定版胸章、船長玩偶、蜜月紀念品）", "description": "把握公海免稅免消費稅的最後機會！前往 Deck 5/6 免稅精品店，搶購「Disney Adventure 限定版」船長米奇玩偶、特製金屬行李吊牌、蜜月紀念馬克杯、香水與限定首飾！", "photo_tips": ["📸 【抱著滿滿戰利品在商店門口合影】：紀錄滿載而歸的開心笑容！"], "transit_tips": [], "dining_tips": [], "alerts": ["💡 【老手提醒】：公海免稅店在靠岸前會關閉，務必在今日中午或下午完成所有紀念品採買！"], "highlights": ["搶購探險號首航限定紀念品", "公海免稅最後採買機會"]}, {"time": "13:00 - 15:00", "title": "重溫最愛甲板設施 ＆ 迪士尼角色最後惜別合照 📸", "description": "下午把握最後機會，再去滑一次水上滑水道、泡一次無邊際泳池，並在中央大廳與身著正式禮服的迪士尼經典角色們排隊拍下最圓滿的道別合影！", "photo_tips": ["📸 【與全套正裝米奇米妮道別合影】：珍貴無比的同框紀念照！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["重溫最愛甲板設施", "最後巡禮與角色道別拍照"]}, {"time": "15:00 - 17:30", "title": "回房整理大行李箱 🧳 ＆ 🚨 隨身包重要留存關鍵提醒", "description": "回房整理打包行李。將已買好的厚重紀念品、替換髒衣物、大瓶液體等妥善收入託運大行李箱。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": ["🚨 【管家重要提醒・託運行李規則】：大行李箱需於今晚 22:00 前貼上發放的行李條放置於「房門外走廊」，由行李員代為送至碼頭！", "⚠️ 【絕對不能放進託運箱的物品】：護照、身分證件、登船房卡、明天換洗衣物、睡衣、隨身貴重首飾、常備藥品、行動電源與房門磁鐵飾品，請務必留在隨身背包中！"], "highlights": ["打包大行李箱準備託運", "仔細檢查隨身證件與明日衣物留存"]}, {"time": "17:30 - 19:30", "title": "第四晚【輪轉主餐廳（Rotational Dining）】惜別感恩晚宴 🥂 🥩", "description": "在迪士尼探險號上的最後晚餐，服務生團隊準備了溫馨的惜別甜點與互動致詞。全體主廚與服務生列隊遊行，現場氣氛感人溫馨。再次大口享受頂級龍蝦牛排大餐，並與朝夕相處的專屬服務生合影留念！", "photo_tips": ["📸 【與貼心服務生團隊同框合影】：感謝四天三夜無微不至的桌邊照顧！"], "transit_tips": [], "dining_tips": ["🥂 【惜別特製甜點】：今晚會有驚喜限定甜點「Baked Alaska」或主廚惜別蛋糕！"], "alerts": ["💡 【小費信封】：可將額外感謝小費裝入信封親手遞給主服務生、助理服務生與餐廳領班。"], "highlights": ["服務團隊感恩遊行與告別儀式", "與專屬服務生合照留念"]}, {"time": "19:30 - 21:00", "title": "中央花園大廳【See Ya Real Soon 迪士尼角色歡送大秀 🎉】", "description": "前往 central Garden，所有迪士尼巨星全部盛裝齊聚大廳樓梯與舞台，帶來感人澎湃的歡送歌舞秀《See Ya Real Soon》，在全場揮手道別與歡呼聲中為航程畫下最高潮！", "photo_tips": ["📸 【群星齊聚大合影】：所有角色站在舞台揮手的震撼全景大片！", "🎬 【定點拉走轉場】：在大廳燈火輝煌中，一人揮手比心，另一人拉出鏡頭，畫面切換至明日下船！"], "transit_tips": [], "dining_tips": [], "alerts": ["💡 提早 20 分鐘抵達大廳尋找正前方欄杆視野。"], "highlights": ["全船角色集結盛大歡送秀", "揮手道別 See Ya Real Soon"]}, {"time": "21:00 - 22:00", "title": "貼上行李吊牌 🧳 ➡️ 準時將託運大行李箱放置於客房門外走廊", "description": "在行李條上寫好姓名與房號，綁在行李箱提把上，確認隨身物品皆已取出，22:00 前推至房門外。回房洗漱，早早安睡，準備迎接明日 Day 6 香格里拉渡假模式！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": ["🚨 再次確認：明早穿的衣服、鞋子、手機充電器與護照都在隨身包內，千萬不要鎖進行李箱！"], "highlights": ["大行李箱準時推至房門外", "安心入睡準備迎接明日下船"]}]}, {"day": 6, "date": "10/26", "weekday": "週一", "tag": "離船渡假", "title": "Day 6：10/26（一）迪士尼探險號下船 ➡️ 香格里拉素顏渡假 ➡️ 洗澡化妝 ＆ 室內外影音特輯 ➡️ 魚尾獅公園拍照 📸 ＆ 影音三轉場 🎬 ➡️ 峇峇娘惹國宴晚餐（🎁 打卡免費送包包 👜 ＆ 冰箱貼 🧲）➡️ 怡豐城一站式湊滿 $100 退稅採買 🛒", "raw_file": "1026.txt", "events": [{"time": "08:30 - 10:30", "title": "迪士尼探險號（Disney Adventure）離船通關 ➡️ 奢華極速省錢動線前往香格里拉寄行李 在濱海灣郵輪中心（MBCCS）辦理離船手續、提領行李並順暢通關。", "description": "🚇【省錢大眾運輸動線（單程僅約 SGD $1.3–$1.5）】：\n\n1. 從 MBCCS 沿遮棚連通道步行 5–8 分鐘至「濱海南碼頭捷運站（Marina South Pier, NS28）」。\n\n2. 搭乘紅線至多美歌站轉紫線至終點 「港灣站／怡豐城（HarbourFront, NE1）」。\n\n3. 步入怡豐城 3 樓搭乘 聖淘沙輕軌（Sentosa Express） 至海灘站，轉乘免費 海灘電車（Beach Tram） 直達 香格里拉聖淘沙度假村 門口（Siloso Point）寄放行李！", "photo_tips": [], "transit_tips": ["🚇【省錢大眾運輸動線（單程僅約 SGD $1.3–$1.5）】："], "dining_tips": [], "alerts": [], "highlights": ["1. 從 MBCCS 沿遮棚連通道步行 5–8 分鐘至「濱海南碼頭捷運站（Marina South Pier, NS28）」。", "2. 搭乘紅線至多美歌站轉紫線至終點 「港灣站／怡豐城（HarbourFront, NE1）」。", "3. 步入怡豐城 3 樓搭乘 聖淘沙輕軌（Sentosa Express） 至海灘站，轉乘免費 海灘電車（Beach Tram） 直達 香格里拉聖淘沙度假村 門口（Siloso Point）寄放行李！"]}, {"time": "10:30 - 15:00", "title": "香格里拉「水上渡假模式」🏖️ 👙素顏玩設施：此時不化妝！穿上泳裝，暢玩香格里拉戶外水上滑水道、豪華泳池與踏浪西樂索私人沙灘！", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "15:00 - 16:15", "title": "香格里拉 Check-in ➡️ 洗澡、吹頭髮、化精緻蜜月妝、換渡假服飾 🧴 辦理 Check-in 取得房卡進房，回房舒適洗澡、吹頭髮、化上精緻蜜月妝容，並換上絕美渡假服飾。", "description": "", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "16:15 - 17:15", "title": "🎬 室內 Room Tour 一鏡到底開箱 ＆ 西樂索沙灘影音三轉場", "description": "🎬【室內 Room Tour 】：趁房內最乾淨整齊時，一鏡到底拍攝推門入房、雙人特大床、奢華備品與無敵海景陽台光影！ 【西樂索沙灘影音三轉場】：走下私人沙灘拍攝\n\n🎬【手拿鏡放大轉場】：對準手拿鏡映出帶墨鏡的笑容，快速推近放大切換沙灘與椰林全景！ 🎬【雙人邁步街拍】（沙灘木棧道漫步／赤腳踏浪）：在木棧道或濕沙灘記錄兩位牽手對視邁步的放閃畫面！\n\n🎬【定點拉走轉場】：一人站在海浪邊，另一個人伸手將他/她拉出鏡頭外，順暢切換夕陽沙灘景緻！", "photo_tips": ["🎬【室內 Room Tour 】：趁房內最乾淨整齊時，一鏡到底拍攝推門入房、雙人特大床、奢華備品與無敵海景陽台光影！ 【西樂索沙灘影音三轉場】：走下私人沙灘拍攝", "🎬【手拿鏡放大轉場】：對準手拿鏡映出帶墨鏡的笑容，快速推近放大切換沙灘與椰林全景！ 🎬【雙人邁步街拍】（沙灘木棧道漫步／赤腳踏浪）：在木棧道或濕沙灘記錄兩位牽手對視邁步的放閃畫面！", "🎬【定點拉走轉場】：一人站在海浪邊，另一個人伸手將他/她拉出鏡頭外，順暢切換夕陽沙灘景緻！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "17:15 - 18:15", "title": "飯店 ➔ 魚尾獅公園（Merlion Park）夕陽黃金光影拍攝 📸 ＆ 🎬 魚尾獅影音三轉場", "description": "🚇 搭免費海灘電車 ➔ 聖淘沙輕軌 ➔ 捷運直達 「萊佛士坊站（Raffles Place）」，H 出口步行約 5 分鐘抵達魚尾獅公園。\n\n📸【神級機位：正面看台 ＋ 左側長橋】：站在左側長橋黃金角度，拍攝魚尾獅噴水雕像與對岸 濱海灣金沙酒店（Marina Bay Sands） 同框的放閃蜜月大片 📸！\n\n📸包包打開，靠著介位接魚尾獅的水--->有接發財水的意思 【魚尾獅公園影音三轉場】：\n\n🎬【手拿鏡放大轉場】：手拿鏡映出兩位側臉與魚尾獅噴水，快速推近放大切換金沙酒店與濱海灣全景！\n\n🎬 【雙人邁步街拍】：沿魚尾獅沿海步道牽手對視邁步，以金沙酒店與摩天大樓群為背景拍攝浪漫街拍！\n\n🎬 【定點拉走轉場】：一人站在看台前，另一人伸手拉走，順暢切換夕陽餘暉下的魚尾獅與濱海灣天際線！", "photo_tips": ["📸【神級機位：正面看台 ＋ 左側長橋】：站在左側長橋黃金角度，拍攝魚尾獅噴水雕像與對岸 濱海灣金沙酒店（Marina Bay Sands） 同框的放閃蜜月大片 📸！", "📸包包打開，靠著介位接魚尾獅的水--->有接發財水的意思 【魚尾獅公園影音三轉場】：", "🎬【手拿鏡放大轉場】：手拿鏡映出兩位側臉與魚尾獅噴水，快速推近放大切換金沙酒店與濱海灣全景！", "🎬 【雙人邁步街拍】：沿魚尾獅沿海步道牽手對視邁步，以金沙酒店與摩天大樓群為背景拍攝浪漫街拍！", "🎬 【定點拉走轉場】：一人站在看台前，另一人伸手拉走，順暢切換夕陽餘暉下的魚尾獅與濱海灣天際線！"], "transit_tips": ["🚇 搭免費海灘電車 ➔ 聖淘沙輕軌 ➔ 捷運直達 「萊佛士坊站（Raffles Place）」，H 出口步行約 5 分鐘抵達魚尾獅公園。"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "18:15 - 20:15", "title": "魚尾獅公園 ➔ 🚶‍♂️ 0 元水岸散步 8~10 分鐘 ➔【峇峇娘惹（Baba Nyonya）】國菜娘惹饗宴 🍽️（🎁 打卡免費送包包 👜 ＆ 冰箱貼 🧲）", "description": "🚶‍♂️ 【0 元散步動線】：從魚尾獅公園拍照結束後，散步！沿著濱海灣水岸景觀步道輕鬆步行約 800 公尺（僅約 8–10 分鐘），一邊欣賞夕陽餘暉與海灣晚風，一邊優雅抵達【峇峇娘惹】餐廳門口！ 🍽️\n\n【峇峇娘惹饗宴】：享用經典國菜海南雞飯（$16.8）！ 🎁【打卡免費贈禮】：入座用餐時完成現場 打卡活動，即可 免費領取娘惹風格包包 👜 與娘惹精美冰箱貼 🧲！", "photo_tips": [], "transit_tips": ["🚶‍♂️ 【0 元散步動線】：從魚尾獅公園拍照結束後，散步！沿著濱海灣水岸景觀步道輕鬆步行約 800 公尺（僅約 8–10 分鐘），一邊欣賞夕陽餘暉與海灣晚風，一邊優雅抵達【峇峇娘惹】餐廳門口！ 🍽️"], "dining_tips": [], "alerts": [], "highlights": ["【峇峇娘惹饗宴】：享用經典國菜海南雞飯（$16.8）！ 🎁【打卡免費贈禮】：入座用餐時完成現場 打卡活動，即可 免費領取娘惹風格包包 👜 與娘惹精美冰箱貼 🧲！"]}, {"time": "20:15 - 21:15", "title": "怡豐城B2 FairPrice Finest 超市一站式湊滿 $100 退稅採買 🛒 ➡️ 免費輕軌/電車返回香格里拉度假村 🌊", "description": "🚇搭捷運返回港灣站，於怡豐城（VivoCity）B2 FairPrice Finest 超市，\n\n🛒將伴手禮一次買齊！\n\n1.Nissin × IRVINS 鹹蛋辣味杯麵🍜\n\n2.FairPrice 腰果（炸雞/玉米/蒜香）🥜\n\n3.IRVINS 鹹蛋黃魚皮🐟(若單筆湊滿 SGD $100 可在此先買並辦退稅）\n\n4.松發肉骨茶包\n\n5.亞坤咖椰醬🚨 咖椰醬超過 100ml，不可隨身手提登機！必須放進大行李箱托運！🍞\n\n6.佳廚 海南雞飯調理包🐔(有肉塊的食物不能帶飛機,要注意,包含泡麵裡面的）\n\n7.Melvados 炸香蕉脆片🍌\n\n• 單筆滿 SGD $100 現場出示護照請櫃檯登記 eTRS 電子退稅憑證 🧾！\n\n• 買完搭乘免費聖淘沙輕軌 ➔ 免費海灘電車直達香格里拉門口，返房享受。", "photo_tips": [], "transit_tips": ["🚇搭捷運返回港灣站，於怡豐城（VivoCity）B2 FairPrice Finest 超市，"], "dining_tips": ["1.Nissin × IRVINS 鹹蛋辣味杯麵🍜", "6.佳廚 海南雞飯調理包🐔(有肉塊的食物不能帶飛機,要注意,包含泡麵裡面的）"], "alerts": ["5.亞坤咖椰醬🚨 咖椰醬超過 100ml，不可隨身手提登機！必須放進大行李箱托運！🍞"], "highlights": ["🛒將伴手禮一次買齊！", "2.FairPrice 腰果（炸雞/玉米/蒜香）🥜", "3.IRVINS 鹹蛋黃魚皮🐟(若單筆湊滿 SGD $100 可在此先買並辦退稅）", "4.松發肉骨茶包", "7.Melvados 炸香蕉脆片🍌", "• 單筆滿 SGD $100 現場出示護照請櫃檯登記 eTRS 電子退稅憑證 🧾！", "• 買完搭乘免費聖淘沙輕軌 ➔ 免費海灘電車直達香格里拉門口，返房享受。"]}], "subtitle": "離船渡假・魚尾獅接發財水・娘惹國宴"}, {"day": 7, "date": "10/27", "weekday": "週二", "tag": "斜坡滑車螃蟹", "title": "Day 7：10/27（二）香格里拉自然醒退房 ➡️ 行李直奔「悅樂聖淘沙酒店」寄放（📸 陽光泳池全景照片 ＆ 🎬 飯店招牌影音三轉場 ☀️）➡️ 12:15 輕鬆享用名勝世界 B1 土司工坊 ☕️ ➡️ 13:00 天際線斜坡滑車飆速 4 次券 🏎️（🎬 斜坡滑車招牌影音三轉場）➡️ 玩完直奔宏茂橋「龍海鮮螃蟹王」砂煲螃蟹米粉 🦀（🚇 紫線多美歌轉紅線 ＋ 🚶‍♂️ 13–15 分鐘散步）➡️ 返房 Room Tour 一鏡到底開箱 🎬 ＆ 📸 四大主題泳池夜景照片 ✨", "raw_file": "1027.txt", "events": [{"time": "10:00 - 11:45", "title": "香格里拉奢華渡假村 睡眠補滿自然醒 ➡️ 洗漱化妝 ＆ 優雅打包行李 🧴", "description": "睡到自然醒，在房內舒適洗漱、化上精緻蜜月妝容並優雅打包行李，11:45 辦理退房！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["睡到自然醒，在房內舒適洗漱、化上精緻蜜月妝容並優雅打包行李，11:45 辦理退房！"]}, {"time": "11:45 - 12:15", "title": "香格里拉 Check-out ➡️ 攜行李直奔「悅樂聖淘沙酒店（Village Hotel Sentosa）」預辦入住 / 寄放行李 🎒（📸 陽光全景照片 ＆ 🎬 飯店招牌三轉場）", "description": "🚌 【搭車/交通路線】：從香格里拉門口（Siloso Point）搭乘免費 海灘電車（Beach Tram） 至海灘站（Beach Station），轉乘免費 聖淘沙輕軌（Sentosa Express） 1 站至 「英比奧站（Imbiah Station）」，出站步行 2 分鐘直達悅樂聖淘沙酒店大廳寄放行李！\n\n📸 【照片拍攝】：【悅樂聖淘沙：Pamukkale 土耳其棉堡池陽光全景照片 📸】（寄行李時順手在公共區域拍下白色階梯與陽光藍水全景）。\n\n🎬 【悅樂聖淘沙酒店：招牌影音三轉場 🎬】：\n\n🎬 【手拿鏡放大轉場】：手拿鏡映出棉堡池陽光波光與笑容，快速推近放大切換全景！\n\n🎬 【雙人邁步街拍】：牽手沿著梯田池畔木棧道優雅邁步放閃！\n\n🎬 【定點拉走轉場】：池畔對鏡頭比心甜笑，伸手拉走畫面，為下午斜坡滑車開場完美留白！\n\n💡 【尊榮島主核心優勢】：入住悅樂聖淘沙酒店，續享聖淘沙島民免費輕軌與巴士通行資格！", "photo_tips": ["📸 【照片拍攝】：【悅樂聖淘沙：Pamukkale 土耳其棉堡池陽光全景照片 📸】（寄行李時順手在公共區域拍下白色階梯與陽光藍水全景）。", "🎬 【悅樂聖淘沙酒店：招牌影音三轉場 🎬】：", "🎬 【手拿鏡放大轉場】：手拿鏡映出棉堡池陽光波光與笑容，快速推近放大切換全景！", "🎬 【雙人邁步街拍】：牽手沿著梯田池畔木棧道優雅邁步放閃！", "🎬 【定點拉走轉場】：池畔對鏡頭比心甜笑，伸手拉走畫面，為下午斜坡滑車開場完美留白！"], "transit_tips": ["🚌 【搭車/交通路線】：從香格里拉門口（Siloso Point）搭乘免費 海灘電車（Beach Tram） 至海灘站（Beach Station），轉乘免費 聖淘沙輕軌（Sentosa Express） 1 站至 「英比奧站（Imbiah Station）」，出站步行 2 分鐘直達悅樂聖淘沙酒店大廳寄放行李！"], "dining_tips": [], "alerts": ["💡 【尊榮島主核心優勢】：入住悅樂聖淘沙酒店，續享聖淘沙島民免費輕軌與巴士通行資格！"], "highlights": []}, {"time": "12:15 - 12:55", "title": "悅樂聖淘沙 ➔ 步行 3 分鐘至【聖淘沙名勝世界 B1】土司工坊 Toast Box☕️", "description": "🚶‍♂️ 【超順路零繞路動線】：從悅樂聖淘沙酒店大門出來，沿著林蔭步道步行僅 3 分鐘直達名勝世界 B1 土司工坊，享用**「咖哩雞配麵包 ＋ 荔枝紅茶 ＋ 咖椰吐司」** 當午餐正餐，補足熱量充沛體力，再去玩斜坡滑車！輕鬆不趕時間！", "photo_tips": [], "transit_tips": ["🚶‍♂️ 【超順路零繞路動線】：從悅樂聖淘沙酒店大門出來，沿著林蔭步道步行僅 3 分鐘直達名勝世界 B1 土司工坊，享用**「咖哩雞配麵包 ＋ 荔枝紅茶 ＋ 咖椰吐司」** 當午餐正餐，補足熱量充沛體力，再去玩斜坡滑車！輕鬆不趕時間！"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "12:55 - 15:30", "title": "名勝世界 ➔ 步行 3 分鐘抵達【天際線斜坡滑車 Skyline Luge 🏎️】13:00 準時報到 ＆ 🎬 斜坡滑車招牌影音三轉場", "description": "🚶‍♂️ 【步行路線】：12:55 步出土司工坊，順著步道步行 3 分鐘於 13:00 準時抵達天際線斜坡滑車英比奧山頂入口！\n\n🏎️ 【飆速 4 次券全體驗】：持 4 次券解鎖 Dragon, Jungle, Expedition, Kupu Kupu 全部 4 條特色賽道！\n\n🎬 【斜坡滑車招牌影音三轉場（影片細節）】：\n\n🎬 【手拿鏡放大轉場】：手拿鏡映出戴頭盔笑容與纜車，快速推近放大切換蔚藍全景！\n\n🎬 【雙人邁步街拍】：戴著質感滑車頭盔牽手邁步走向起跑線，錄下青春動感街拍！\n\n🎬 【定點拉走轉場】：終點衝線比心，伸手拉走畫面，為 Day 8 環球影城開場完美串聯！", "photo_tips": ["🎬 【斜坡滑車招牌影音三轉場（影片細節）】：", "🎬 【手拿鏡放大轉場】：手拿鏡映出戴頭盔笑容與纜車，快速推近放大切換蔚藍全景！", "🎬 【雙人邁步街拍】：戴著質感滑車頭盔牽手邁步走向起跑線，錄下青春動感街拍！", "🎬 【定點拉走轉場】：終點衝線比心，伸手拉走畫面，為 Day 8 環球影城開場完美串聯！"], "transit_tips": ["🚶‍♂️ 【步行路線】：12:55 步出土司工坊，順著步道步行 3 分鐘於 13:00 準時抵達天際線斜坡滑車英比奧山頂入口！"], "dining_tips": [], "alerts": [], "highlights": ["🏎️ 【飆速 4 次券全體驗】：持 4 次券解鎖 Dragon, Jungle, Expedition, Kupu Kupu 全部 4 條特色賽道！"]}, {"time": "15:30 - 17:00", "title": "玩完不回飯店！跨島出發前往【宏茂橋】龍海鮮螃蟹王總店 🦀", "description": "🚇 【捷運轉乘 ＋ 100% 徒步詳細路線】：\n\n聖淘沙輕軌：從英比奧站搭乘輕軌至 港灣站（HarbourFront, NE1）。\n\n捷運紫線：從港灣站搭乘 東北線（紫線） 坐 5 站至 多美歌站（Dhoby Ghaut, NE6/NS24）。\n\n捷運紅線（站內轉乘）：在多美歌站內順著指標走至紅線月台，轉乘 南北線（紅線） 坐 8 站直達 宏茂橋站（Ang Mo Kio, NS16）。\n\n100% 散步路線：從宏茂橋站 C 出口 出來，沿著主要大馬路 Ang Mo Kio Ave 3（宏茂橋 3 道） 的林蔭步道直直散步約 13–15 分鐘（約 1.1 公里），右手邊即達 Block 232 龍海鮮螃蟹王門口！", "photo_tips": [], "transit_tips": ["🚇 【捷運轉乘 ＋ 100% 徒步詳細路線】："], "dining_tips": [], "alerts": [], "highlights": ["聖淘沙輕軌：從英比奧站搭乘輕軌至 港灣站（HarbourFront, NE1）。", "捷運紫線：從港灣站搭乘 東北線（紫線） 坐 5 站至 多美歌站（Dhoby Ghaut, NE6/NS24）。", "捷運紅線（站內轉乘）：在多美歌站內順著指標走至紅線月台，轉乘 南北線（紅線） 坐 8 站直達 宏茂橋站（Ang Mo Kio, NS16）。", "100% 散步路線：從宏茂橋站 C 出口 出來，沿著主要大馬路 Ang Mo Kio Ave 3（宏茂橋 3 道） 的林蔭步道直直散步約 13–15 分鐘（約 1.1 公里），右手邊即達 Block 232 龍海鮮螃蟹王門口！"]}, {"time": "17:00 - 19:30", "title": "【龍海鮮螃蟹王 Mellben Seafood（宏茂橋總店）】神級螃蟹饗宴 🦀", "description": "🦀 【預約制神級名店】：對準預約好的 17:00 提早開吃，避開越晚人潮越爆炸的排隊潮！\n\n🍜 【必點雙招牌】：砂煲螃蟹米粉（Claypot Crab Bee Hoon） ＋ 黑胡椒蟹（Black Pepper Crab）配炸小饅頭！", "photo_tips": [], "transit_tips": [], "dining_tips": ["🦀 【預約制神級名店】：對準預約好的 17:00 提早開吃，避開越晚人潮越爆炸的排隊潮！", "🍜 【必點雙招牌】：砂煲螃蟹米粉（Claypot Crab Bee Hoon） ＋ 黑胡椒蟹（Black Pepper Crab）配炸小饅頭！"], "alerts": [], "highlights": []}, {"time": "19:30 之後", "title": "宏茂橋 ➔ 返抵「悅樂聖淘沙酒店」正式領房卡進房 ➡️ 🎬 Room Tour 開箱 ➡️ 📸 泳池夜景照片 ✨", "description": "🚇 【回程搭車/交通路線】：\n\n從餐廳沿 Ang Mo Kio Ave 3 散步 13–15 分鐘回 宏茂橋站。\n\n搭乘 捷運紅線 至多美歌站，站內轉乘 捷運紫線 至港灣站。\n\n步入怡豐城 3 樓搭乘 聖淘沙輕軌（憑飯店憑證免費）至 英比奧站，步行 2 分鐘返抵悅樂聖淘沙酒店！\n\n🎬 【室內 Room Tour 一鏡到底蜜月開箱 🎬】：推門入房第一時間，一鏡到底拍攝特大床、奢華備品與質感客房！\n\n📸 【四大主題露天泳池星光夜景照片 📸】：在房內洗去一日塵勞，隨後夜間漫步於 Pamukkale 棉堡池、Lazy River 漂漂河池、無邊際海景池，享用璀璨夜景照片 📸！", "photo_tips": ["🎬 【室內 Room Tour 一鏡到底蜜月開箱 🎬】：推門入房第一時間，一鏡到底拍攝特大床、奢華備品與質感客房！", "📸 【四大主題露天泳池星光夜景照片 📸】：在房內洗去一日塵勞，隨後夜間漫步於 Pamukkale 棉堡池、Lazy River 漂漂河池、無邊際海景池，享用璀璨夜景照片 📸！"], "transit_tips": ["🚇 【回程搭車/交通路線】："], "dining_tips": [], "alerts": [], "highlights": ["從餐廳沿 Ang Mo Kio Ave 3 散步 13–15 分鐘回 宏茂橋站。", "搭乘 捷運紅線 至多美歌站，站內轉乘 捷運紫線 至港灣站。", "步入怡豐城 3 樓搭乘 聖淘沙輕軌（憑飯店憑證免費）至 英比奧站，步行 2 分鐘返抵悅樂聖淘沙酒店！"]}], "subtitle": "悅樂棉堡池・斜坡滑車・龍海鮮螃蟹"}, {"day": 8, "date": "10/28", "weekday": "週三", "tag": "環球影城沙嗲", "title": "Day 8：10/28（三）悅樂聖淘沙自然醒 ➡️ 步行 3 分鐘至名勝世界 B1 亞坤輕盈早餐 ☕️ ➡️ 步行直達 USS 門口（📸 地球儀合照 ＆ 🎬 USS 招牌影音三轉場）➡️ 新加坡環球影城七大主題區狂歡 🎡 ＆ 🍌 小小兵主題美食打卡 ➡️ 返房洗漱換裝 ➡️ 捷運直達【老巴剎沙嗲街】炭火大餐 🍢（🍹 必喝桌邊送達冰鎮荔枝水）➡️ 返抵飯店享用島主夜景 ✨", "raw_file": "1028.txt", "events": [{"time": "08:00 - 08:30", "title": "悅樂聖淘沙酒店 晨間悠閒洗漱 ＆ 化上精緻美妝 / 換上環球影城渡假戰袍 🧴", "description": "在飯店舒適醒來，享受島主晨光，化上持久精緻美妝，換上適合樂園拍照與狂歡的時尚渡假戰袍！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["在飯店舒適醒來，享受島主晨光，化上持久精緻美妝，換上適合樂園拍照與狂歡的時尚渡假戰袍！"]}, {"time": "08:30 - 09:15", "title": "步行 3 分鐘至「聖淘沙名勝世界 B1」享用【亞坤 Ya Kun】輕盈南洋早餐 ☕️", "description": "🚶‍♂️ 【島主超近動線】：從飯店大門出來沿著步道散步僅 3 分鐘，直達名勝世界地下街（RWS B1）。\n\n☕️ 【輕盈早餐】：於 亞坤 享用香酥牛油咖椰吐司、靈魂半熟蛋與熱拉茶 ☕️，清爽暖胃，把胃口空間留在園內享用小小兵美食！", "photo_tips": [], "transit_tips": ["🚶‍♂️ 【島主超近動線】：從飯店大門出來沿著步道散步僅 3 分鐘，直達名勝世界地下街（RWS B1）。"], "dining_tips": ["☕️ 【輕盈早餐】：於 亞坤 享用香酥牛油咖椰吐司、靈魂半熟蛋與熱拉茶 ☕️，清爽暖胃，把胃口空間留在園內享用小小兵美食！"], "alerts": [], "highlights": []}, {"time": "09:15 - 10:00", "title": "上樓步行 1 分鐘直達 USS 門口 ➡️ 📸 地球儀巨型地標合照 ＆ 🎬 USS 招牌影音三轉場 ➡️ 順暢排隊等候開園 🎟️", "description": "📸 【照片拍攝】：【USS 巨型旋轉地球儀地標照片 📸】（趁大批市區團客抵達前，拍下經典旋轉地球儀與兩位完美的同框照片）。\n\n🎬 【USS 招牌影音三轉場】：\n\n🎬 【手拿鏡放大轉場】：手拿鏡映出旋轉地球儀與門票，快速推近放大切換樂園入口大景！\n\n🎬 【雙人邁步街拍】：牽手邁步走向環球影城拱門，拍下充滿歡樂期待感的動態街拍！\n\n🎬 【定點拉走轉場】：拱門前一人對鏡頭揮手，另一人伸手拉走，順暢切換至樂園內部！", "photo_tips": ["📸 【照片拍攝】：【USS 巨型旋轉地球儀地標照片 📸】（趁大批市區團客抵達前，拍下經典旋轉地球儀與兩位完美的同框照片）。", "🎬 【USS 招牌影音三轉場】：", "🎬 【手拿鏡放大轉場】：手拿鏡映出旋轉地球儀與門票，快速推近放大切換樂園入口大景！", "🎬 【雙人邁步街拍】：牽手邁步走向環球影城拱門，拍下充滿歡樂期待感的動態街拍！", "🎬 【定點拉走轉場】：拱門前一人對鏡頭揮手，另一人伸手拉走，順暢切換至樂園內部！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "10:00 - 19:00", "title": "【新加坡環球影城 Universal Studios Singapore（USS）】**玩滿 9 小時至 19:00 閉園 🎡 ＆ 🍌 小小兵主題美食打卡", "description": "🎟️ 【樂園無痛玩樂攻略】：\n\n順暢暢玩 變形金剛（Transformers 3D）、木乃伊復仇記（Mummy）、侏羅紀公園（Jurassic Park）、遠的要命王國（Far Far Away） 與 小黃人（Minions） 等七大經典主題區！\n\n🍌 【小小兵超萌美食打卡常規建議（來源未提及）】：品嚐熱門推爆的小小兵造型包子、泡芙與造型冰淇淋，拿著萌翻天的小小兵餐點在紐約/好萊塢大道拍照放閃！\n\n19:00 - :00 ｜ 步行 3 分鐘返抵悅樂聖淘沙酒店 沖澡洗漱換裝 ➡️ 捷運出發前往【老巴剎】\n\n🚶‍♂️ 步行 3 分鐘回飯店，回房沖澡洗去樂園汗水、重新補妝並換上輕便時尚的晚宴服飾。\n\n🚇 【搭車/交通路線】：約 20–25 分鐘\n\n步行至英比奧站搭乘免費 聖淘沙輕軌 至 港灣站（HarbourFront, NE1）。\n\n轉乘 捷運紫線（東北線） 坐 2 站至 牛車水站（Chinatown, NE4/DT19）。\n\n站內轉乘 藍線（濱海市區線） 坐 1 站直達 「直落亞逸站（Telok Ayer, DT18）」，出站步行 3–5 分鐘即達老巴剎！", "photo_tips": [], "transit_tips": ["🚶‍♂️ 步行 3 分鐘回飯店，回房沖澡洗去樂園汗水、重新補妝並換上輕便時尚的晚宴服飾。", "🚇 【搭車/交通路線】：約 20–25 分鐘"], "dining_tips": [], "alerts": [], "highlights": ["🎟️ 【樂園無痛玩樂攻略】：", "順暢暢玩 變形金剛（Transformers 3D）、木乃伊復仇記（Mummy）、侏羅紀公園（Jurassic Park）、遠的要命王國（Far Far Away） 與 小黃人（Minions） 等七大經典主題區！", "🍌 【小小兵超萌美食打卡常規建議（來源未提及）】：品嚐熱門推爆的小小兵造型包子、泡芙與造型冰淇淋，拿著萌翻天的小小兵餐點在紐約/好萊塢大道拍照放閃！", "19:00 - :00 ｜ 步行 3 分鐘返抵悅樂聖淘沙酒店 沖澡洗漱換裝 ➡️ 捷運出發前往【老巴剎】", "步行至英比奧站搭乘免費 聖淘沙輕軌 至 港灣站（HarbourFront, NE1）。", "轉乘 捷運紫線（東北線） 坐 2 站至 牛車水站（Chinatown, NE4/DT19）。", "站內轉乘 藍線（濱海市區線） 坐 1 站直達 「直落亞逸站（Telok Ayer, DT18）」，出站步行 3–5 分鐘即達老巴剎！"]}, {"time": "18:00 - 20:30", "title": "【老巴剎沙嗲街 Lau Pa Sat Satay Street 🍢】摩天大樓下的炭火沙嗲夜市狂歡 (**19:00 封街開賣營業至 凌晨 03:00)", "description": "🍢 【封街炭火大餐】：每到傍晚 19:00，老巴剎旁的 Boon Tat Street 會完全封街，擺滿露天桌椅與數十個炭火沙嗲攤！\n\n🍻 【神級必吃黃金組合】：\n\n鎖定名店：直奔最火爆的 7 號 ＆ 8 號攤位（Best Satay 7 & 8）！\n\n必點盛宴：綜合炭烤沙嗲串（雞肉、牛肉、羊肉）＋ 現烤大香蝦，蘸上濃郁特調花生沙嗲醬！\n\n解辣解膩神飲（推爆！）：直接向桌邊飲料服務生點購 「冰鎮鮮榨荔枝水（含飽滿果肉）🍹」（或前往中央大攤購買），搭配冰鎮虎牌啤酒 🍻，感受解辣清涼的極致快感！", "photo_tips": [], "transit_tips": [], "dining_tips": ["🍢 【封街炭火大餐】：每到傍晚 19:00，老巴剎旁的 Boon Tat Street 會完全封街，擺滿露天桌椅與數十個炭火沙嗲攤！", "🍻 【神級必吃黃金組合】："], "alerts": [], "highlights": ["鎖定名店：直奔最火爆的 7 號 ＆ 8 號攤位（Best Satay 7 & 8）！", "必點盛宴：綜合炭烤沙嗲串（雞肉、牛肉、羊肉）＋ 現烤大香蝦，蘸上濃郁特調花生沙嗲醬！", "解辣解膩神飲（推爆！）：直接向桌邊飲料服務生點購 「冰鎮鮮榨荔枝水（含飽滿果肉）🍹」（或前往中央大攤購買），搭配冰鎮虎牌啤酒 🍻，感受解辣清涼的極致快感！"]}, {"time": "20:30 之後", "title": "返抵「悅樂聖淘沙酒店」 享用島主浪漫夜景 🏊‍♂️✨", "description": "🚇 【回程搭車/交通路線】：從老巴剎步行至萊佛士坊站，搭捷運紅線/紫線返回港灣站，轉乘免費聖淘沙輕軌回英比奧站，返抵飯店。\n\n在房內享受晚間微醺，或漫步於夜間點燈的四層露天泳池畔，為 Day 8 劃下完美句點！", "photo_tips": [], "transit_tips": ["🚇 【回程搭車/交通路線】：從老巴剎步行至萊佛士坊站，搭捷運紅線/紫線返回港灣站，轉乘免費聖淘沙輕軌回英比奧站，返抵飯店。"], "dining_tips": [], "alerts": [], "highlights": ["在房內享受晚間微醺，或漫步於夜間點燈的四層露天泳池畔，為 Day 8 劃下完美句點！"]}], "subtitle": "亞坤南洋早餐・環球影城9小時・老巴剎沙嗲"}, {"day": 9, "date": "10/29", "weekday": "週四", "tag": "水族館烤鴨", "title": "Day 9：10/29（四）悅樂聖淘沙自然醒 ➡️ 10:00 入場【S.E.A. 水族館 🐠】（🎬 樂園招牌影音三轉場）➡️ 蓋章彈性用餐 🍴 ➡️ 沉浸全覽三大表演（🎤 13:15 潛水員水下即時互動）➡️ 捷運直達【牛車水（Chinatown）】 ➡️ 麥士威熟食中心【天天海南雞飯 🐔】 ➡️ 老街文化漫遊 📸 ＆ ☕️【牛車水星巴克】採買魚尾獅限定杯 🛍️ ➡️ 步行 3 分鐘外帶【譚氏港式燒臘 🦆】半隻烤鴨 ➡️ 返抵悅樂聖淘沙享用港式烤鴨奢華宵夜 ＆ 戶外星光泳池 ✨", "raw_file": "1029.txt", "events": [{"time": "08:30 - 09:30", "title": "悅樂聖淘沙酒店 悠閒自然醒 ➡️ 晨間洗漱 ＆ 化上美妝/換上輕便時尚散步服 🧴", "description": "在聖淘沙享受難得無後顧之憂的悠閒晨光，睡到自然醒後舒適洗漱、化上精緻蜜月妝容並換上涼爽散步服飾！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["在聖淘沙享受難得無後顧之憂的悠閒晨光，睡到自然醒後舒適洗漱、化上精緻蜜月妝容並換上涼爽散步服飾！"]}, {"time": "09:30 - 10:00", "title": "悅樂聖淘沙 ➔ 步行 3 分鐘直達【S.E.A. 水族館（S.E.A. Aquarium）門口】", "description": "🚶‍♂️ 【島主超近動線】：從飯店大門出來沿著林蔭步道散步僅 3 分鐘，10:00 開館準時入場！", "photo_tips": [], "transit_tips": ["🚶‍♂️ 【島主超近動線】：從飯店大門出來沿著林蔭步道散步僅 3 分鐘，10:00 開館準時入場！"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "10:00 - 16:30", "title": "【S.E.A. 水族館 S.E.A. Aquarium 🐠】6.5 小時極致沉浸漫遊 ＆ 🎬 招牌影音三轉場 ＆ 解鎖三大精采表演 (S.E.A. 水族館營業時間:1000-1900)", "description": "🎬 【水族館招牌影音三轉場（拍攝細節）】：\n\n🎬 【手拿鏡放大轉場】：水族館入口藍色巨型看板前，手拿鏡映出深藍海洋與波光，快速推近放大切換全景！\n\n🎬 【雙人邁步街拍】：在沉浸式海底隧道（Shark Seas Tunnel）牽手邁步，拍下鯊魚悠游的夢幻街拍！\n\n🎬 【定點拉走轉場】：在「深海奧秘 Open Ocean」巨型觀景窗前雙人比心，伸手拉走畫面，完美串聯牛車水！\n\n🍴 【午間彈性用餐】：可在館內 S.E.A.side Snacks 購買熱狗堡、三明治、造型包子與輕食，或憑手印蓋章出館至名勝世界 B1 享用正餐後再入場！\n\n🎤 【13:15 開放海洋對話（潛水員水下即時互動！）】：於 廣闊海洋（Open Ocean） 觀賞潛水員配戴水下通話配備，與現場主持人及觀眾連線互動答題常規建議（來源未提及）！\n\n🦈 【14:30 潛水餵食秀】：於 鯊魚海洋（Shark Seas） 近距離目睹潛水員餵食壯觀鯊魚群！\n\n🐟 【16:00 潛水餵食秀】：於 廣闊海洋（Open Ocean） 觀賞潛水員在巨型觀景窗前與魔鬼魚及萬魚群共舞！", "photo_tips": ["🎬 【水族館招牌影音三轉場（拍攝細節）】：", "🎬 【手拿鏡放大轉場】：水族館入口藍色巨型看板前，手拿鏡映出深藍海洋與波光，快速推近放大切換全景！", "🎬 【雙人邁步街拍】：在沉浸式海底隧道（Shark Seas Tunnel）牽手邁步，拍下鯊魚悠游的夢幻街拍！", "🎬 【定點拉走轉場】：在「深海奧秘 Open Ocean」巨型觀景窗前雙人比心，伸手拉走畫面，完美串聯牛車水！"], "transit_tips": [], "dining_tips": ["🍴 【午間彈性用餐】：可在館內 S.E.A.side Snacks 購買熱狗堡、三明治、造型包子與輕食，或憑手印蓋章出館至名勝世界 B1 享用正餐後再入場！"], "alerts": [], "highlights": ["🎤 【13:15 開放海洋對話（潛水員水下即時互動！）】：於 廣闊海洋（Open Ocean） 觀賞潛水員配戴水下通話配備，與現場主持人及觀眾連線互動答題常規建議（來源未提及）！", "🦈 【14:30 潛水餵食秀】：於 鯊魚海洋（Shark Seas） 近距離目睹潛水員餵食壯觀鯊魚群！", "🐟 【16:00 潛水餵食秀】：於 廣闊海洋（Open Ocean） 觀賞潛水員在巨型觀景窗前與魔鬼魚及萬魚群共舞！"]}, {"time": "16:30 - 17:00", "title": "名勝世界 ➔ 捷運紫線直達【牛車水站（Chinatown, NE4/DT19）】（車程約 20 分鐘）", "description": "🚇 【搭車/交通路線】：搭乘免費 聖淘沙輕軌 1 站至 港灣站，轉乘 捷運紫線 坐 2 站直達 「牛車水站（Chinatown, NE4）」 A 出口！", "photo_tips": [], "transit_tips": ["🚇 【搭車/交通路線】：搭乘免費 聖淘沙輕軌 1 站至 港灣站，轉乘 捷運紫線 坐 2 站直達 「牛車水站（Chinatown, NE4）」 A 出口！"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "17:00 - 18:00", "title": "【麥士威熟食中心】享用【天天海南雞飯 🐔】（傍晚黃金時段免長隊！）", "description": "🐔 【神級必吃攻略】：傍晚 17:00 抵達【天天海南雞飯】，完美避開午餐人潮！品嚐滑嫩白斬雞搭配雞油香米飯，再配上一杯現榨冰鎮甘蔗水 🥤！", "photo_tips": [], "transit_tips": [], "dining_tips": ["🐔 【神級必吃攻略】：傍晚 17:00 抵達【天天海南雞飯】，完美避開午餐人潮！品嚐滑嫩白斬雞搭配雞油香米飯，再配上一杯現榨冰鎮甘蔗水 🥤！"], "alerts": [], "highlights": []}, {"time": "18:00 - 18:45", "title": "【牛車水商圈 Chinatown】老街漫遊 📸 ＆ ☕️【牛車水星巴克】採買魚尾獅限定杯 🛍️", "description": "📸 【文化與街景拍攝】：漫步於 佛牙寺龍華院 與南洋彩樓騎樓間，拍下濃郁復古色彩的蜜月照！\n\n☕️ 【星巴克魚尾獅杯採買】：前往 牛車水星巴克分店，鎖定並購入兩位心心念念的 新加坡限定魚尾獅馬克杯/城市杯 ☕️！", "photo_tips": ["📸 【文化與街景拍攝】：漫步於 佛牙寺龍華院 與南洋彩樓騎樓間，拍下濃郁復古色彩的蜜月照！"], "transit_tips": [], "dining_tips": ["☕️ 【星巴克魚尾獅杯採買】：前往 牛車水星巴克分店，鎖定並購入兩位心心念念的 新加坡限定魚尾獅馬克杯/城市杯 ☕️！"], "alerts": [], "highlights": []}, {"time": "18:45 - 19:15", "title": "麥士威/史密斯街步行 3 分鐘 ➡️ 外帶【譚氏港式燒臘】半隻烤鴨 🦆 ➡️ 搭捷運/輕軌返抵飯店", "description": "🦆 【超順路外帶路線】：從麥士威熟食中心/史密斯街散步 3 分鐘直達【譚氏港式燒臘】，外帶半隻金黃酥脆的 招牌烤鴨（附特製醬汁與酸梅醬）！\n\n🚇 【回程搭車（約 25 分鐘）】：步行回牛車水站，搭捷運紫線至港灣站，轉乘免費聖淘沙輕軌返回英比奧站，輕鬆返抵悅樂聖淘沙酒店。", "photo_tips": [], "transit_tips": ["🚇 【回程搭車（約 25 分鐘）】：步行回牛車水站，搭捷運紫線至港灣站，轉乘免費聖淘沙輕軌返回英比奧站，輕鬆返抵悅樂聖淘沙酒店。"], "dining_tips": ["🦆 【超順路外帶路線】：從麥士威熟食中心/史密斯街散步 3 分鐘直達【譚氏港式燒臘】，外帶半隻金黃酥脆的 招牌烤鴨（附特製醬汁與酸梅醬）！"], "alerts": [], "highlights": []}, {"time": "19:15 之後", "title": "悅樂聖淘沙享用渡假設施 ➡️ 晚間享用【港式烤鴨奢華宵夜 🦆】＆ 泳池微醺 night ✨", "description": "回房妥善放置烤鴨，傍晚在飯店 Pamukkale 棉堡池輕鬆悠游。\n\n晚間在房內搭配微醺飲料，開吃金黃多汁的 譚氏港式燒臘烤鴨宵夜 🦆，為聖淘沙島主的最後一個夜晚劃下最奢華美味的句點！", "photo_tips": [], "transit_tips": [], "dining_tips": ["晚間在房內搭配微醺飲料，開吃金黃多汁的 譚氏港式燒臘烤鴨宵夜 🦆，為聖淘沙島主的最後一個夜晚劃下最奢華美味的句點！"], "alerts": [], "highlights": ["回房妥善放置烤鴨，傍晚在飯店 Pamukkale 棉堡池輕鬆悠游。"]}], "subtitle": "S.E.A.水族館三大秀・天天海南雞飯・港式烤鴨"}, {"day": 10, "date": "10/30", "weekday": "週五", "tag": "滑梯瀑布返台", "title": "Day 10：10/30（三）悅樂聖淘沙悠閒退房 ➡️ 搭車直達樟宜機場 T3 ➡️【The Slide@T3 巨型滑梯 🎢】歡樂開滑 ➡️【星耀樟宜 Jewel】雨林瀑布朝聖（🎬 瀑布專屬影音三轉場 ＋ 5 樓輕軌同框大片）➡️ 星宇 Check-in ＆ 電子退稅 ➡️ 通關後【T3 夢幻蝶園 🦋】浪漫漫遊 ➡️ 14:45 星宇航空滿載浪漫返台 ✈️", "raw_file": "1030.txt", "events": [{"time": "08:30 - 10:30", "title": "悅樂聖淘沙酒店 晨間自然醒 ➡️ 悠閒洗漱 ＆ 打包蜜月戰利品與行李 ➡️ 辦理 Check-out 退房 🎒(穿長褲跟布鞋，因為要溜滑梯)", "description": "在聖淘沙享受最後一個奢華晨光，優雅收拾行李與蜜月戰利品（亞坤咖椰醬 已妥善放入大行李箱託運），10:30 於飯店大廳辦理退房手續。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["在聖淘沙享受最後一個奢華晨光，優雅收拾行李與蜜月戰利品（亞坤咖椰醬 已妥善放入大行李箱託運），10:30 於飯店大廳辦理退房手續。"]}, {"time": "10:30 - 11:15", "title": "悅樂聖淘沙 ➔ 搭乘 Grab 直達【樟宜機場 T3 航廈】（車程約 25–30 分鐘 🚗）", "description": "🚗 【直達無痛交通】：飯店大廳叫 Grab 直達樟宜機場 T3 出境大廳門口，免去拖著大行李轉乘捷運的奔波！", "photo_tips": [], "transit_tips": ["🚗 【直達無痛交通】：飯店大廳叫 Grab 直達樟宜機場 T3 出境大廳門口，免去拖著大行李轉乘捷運的奔波！"], "dining_tips": [], "alerts": [], "highlights": []}, {"time": "11:15 - 11:45", "title": "【樟宜機場 T3 B2】體驗「The Slide@T3」全球最高機場室內巨型滑梯 🎢", "description": "(穿長褲跟布鞋)\n\n🎢 【機場滑梯體驗】：直奔 T3 地下一樓（B2），免費註冊 Changi App 換領體驗，感受從高處急速滑下的刺激快感，留下離境前最歡樂有趣的蜜月側拍！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["(穿長褲跟布鞋)", "🎢 【機場滑梯體驗】：直奔 T3 地下一樓（B2），免費註冊 Changi App 換領體驗，感受從高處急速滑下的刺激快感，留下離境前最歡樂有趣的蜜月側拍！"]}, {"time": "11:45 - 12:45", "title": "搭免費 Skytrain（2分鐘）至【星耀樟宜 Jewel】雨林瀑布朝聖 📸（🎬 瀑布專屬影音三轉場）", "description": "🌊 【巨型雨林瀑布（Rain Vortex）】：觀賞 11:00 剛開啟的雨林瀑布水舞與蔚藍水霧。\n\n🎬 【瀑布專屬影音三轉場機位細節】：\n\n🎬 【手拿鏡放大轉場】：於 5 樓頂層觀景台正中央，手拿鏡映出兩位與背後奔流而下的巨型瀑布（及同框高空輕軌），鏡頭快速拉近放大，瞬間切換至雨林瀑布的全景！\n\n🎬 【雙人邁步街拍】：於 資生堂森林谷空中環形步道，兩位牽手沿著綠意盎然的森林空中步道朝鏡頭邁步而來，背景是傾瀉而下的水霧與高空輕軌，充滿奢華浪漫的渡假感！\n\n🎬 【定點拉走轉場】：於 5 樓觀景台瀑布正面，一人站在原地看鏡頭甜笑/比心，另一人伸手將他/她拉出鏡頭外，畫面順暢切換至管制區內的夢幻蝶園或登機門！", "photo_tips": ["🎬 【瀑布專屬影音三轉場機位細節】：", "🎬 【手拿鏡放大轉場】：於 5 樓頂層觀景台正中央，手拿鏡映出兩位與背後奔流而下的巨型瀑布（及同框高空輕軌），鏡頭快速拉近放大，瞬間切換至雨林瀑布的全景！", "🎬 【雙人邁步街拍】：於 資生堂森林谷空中環形步道，兩位牽手沿著綠意盎然的森林空中步道朝鏡頭邁步而來，背景是傾瀉而下的水霧與高空輕軌，充滿奢華浪漫的渡假感！", "🎬 【定點拉走轉場】：於 5 樓觀景台瀑布正面，一人站在原地看鏡頭甜笑/比心，另一人伸手將他/她拉出鏡頭外，畫面順暢切換至管制區內的夢幻蝶園或登機門！"], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["🌊 【巨型雨林瀑布（Rain Vortex）】：觀賞 11:00 剛開啟的雨林瀑布水舞與蔚藍水霧。"]}, {"time": "12:45 - 13:45", "title": "星宇航空（T1）預辦登機 ➡️ 托運行李 ➡️ 辦理電子退稅（TRS）➡️ 通關入關 ✈️", "description": "✈️ 【星宇航空櫃檯 Check-in】：步入 T1 星宇櫃檯，對準 14:45 航班，辦理行李託運與領取登機證。\n\n💸 【電子退稅（TRS）】：於機場退稅快捷機台輕鬆完成消費稅（GST）退稅手續後順暢通關。", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["✈️ 【星宇航空櫃檯 Check-in】：步入 T1 星宇櫃檯，對準 14:45 航班，辦理行李託運與領取登機證。", "💸 【電子退稅（TRS）】：於機場退稅快捷機台輕鬆完成消費稅（GST）退稅手續後順暢通關。"]}, {"time": "13:45 - 14:15", "title": "【出境管制區】搭管制區輕軌至 T3 體驗【夢幻蝶園 Butterfly Garden 🦋】", "description": "🦋 【夢幻蝶園】：通關後搭乘管制區內 Skytrain 3 分鐘至 T3，免費漫步於雙層熱帶蝴蝶園，觀賞 1,000+ 隻活體蝴蝶自由飛舞與 6 公尺室內花園瀑布，拍下夢幻照片！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["🦋 【夢幻蝶園】：通關後搭乘管制區內 Skytrain 3 分鐘至 T3，免費漫步於雙層熱帶蝴蝶園，觀賞 1,000+ 隻活體蝴蝶自由飛舞與 6 公尺室內花園瀑布，拍下夢幻照片！"]}, {"time": "14:15 - 14:45", "title": "返抵 T1 登機門登機 ➡️ 14:45 星宇航空滿載浪漫返台 ✈️", "description": "✈️ 【星宇航空 14:45 起飛】：享用星宇航空精緻機上餐點與蜜月服務，於 19:25 順利抵達台灣，為 10 天 9 夜新加坡頂級蜜月劃下最完美的句點！", "photo_tips": [], "transit_tips": [], "dining_tips": [], "alerts": [], "highlights": ["✈️ 【星宇航空 14:45 起飛】：享用星宇航空精緻機上餐點與蜜月服務，於 19:25 順利抵達台灣，為 10 天 9 夜新加坡頂級蜜月劃下最完美的句點！"]}], "subtitle": "T3巨型滑梯・Jewel雨林瀑布・夢幻蝶園・返台"}];
+
+    let calActiveDay = "all";
+    let calSearchKeyword = "";
+    let calDayStatus = {};
+
+    // Load saved day checked status
+    try {
+      const savedCalStatus = localStorage.getItem("dcl_calendar_checked_v1");
+      if (savedCalStatus) {
+        calDayStatus = JSON.parse(savedCalStatus);
+      }
+    } catch (e) {
+      console.error("Failed to load calendar status", e);
+    }
+
+    function saveCalStatus() {
+      try {
+        localStorage.setItem("dcl_calendar_checked_v1", JSON.stringify(calDayStatus));
+      } catch (e) {
+        console.error("Failed to save calendar status", e);
+      }
+    }
+
+    // Render Day Pills
+    function renderCalDayPills() {
+      const pillsContainer = document.getElementById("calDayPills");
+      if (!pillsContainer) return;
+
+      let html = `
+        <div class="cal-day-pill ${calActiveDay === 'all' ? 'active' : ''}" data-day="all">
+          <div class="cal-day-pill-top">🌟 全部</div>
+          <div class="cal-day-pill-date">10 天日程</div>
+          <div class="cal-day-pill-tag">完整全覽</div>
+        </div>
+      `;
+
+      calendarData.forEach(d => {
+        const isAct = String(calActiveDay) === String(d.day);
+        html += `
+          <div class="cal-day-pill ${isAct ? 'active' : ''}" data-day="${d.day}">
+            <div class="cal-day-pill-top">Day ${d.day} (${d.weekday.replace('週', '')})</div>
+            <div class="cal-day-pill-date">${d.date}</div>
+            <div class="cal-day-pill-tag">${d.tag}</div>
+          </div>
+        `;
+      });
+
+      pillsContainer.innerHTML = html;
+
+      pillsContainer.querySelectorAll(".cal-day-pill").forEach(pill => {
+        pill.addEventListener("click", () => {
+          calActiveDay = pill.dataset.day;
+          renderCalDayPills();
+          renderCalDays();
+          if (calActiveDay !== "all") {
+            const targetCard = document.getElementById(`cal-day-card-${calActiveDay}`);
+            if (targetCard) {
+              targetCard.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    }
+
+    // Render Calendar Days & Events
+    function renderCalDays() {
+      const container = document.getElementById("calDaysContainer");
+      if (!container) return;
+
+      const q = calSearchKeyword.trim().toLowerCase();
+
+      let filteredDays = calendarData;
+      if (calActiveDay !== "all") {
+        filteredDays = calendarData.filter(d => String(d.day) === String(calActiveDay));
+      }
+
+      let matchedDayCount = 0;
+      let html = "";
+
+      filteredDays.forEach(d => {
+        // Filter events by keyword
+        const matchingEvents = d.events.filter(ev => {
+          if (!q) return true;
+          const fullText = (ev.time + " " + ev.title + " " + ev.description + " " + 
+                            ev.photo_tips.join(" ") + " " + ev.transit_tips.join(" ") + " " + 
+                            ev.dining_tips.join(" ") + " " + ev.alerts.join(" ")).toLowerCase();
+          return fullText.includes(q);
+        });
+
+        if (q && matchingEvents.length === 0) {
+          return;
+        }
+
+        matchedDayCount++;
+        const isChecked = !!calDayStatus[`day_${d.day}`];
+        const isCruise = d.day >= 2 && d.day <= 5;
+
+        html += `
+          <div class="cal-day-card" id="cal-day-card-${d.day}">
+            <div class="cal-day-card-header">
+              <div class="cal-day-header-left">
+                <span class="cal-day-number-badge ${isCruise ? 'cruise' : ''}">Day ${d.day} • ${d.date} (${d.weekday})</span>
+                <div>
+                  <h3 class="cal-day-title-main">${highlightText(d.subtitle || d.title, q)}</h3>
+                  <div class="cal-day-title-sub">${d.tag} • 共 ${matchingEvents.length} 項精選行程動線</div>
+                </div>
+              </div>
+              <div class="cal-day-header-right">
+                <button type="button" class="cal-day-check-btn ${isChecked ? 'checked' : ''}" data-day="${d.day}">
+                  ${isChecked ? '✅ 今日已完成' : '⭕ 標記今日完成'}
+                </button>
+                <button type="button" class="cal-day-toggle-btn" data-day="${d.day}" title="收合/展開此日行程">▼</button>
+              </div>
+            </div>
+
+            <div class="cal-route-bar">
+              <span>📍 當日路線：</span>
+              <span>${highlightText(d.title.replace(/^Day\s*\d+[：:]?\s*/, ''), q)}</span>
+            </div>
+
+            <div class="cal-timeline-body" id="cal-timeline-body-${d.day}">
+              <div class="cal-timeline-container">
+        `;
+
+        matchingEvents.forEach(ev => {
+          html += `
+            <div class="cal-timeline-item">
+              <div class="cal-timeline-dot"></div>
+              <div class="cal-time-badge">🕒 ${highlightText(ev.time, q)}</div>
+              <h4 class="cal-event-title-h4">${highlightText(ev.title, q)}</h4>
+              <div class="cal-event-content-p">${highlightText(ev.description, q)}</div>
+          `;
+
+          // Video / Photo box
+          if (ev.photo_tips && ev.photo_tips.length > 0) {
+            html += `
+              <div class="cal-feature-card cal-video-card">
+                <div class="cal-video-header">🎬 📸 蜜月招牌影音轉場 ＆ 神級機位</div>
+                <ul class="cal-tip-list">
+                  ${ev.photo_tips.map(tip => `<li>${highlightText(tip, q)}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          }
+
+          // Transit box
+          if (ev.transit_tips && ev.transit_tips.length > 0) {
+            html += `
+              <div class="cal-feature-card cal-transit-card">
+                <div class="cal-transit-header">🚇 🚗 交通接駁與動線指引</div>
+                <ul class="cal-tip-list">
+                  ${ev.transit_tips.map(tip => `<li>${highlightText(tip, q)}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          }
+
+          // Dining box
+          if (ev.dining_tips && ev.dining_tips.length > 0) {
+            html += `
+              <div class="cal-feature-card cal-dining-card">
+                <div class="cal-dining-header">🍴 ☕️ 美食必吃與特色指南</div>
+                <ul class="cal-tip-list">
+                  ${ev.dining_tips.map(tip => `<li>${highlightText(tip, q)}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          }
+
+          // Alert box
+          if (ev.alerts && ev.alerts.length > 0) {
+            html += `
+              <div class="cal-feature-card cal-alert-card">
+                <div class="cal-alert-header">🚨 💡 管家重要提醒與避坑秘笈</div>
+                <ul class="cal-tip-list">
+                  ${ev.alerts.map(tip => `<li>${highlightText(tip, q)}</li>`).join('')}
+                </ul>
+              </div>
+            `;
+          }
+
+          html += `
+            </div>
+          `;
+        });
+
+        html += `
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      if (matchedDayCount === 0) {
+        html = `
+          <div style="text-align: center; padding: 60px 20px; background: #fff; border-radius: var(--radius-lg); border: 1px dashed var(--border);">
+            <div style="font-size: 3rem; margin-bottom: 12px;">🔍</div>
+            <h3 style="font-size: 1.2rem; font-weight: 800; color: var(--disney-navy); margin-bottom: 6px;">找不到與「${escapeHtml(calSearchKeyword)}」相符的行程</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">請嘗試輸入其他關鍵字，如：卡丁車、斜坡滑車、亞坤、烤鴨、肉骨茶、水族館、轉場...</p>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+
+      // Bind Day Check Buttons
+      container.querySelectorAll(".cal-day-check-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const dayId = btn.dataset.day;
+          calDayStatus[`day_${dayId}`] = !calDayStatus[`day_${dayId}`];
+          saveCalStatus();
+          renderCalDays();
+          showToast(calDayStatus[`day_${dayId}`] ? `✅ Day ${dayId} 行程已標記為完成！` : `⭕ Day ${dayId} 已重置為未完成`);
+        });
+      });
+
+      // Bind Toggle Collapse Buttons
+      container.querySelectorAll(".cal-day-toggle-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const dayId = btn.dataset.day;
+          const body = document.getElementById(`cal-timeline-body-${dayId}`);
+          if (body) {
+            const isHidden = body.style.display === "none";
+            body.style.display = isHidden ? "block" : "none";
+            btn.textContent = isHidden ? "▼" : "▲";
+          }
+        });
+      });
+    }
+
+    function highlightText(text, keyword) {
+      if (!keyword || !text) return escapeHtml(text || "");
+      const escapedText = escapeHtml(text);
+      const escapedKwd = escapeHtml(keyword).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const reg = new RegExp(`(${escapedKwd})`, 'gi');
+      return escapedText.replace(reg, '<mark style="background: #fef08a; color: #854d0e; padding: 1px 4px; border-radius: 4px;">$1</mark>');
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Main Tabs Switch Logic
+    function initMainTabs() {
+      const tabBtnChecklist = document.getElementById("tabBtnChecklist");
+      const tabBtnCalendar = document.getElementById("tabBtnCalendar");
+      const viewChecklist = document.getElementById("viewChecklist");
+      const viewCalendar = document.getElementById("viewCalendar");
+
+      function switchTab(tabName) {
+        if (tabName === "calendar") {
+          tabBtnCalendar.classList.add("active");
+          tabBtnChecklist.classList.remove("active");
+          viewCalendar.classList.add("active");
+          viewCalendar.style.display = "block";
+          viewChecklist.classList.remove("active");
+          viewChecklist.style.display = "none";
+          renderCalDayPills();
+          renderCalDays();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          tabBtnChecklist.classList.add("active");
+          tabBtnCalendar.classList.remove("active");
+          viewChecklist.classList.add("active");
+          viewChecklist.style.display = "block";
+          viewCalendar.classList.remove("active");
+          viewCalendar.style.display = "none";
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      if (tabBtnChecklist && tabBtnCalendar) {
+        tabBtnChecklist.addEventListener("click", () => switchTab("checklist"));
+        tabBtnCalendar.addEventListener("click", () => switchTab("calendar"));
+      }
+
+      // Calendar Search
+      const calSearchInput = document.getElementById("calSearchInput");
+      if (calSearchInput) {
+        calSearchInput.addEventListener("input", (e) => {
+          calSearchKeyword = e.target.value;
+          renderCalDays();
+        });
+      }
+
+      // Calendar Expand / Collapse All
+      const calExpandAllBtn = document.getElementById("calExpandAllBtn");
+      const calCollapseAllBtn = document.getElementById("calCollapseAllBtn");
+      if (calExpandAllBtn) {
+        calExpandAllBtn.addEventListener("click", () => {
+          calendarData.forEach(d => {
+            const body = document.getElementById(`cal-timeline-body-${d.day}`);
+            if (body) body.style.display = "block";
+            const btn = document.querySelector(`.cal-day-toggle-btn[data-day="${d.day}"]`);
+            if (btn) btn.textContent = "▼";
+          });
+        });
+      }
+      if (calCollapseAllBtn) {
+        calCollapseAllBtn.addEventListener("click", () => {
+          calendarData.forEach(d => {
+            const body = document.getElementById(`cal-timeline-body-${d.day}`);
+            if (body) body.style.display = "none";
+            const btn = document.querySelector(`.cal-day-toggle-btn[data-day="${d.day}"]`);
+            if (btn) btn.textContent = "▲";
+          });
+        });
+      }
+
+      // Print Calendar
+      const calPrintBtn = document.getElementById("calPrintBtn");
+      if (calPrintBtn) {
+        calPrintBtn.addEventListener("click", () => {
+          window.print();
+        });
+      }
+    }
+
+    // Auto-init Calendar on page load
+    window.addEventListener("DOMContentLoaded", () => {
+      initMainTabs();
+      renderCalDayPills();
+      renderCalDays();
+    });
+    setTimeout(() => {
+      initMainTabs();
+    }, 50);
+    
+</script>
+</body>
+</html>

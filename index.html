@@ -3405,6 +3405,12 @@
 
     // Check Python Server Backend
     async function checkPythonServer() {
+      const isLocalHost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+      if (!isLocalHost) {
+        isPythonServer = false;
+        updateSyncStatus();
+        return;
+      }
       try {
         const baseUrl = window.location.origin.startsWith('http') ? window.location.origin : 'http://localhost:8000';
         const res = await fetch(baseUrl + '/api/status', { mode: 'cors' });

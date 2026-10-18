@@ -2,6 +2,8 @@
 
 > 新加坡迪士尼郵輪 + 當地 5 日遊（10 天行李與行前檢核表 & 每日行程日曆）
 
+🌐 **線上展示網址（GitHub Pages）**：[https://linonedollar.github.io/Travel-Calendar/](https://linonedollar.github.io/Travel-Calendar/)
+
 本專案提供互動式的旅遊行前準備清單與每日詳細行程表，支援離線操作、分類管理與雲端狀態同步。
 
 ---
